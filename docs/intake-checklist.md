@@ -99,6 +99,15 @@ SVGO is configured to preserve comments. **Do not put `--` inside the comment**
 - [ ] Per-corner records: at minimum the signature corner(s) with `name`,
       `description`, and a `sources` block. Add `position` once the map viewBox is
       final.
+- [ ] Optional per-corner geometry + coaching (all additive, populate what
+      genuinely applies — omit fields that don't fit a compound corner):
+      - `direction` (`left`/`right`/`left-right`/`right-left`/`chicane`),
+        `apex_type` (`early`/`geometric`/`late`/`double`).
+      - `elevation_change_m` + `elevation_change_ft` — **signed** (negative =
+        drops), paired like the layout figure; cross-check against a source.
+      - `radius_m` (approx; metric-only), `landmark` (visual brake/turn-in
+        reference), `coaching` (free-form technique notes — craft knowledge, no
+        source required). Keep car/class-specific numbers OUT.
 - [ ] Lap records by class (optional) — each REQUIRES a `sources` block.
 
 ## 7. Editorial + commerce

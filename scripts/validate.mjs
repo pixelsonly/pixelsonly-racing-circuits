@@ -9,7 +9,8 @@
  *   1. JSON Schema (schema/circuit.schema.json) — structure, types, required fields.
  *   2. slug matches the containing folder name.
  *   3. No duplicate slugs across the repo.
- *   4. Units are paired: every length has km AND mi; every elevation has m AND ft.
+ *   4. Units are paired: every length has km AND mi; every elevation has m AND
+ *      ft — at the layout level AND per corner.
  *   5. primary_layout references an existing layout id; layout ids are unique.
  *   6. corner ids unique within a layout; signature flag is internally consistent.
  *   7. Every referenced asset/file exists on disk:
@@ -130,6 +131,13 @@ for (const folder of trackFolders) {
       const cid = c?.id ?? "(no id)";
       if (cornerIds.has(cid)) err(folder, `layout "${lid}": duplicate corner id "${cid}".`);
       cornerIds.add(cid);
+
+      // corner elevation is paired, like layout elevation (both or neither)
+      const cHasM = c?.elevation_change_m != null;
+      const cHasFt = c?.elevation_change_ft != null;
+      if (cHasM !== cHasFt) {
+        err(folder, `layout "${lid}" corner "${cid}": elevation must have BOTH elevation_change_m and elevation_change_ft (or neither).`);
+      }
     }
   }
 

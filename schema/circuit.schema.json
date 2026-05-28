@@ -196,6 +196,37 @@
           "type": "string",
           "description": "Optional longer narrative / notable moments at this corner."
         },
+        "direction": {
+          "type": "string",
+          "enum": ["left", "right", "left-right", "right-left", "chicane"],
+          "description": "Turn-in direction. Compound corners (e.g. an esse) use 'left-right'/'right-left' in entry order; a chicane uses 'chicane'."
+        },
+        "apex_type": {
+          "type": "string",
+          "enum": ["early", "geometric", "late", "double"],
+          "description": "Where the apex falls relative to the corner's geometric middle — a core line-choice cue for learning the corner. Omit for compound corners where a single apex doesn't apply."
+        },
+        "elevation_change_m": {
+          "type": "number",
+          "description": "Approximate elevation change through the corner, in metres, SIGNED: negative drops, positive climbs (differs from the layout-level magnitude). Pair with elevation_change_ft."
+        },
+        "elevation_change_ft": {
+          "type": "number",
+          "description": "Approximate elevation change through the corner, in feet, SIGNED (negative drops, positive climbs). Pair with elevation_change_m."
+        },
+        "radius_m": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Approximate corner radius in metres. Coarse proxy for speed potential. Metric-only by convention — corner radius is quoted in metres in motorsport analysis."
+        },
+        "landmark": {
+          "type": "string",
+          "description": "Visual reference for braking / turn-in (e.g. 'brake at the 3 board', 'turn in at the tyre wall'). Lets a driver locate the corner without telemetry."
+        },
+        "coaching": {
+          "type": "string",
+          "description": "Free-form driving / sim-racing notes for learning the corner: technique, commitment, visibility, common mistakes. Interpretive craft knowledge, not a sourced fact. Keep car/class-specific numbers (entry speed, gear, braking distance) OUT — those belong with future per-lap reference data, not the corner's intrinsic record."
+        },
         "position": {
           "type": "object",
           "additionalProperties": false,

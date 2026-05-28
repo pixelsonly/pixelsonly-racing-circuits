@@ -41,6 +41,14 @@ layouts:
       Widely regarded as one of the most challenging corners in motorsport.
       The 1996 pass by Alex Zanardi around the outside of Bryan Herta on the
       final lap is among its most famous moments.
+    direction: left-right # Turn 8 left, Turn 8A right
+    elevation_change_m: -18 # signed: drops ~18 m through the complex
+    elevation_change_ft: -59
+    # apex_type / radius_m intentionally omitted — a single apex/radius doesn't apply to this compound left-right.
+    landmark: >-
+      Turn in blind as the track vanishes over the Turn 8 crest; the exit is hidden until the car is committed.
+    coaching: >-
+      Commit to the blind entry — the apex only reveals itself after turn-in. Prioritise getting the car rotated before the drop and sacrifice entry for a clean, settled exit onto the downhill; a tidy exit matters far more than carrying entry speed.
     position: { x: 0.20, y: 0.15 } # apex of the Corkscrew on map.svg — picked from the Turn 8 marker in the Wikimedia source
     sources:
     - title: Laguna Seca — Wikipedia
