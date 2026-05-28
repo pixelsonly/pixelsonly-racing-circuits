@@ -35,15 +35,21 @@ import { readFile, writeFile } from "node:fs/promises";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
-import { parse as parseYaml } from "yaml";
+import {
+  USER_AGENT,
+  commonsImageInfo,
+  commonsFilePageUrl,
+  readTrackRecord,
+  stripHtml,
+  stripTrailingPunctuation,
+  escapePipe,
+  escapeRegex,
+} from "./lib/commons.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, "..");
 
-const USER_AGENT =
-  "pixelsonly-racing-circuits/0.1.0 (https://github.com/pixelsonly/pixelsonly-racing-circuits)";
 const WIKIDATA_SPARQL = "https://query.wikidata.org/sparql";
-const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
 
 const slug = process.argv[2];
 if (!slug) {
@@ -56,7 +62,7 @@ const yamlPath = join(trackDir, `${slug}.yaml`);
 const flagPath = join(trackDir, "flag.svg");
 const registerPath = join(repoRoot, "LICENSE-ASSETS.md");
 
-const record = parseYaml(await readFileText(yamlPath));
+const record = await readTrackRecord(yamlPath).catch((e) => fail(e.message));
 const code = record?.country_code;
 if (!code || !/^[A-Z]{2}$/.test(code)) {
   fail(`Missing or invalid country_code in ${yamlPath} (got: ${code ?? "(none)"})`);
@@ -78,13 +84,13 @@ const title = `File:${filename}`;
 console.log(`  Wikidata -> ${title}`);
 
 // 2. Commons API: imageinfo for canonical URL + license metadata.
-const info = await commonsImageInfo(title);
+const info = await commonsImageInfo(title).catch((e) => fail(e.message));
 const svgUrl = info.url;
 const meta = info.extmetadata ?? {};
 const licenseShortName = stripHtml(meta.LicenseShortName?.value ?? "unknown");
 const licenseUrl = meta.LicenseUrl?.value ?? "";
 const artist = stripHtml(meta.Artist?.value ?? "");
-const filePageUrl = `https://commons.wikimedia.org/wiki/${encodeURI(title.replace(/ /g, "_"))}`;
+const filePageUrl = commonsFilePageUrl(title);
 
 console.log(`  Source:  ${svgUrl}`);
 console.log(`  License: ${licenseShortName}${licenseUrl ? ` (${licenseUrl})` : ""}`);
@@ -116,7 +122,7 @@ const newRow =
   `| ${escapePipe(licenseShortName)} ` +
   `| ${noteParts.join(". ")}. |`;
 
-let register = await readFileText(registerPath);
+let register = await readFile(registerPath, "utf8");
 const rowRegex = new RegExp(
   `^\\| \\\`${escapeRegex(slug)}/flag\\.svg\\\`.*$`,
   "m"
@@ -165,49 +171,6 @@ async function sparqlFlag(isoAlpha2) {
     );
   }
   return flagValue;
-}
-
-async function commonsImageInfo(title) {
-  const url = new URL(COMMONS_API);
-  url.searchParams.set("action", "query");
-  url.searchParams.set("prop", "imageinfo");
-  url.searchParams.set("iiprop", "url|extmetadata");
-  url.searchParams.set("titles", title);
-  url.searchParams.set("format", "json");
-  url.searchParams.set("formatversion", "2");
-  url.searchParams.set("redirects", "1");
-  const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
-  if (!res.ok) fail(`Commons API failed: HTTP ${res.status}`);
-  const json = await res.json();
-  const page = json?.query?.pages?.[0];
-  if (!page || page.missing || !page.imageinfo?.[0]) {
-    fail(`Commons did not return imageinfo for ${title}.`);
-  }
-  return page.imageinfo[0];
-}
-
-async function readFileText(path) {
-  try {
-    return await readFile(path, "utf8");
-  } catch (e) {
-    fail(`Cannot read ${path}: ${e.message}`);
-  }
-}
-
-function stripHtml(html) {
-  return String(html).replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
-}
-
-function stripTrailingPunctuation(s) {
-  return String(s).replace(/[.\s]+$/, "");
-}
-
-function escapePipe(s) {
-  return String(s).replace(/\|/g, "\\|");
-}
-
-function escapeRegex(s) {
-  return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function relative(p) {

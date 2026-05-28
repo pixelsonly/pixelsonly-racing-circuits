@@ -41,7 +41,7 @@ layouts:
       Widely regarded as one of the most challenging corners in motorsport.
       The 1996 pass by Alex Zanardi around the outside of Bryan Herta on the
       final lap is among its most famous moments.
-    # position: { x: 0.00, y: 0.00 }  # add when the map.svg viewBox is finalized
+    position: { x: 0.20, y: 0.15 } # apex of the Corkscrew on map.svg — picked from the Turn 8 marker in the Wikimedia source
     sources:
     - title: Laguna Seca — Wikipedia
       url: https://en.wikipedia.org/wiki/Laguna_Seca
