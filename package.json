@@ -28,6 +28,7 @@
     "validate": "node scripts/validate.mjs",
     "build": "node scripts/build.mjs",
     "fetch-flag": "node scripts/fetch-flag.mjs",
+    "fetch-map": "node scripts/fetch-map.mjs",
     "prepack": "npm run build"
   },
   "publishConfig": {

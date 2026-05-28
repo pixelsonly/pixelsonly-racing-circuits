@@ -1,9 +1,9 @@
-<!--PLACEHOLDER track map — NOT the real Laguna Seca outline.
-  Replace with the production single-line outline of the SELECTED layout:
-    - normalized viewBox (keep "0 0 1000 1000" so corner positions are 0-1 of the box)
-    - single path, consistent stroke width, no fill
-    - traced from the satellite frame / open geo data per the intake workflow
-  This placeholder exists only so the record validates and the folder shape is complete.-->
-<svg xmlns="http://www.w3.org/2000/svg" aria-label="Laguna Seca track map (placeholder)" role="img" viewBox="0 0 1000 1000">
-  <path fill="none" stroke="#1f1f21" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" d="M200 700c-50-200 50-350 220-370 140-16 180 90 120 140s-20 90 80 70c160-30 240 20 200 120S600 800 460 780s-230 20-260-80"/>
+<!--Laguna Seca GP layout, traced single-line outline.
+     Derived from File:Laguna_Seca.svg by Will Pittenger on Wikimedia Commons
+     (https://commons.wikimedia.org/wiki/File:Laguna_Seca.svg, CC BY-SA 3.0).
+     The source's path2538 (the track outline) was extracted and affine-fit
+     to the normalized 0 0 1000 1000 viewBox. License is recorded in
+     LICENSE-ASSETS.md. To re-fetch the source, see scripts/fetch-map.mjs.-->
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Laguna Seca track map" role="img" viewBox="0 0 1000 1000">
+  <path fill="none" stroke="#1f1f21" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" d="M396.368 936.913c11 2.169 22.017 2.281 33.219 2.16 55.776-.6 112.58-.265 167.713-5.941 18.326-1.886 36.088-7.966 52.934-15.664 50.131-22.91 96.758-47.151 145.298-73.189 5.834-3.13 12.777-8.876 15.934-14.314 3.324-5.725 5.433-14.012 4.32-20.525-1.408-8.25-3.833-16.943-9.182-23.766-5.094-6.5-12.764-13.591-20.255-16.204-7.993-2.789-20.518-1.837-27.817 2.43-16.107 9.417-26.495 26.934-42.401 38.62-19.383 14.24-40.559 27.213-62.656 36.73-27.235 11.729-56.63 18.348-85.342 24.036-9.458 1.874-20.873-.681-29.438-4.591-8-3.652-17.653-15.35-19.985-24.036-18.553-69.094-28.332-134.828-42.401-206.064-2.297-11.675.2-24.932 4.321-35.65 3.08-8.007 9.819-15.714 17.284-20.524 46.189-29.76 90.321-55.013 139.627-79.4 17.671-8.742 46.401-16.215 65.897-19.716 68.727-12.343 130.852-20.61 200.392-32.138 13.425-2.226 26.167-13.47 34.839-23.226 5.731-6.449 8.513-16.288 9.452-25.117.861-8.095 1.879-24.5-5.131-36.19-62.462-104.151-124.045-191.08-192.83-290.324-3.593-5.184-14.738-10.845-21.066-11.342-25.72-2.023-51.863-2.161-77.78-2.161-12.973 0-32.93.167-45.101 4.321-47.964 16.37-88.027 37.707-135.306 57.255-27.62 11.42-56.416 20.412-83.181 33.489-20.407 9.97-38.516 26.545-59.686 33.758-27.442 9.351-54.63 8.348-82.371 13.774-5.102.998-12.945 6.009-12.963 15.394-.017 8.452 6.297 16.888 6.481 25.927.176 8.605-4.603 22.54-11.883 28.087-16.423 12.513-30.604 20.534-49.152 29.438-17.461 8.38-36.902 11.14-54.014 19.985-14.936 7.72-28.767 19.387-38.62 32.408-10.312 13.626-18.453 30.424-19.446 47.532-.667 11.505 4.692 27.866 11.884 37.27 39.62 51.811 83.759 95.481 126.122 146.378 7.69 9.239 15.835 21.5 16.204 32.408.35 10.337-7.353 22.085-14.043 31.329-48.044 66.376-98.967 124.324-147.188 189.319C50.65 850.2 50 860.22 56.08 867.235c5.368 6.193 26.891 4.971 40.24 7.832 106.57 22.84 191.108 40.368 300.048 61.846"/>
 </svg>
