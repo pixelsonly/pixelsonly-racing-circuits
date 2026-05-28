@@ -284,7 +284,52 @@
           "type": "string",
           "description": "Filename (relative to the track folder) of the country flag SVG. Carries its source license (see LICENSE-ASSETS.md)."
         },
+        "map_source": {
+          "type": "string",
+          "description": "Optional. Filename (relative to the track folder) of the original, un-simplified SVG that the layout's map_svg was derived from (e.g. the Wikimedia Commons original, committed as 'map-source.svg' and SVGO-optimized for the repo — visually identical to upstream, editor metadata stripped). Present whenever the production map was traced/extracted from a third-party geometry source. The website may render this richer original; its license + credit live in map_attribution and LICENSE-ASSETS.md."
+        },
+        "map_attribution": { "$ref": "#/$defs/mapAttribution" },
         "satellite": { "$ref": "#/$defs/satellite" }
+      }
+    },
+    "mapAttribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_url", "license"],
+      "description": "Provenance + license for the track map, surfaced as a credit line on the apex circuit page and consumable by downstream tools. Present when map.svg (and/or the committed map_source) is derived from a third-party source such as Wikimedia Commons. Richer than satellite.attribution (a single string) because the map credit is rendered, not just legally required. LICENSE-ASSETS.md carries the canonical register row; this block is the machine-readable mirror so consumers never have to scrape it.",
+      "properties": {
+        "source_title": {
+          "type": "string",
+          "description": "Title/filename of the source work (e.g. 'Laguna_Seca.svg')."
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Canonical URL of the source work's page (e.g. its Wikimedia Commons file page)."
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1,
+          "description": "License short name as published by the source (e.g. 'CC BY-SA 3.0', 'Public domain')."
+        },
+        "license_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Optional. URL of the license deed (e.g. 'https://creativecommons.org/licenses/by-sa/3.0')."
+        },
+        "artist": {
+          "type": "string",
+          "description": "Optional. Author/creator credit as published by the source."
+        },
+        "attribution_text": {
+          "type": "string",
+          "description": "Optional. Ready-to-render one-line credit string, composed from the fields above so consumers can display it verbatim without reassembling parts."
+        },
+        "accessed": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "description": "ISO date (YYYY-MM-DD) the source was fetched."
+        }
       }
     },
     "satellite": {

@@ -17,8 +17,3 @@ dist/
 .env
 .env.*
 !.env.example
-
-# Track-map source files: fetched by `npm run fetch-map` from Wikimedia
-# Commons, kept on disk for the Affinity tracing pass, never committed —
-# only the hand-traced production map.svg ships in the repo.
-tracks/*/.map-source.svg
