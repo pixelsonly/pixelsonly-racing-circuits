@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.0.0...pixelsonly-racing-circuits-v1.1.0) (2026-05-28)
+
+
+### New tracks & additive changes
+
+* refresh Laguna Seca map + add reusable fetch-map workflow ([#5](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/5)) ([a490c49](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/a490c49caf3da26b76d6a721f5c4c781b3d9472e))
+
 ## 1.0.0 (2026-05-28)
 
 
