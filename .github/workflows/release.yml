@@ -1,0 +1,64 @@
+name: Release
+
+# SemVer releases via release-please (Conventional Commits) + publish to GitHub Packages.
+#
+# How it works:
+#   1. On every push to main, release-please maintains a "release PR" that accrues
+#      changes and computes the next SemVer version from commit prefixes:
+#         feat:            -> minor (new track / additive optional field)
+#         fix: / data:     -> patch (value correction, typo)
+#         feat!: or a "BREAKING CHANGE:" footer -> major (schema break, track removal,
+#                          field removal/rename/retype, optional->required)
+#      See the "Versioning" section of the README for the full policy.
+#   2. When you MERGE that release PR, release-please tags the release, writes the
+#      CHANGELOG, and sets release_created=true.
+#   3. The publish job then builds (YAML -> JSON) and publishes @pixelsonly/pixelsonly-racing-circuits
+#      to GitHub Packages.
+#
+# So releases are deliberate (one per merged release PR), not one-per-merge — which
+# is what SemVer requires.
+#
+# Note: the default GITHUB_TOKEN is fine for creating the release PR and releasing,
+# but PRs it opens do NOT trigger other workflows (so `validate` won't re-run on the
+# release PR itself — that PR only bumps version + changelog). If you ever want CI to
+# run on the release PR, swap `token:` for a PAT stored as a secret.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.rp.outputs.release_created }}
+      tag_name: ${{ steps.rp.outputs.tag_name }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: rp
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created == 'true' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: "https://npm.pkg.github.com/"
+          scope: "@pixelsonly"
+      - run: npm ci
+      - run: npm run build
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

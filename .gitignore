@@ -1,0 +1,19 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Build output (generated package / JSON emit)
+build/
+dist/
+
+# OS / editor cruft
+.DS_Store
+._*
+*.swp
+.idea/
+.vscode/
+
+# Credentials — never commit (capture tooling lives in the private repo anyway)
+.env
+.env.*
+!.env.example

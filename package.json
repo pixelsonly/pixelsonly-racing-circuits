@@ -1,0 +1,44 @@
+{
+  "name": "@pixelsonly/pixelsonly-racing-circuits",
+  "version": "0.0.0",
+  "description": "Canonical motorsport circuit data, narrative, and visual assets behind pixelsonly.racing.",
+  "author": "Pixelsonly Racing <hello@pixelsonly.racing>",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "homepage": "https://github.com/pixelsonly/pixelsonly-racing-circuits",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixelsonly/pixelsonly-racing-circuits.git"
+  },
+  "exports": {
+    ".": "./build/circuits.json",
+    "./schema": "./schema/circuit.schema.json",
+    "./data/*": "./build/data/*"
+  },
+  "files": [
+    "build/",
+    "schema/",
+    "README.md",
+    "LICENSE.md",
+    "LICENSE-DATA.md",
+    "LICENSE-CONTENT.md",
+    "LICENSE-ASSETS.md"
+  ],
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "fetch-flag": "node scripts/fetch-flag.mjs",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

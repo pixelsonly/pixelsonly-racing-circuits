@@ -1,0 +1,33 @@
+name: Validate records
+
+# The gate for the public-PR model: no record reaches main without passing
+# schema + integrity validation. Required-field checks, type validation,
+# paired units, no duplicate slugs, asset existence, and source citations.
+
+on:
+  pull_request:
+    paths:
+      - "tracks/**"
+      - "schema/**"
+      - "scripts/**"
+      - "package.json"
+  push:
+    branches: [main]
+    paths:
+      - "tracks/**"
+      - "schema/**"
+      - "scripts/**"
+      - "package.json"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run validate

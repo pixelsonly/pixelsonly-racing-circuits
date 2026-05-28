@@ -1,0 +1,31 @@
+name: SVG optimization check
+
+# Keeps committed SVG assets optimized and consistent. Rather than auto-committing
+# back (which needs elevated permissions and can loop), this runs SVGO over all
+# track SVGs in a PR and fails if anything would change — telling the contributor
+# to run `npx svgo -rf tracks` locally and commit the result.
+
+on:
+  pull_request:
+    paths:
+      - "tracks/**/*.svg"
+  workflow_dispatch:
+
+jobs:
+  svgo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run SVGO
+        run: npx --yes svgo@^3 --config svgo.config.mjs -rf tracks --quiet
+      - name: Fail if SVGs are not optimized
+        run: |
+          if ! git diff --quiet -- 'tracks/**/*.svg'; then
+            echo "::error::SVG assets are not optimized. Run 'npx svgo --config svgo.config.mjs -rf tracks' locally and commit the result."
+            git --no-pager diff --stat -- 'tracks/**/*.svg'
+            exit 1
+          fi
+          echo "All SVGs optimized."

@@ -1,0 +1,23 @@
+name: Scheduled integrity check
+
+# Catches silent drift: a monthly re-run of the full validator over all records,
+# so a record that was fine at merge time but later lost an asset, broke a
+# reference, or fell out of spec gets flagged even with no new PR.
+
+on:
+  schedule:
+    # 06:00 UTC on the 1st of every month
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run validate
