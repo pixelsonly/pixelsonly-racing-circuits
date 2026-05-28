@@ -1,0 +1,124 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: mugello
+name: Autodromo Internazionale del Mugello
+display_name: Mugello
+subtitle: Circuit
+country_code: IT
+country_name: Italy
+locality: Scarperia e San Piero, Tuscany, Italy
+latitude: 43.9975 # circuit center — confirm exact value against an authoritative source during intake
+longitude: 11.3717
+year_opened: 1974
+owner: Ferrari
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix
+  current: true
+  years: 1974-present
+  direction: clockwise
+  turns: 15
+  length_km: 5.245
+  length_mi: 3.259
+  elevation_change_m: 41
+  elevation_change_ft: 135
+  map_svg: map.svg
+  corners:
+  - id: san-donato
+    number: "1"
+    name: San Donato
+    description: >-
+      A fast right-hander at the end of the 1.141 km (0.709 mi) main straight, taken from speeds well above 300 km/h (186 mph) and reduced under heavy braking. The primary overtaking spot on the lap.
+    direction: right
+    apex_type: late
+    landmark: >-
+      Brake on the 100 m board past the start-finish bridge — the corner crests slightly into the braking zone, hiding the apex until the car is settled.
+    coaching: >-
+      Threshold-brake in a straight line; the corner is long enough that an early apex compromises both mid-corner stability and the exit onto Luco. Aim for a late apex and roll a little entry speed off rather than trail-braking deep — the surface drops away on exit.
+    position: { x: 0.07, y: 0.33 } # T1 marker from the Wikimedia source, affine-transformed to map.svg
+    sources:
+    - title: Mugello Circuit — Wikipedia
+      url: https://en.wikipedia.org/wiki/Mugello_Circuit
+      accessed: 2026-05-28
+  - id: arrabbiata-2
+    number: "9"
+    name: Arrabbiata 2
+    signature: true
+    description: >-
+      The second of two flat-in-top-gear right-handers that define Mugello's character, taken blind over a crest at well above 250 km/h (155 mph) with the apex climbing out of sight on entry.
+    story: |
+      Universally cited by drivers as the corner that earns Mugello its reputation
+      as a "driver's circuit": a sustained, committed high-speed sweeper where
+      the consequences of a mistake are very real but the time gained from a
+      clean line is significant.
+    direction: right
+    apex_type: geometric
+    landmark: >-
+      Turn in as the inside kerb of Arrabbiata 1 disappears under the front wheel — the apex of Arrabbiata 2 is hidden behind the rise until commitment is irreversible.
+    coaching: >-
+      Treat the Arrabbiata pair as one corner: get the car settled and pointed through Arrabbiata 1, then carry the load through the brief straight and commit fully to Arrabbiata 2 before the apex is visible. Lifting mid-corner unsettles the rear; the trust to stay flat is what the corner asks for.
+    position: { x: 0.91, y: 0.78 } # T9 marker from the Wikimedia source, affine-transformed to map.svg
+    sources:
+    - title: Mugello Circuit — Wikipedia
+      url: https://en.wikipedia.org/wiki/Mugello_Circuit
+      accessed: 2026-05-28
+  lap_records: []
+    # Shape for when records are added (each entry REQUIRES sources):
+    # - class: F1
+    #   time: "1:15.484"
+    #   driver: ""
+    #   team: ""
+    #   car: ""
+    #   year: 2020
+    #   record_type: race
+    #   sources:
+    #     - title: ""
+    #       url: ""
+    #       accessed: "2026-05-28"
+
+editorial:
+  tagline: >-
+    A 5.2-kilometer ribbon through the Tuscan hills, owned by Ferrari and defined by the blind, flat-out commitment of the Arrabbiata sweepers.
+  narrative_md: mugello.md
+  available_in:
+  - iRacing
+  - Assetto Corsa Competizione
+  - Gran Turismo 7
+
+commerce:
+  # shopify_product_url: https://shop.pixelsonly.racing/products/mugello-poster
+  card_url: https://pixelsonly.racing/circuits/mugello # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Mugello_Racing_Circuit_track_map_15_turns.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Mugello_Racing_Circuit_track_map_15_turns.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Mugello_Racing_Circuit_track_map_15_turns.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-05-28
+  # satellite:
+  #   derivative: satellite.webp   # add the stylized/cropped derivative here at intake step 3 (produced by the private capture tooling)
+  #   source_key: tracks/mugello/mugello.tiff # private R2 master — informational only, never published
+  #   attribution: Contains modified Copernicus Sentinel data 2026
+
+sources:
+- title: Mugello Circuit — Wikipedia
+  url: https://en.wikipedia.org/wiki/Mugello_Circuit
+  accessed: 2026-05-28
+- title: Autodromo Internazionale del Mugello (official)
+  url: https://mugellocircuit.com/
+  accessed: 2026-05-28
+
+status: draft
