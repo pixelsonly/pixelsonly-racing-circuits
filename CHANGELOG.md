@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.2.0...pixelsonly-racing-circuits-v1.3.0) (2026-05-28)
+
+
+### New tracks & additive changes
+
+* add per-corner geometry + coaching fields to the schema ([#10](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/10)) ([5d04ced](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/5d04ced399290e594b9555a57399732129584bf3))
+
 ## [1.2.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.1.0...pixelsonly-racing-circuits-v1.2.0) (2026-05-28)
 
 
