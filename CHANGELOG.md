@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.3.0...pixelsonly-racing-circuits-v1.4.0) (2026-05-28)
+
+
+### New tracks & additive changes
+
+* add Mugello (mugello) ([#12](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/12)) ([c964647](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/c9646472a8bc45f9e201821fa10b72d196423081))
+
 ## [1.3.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.2.0...pixelsonly-racing-circuits-v1.3.0) (2026-05-28)
 
 
