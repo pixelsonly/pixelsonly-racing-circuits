@@ -79,6 +79,15 @@ assets:
     # derivative: satellite.webp   # add the stylized/cropped derivative here at intake step 3 (produced by the private capture tooling)
     source_key: tracks/laguna-seca/laguna-seca.tiff # private R2 master — informational only, never published
     attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Laguna_Seca.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Laguna_Seca.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Laguna_Seca.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-05-28
 
 sources:
 - title: Laguna Seca — Wikipedia

@@ -13,8 +13,8 @@
  *   5. primary_layout references an existing layout id; layout ids are unique.
  *   6. corner ids unique within a layout; signature flag is internally consistent.
  *   7. Every referenced asset/file exists on disk:
- *        layout.map_svg, assets.flag_svg, assets.satellite.derivative (if set),
- *        editorial.narrative_md (if set).
+ *        layout.map_svg, assets.flag_svg, assets.map_source (if set),
+ *        assets.satellite.derivative (if set), editorial.narrative_md (if set).
  *   8. Referenced .svg assets parse as well-formed XML and look like <svg>.
  *   9. Source citations present (record-level enforced by schema; warns on draft-only).
  *
@@ -140,6 +140,15 @@ for (const folder of trackFolders) {
 
   // 7 flag asset
   if (record.assets?.flag_svg) checkSvg(folder, folderPath, record.assets.flag_svg, "assets.flag_svg");
+
+  // 7/8 committed map source (verbatim third-party original; exists + parses)
+  if (record.assets?.map_source) {
+    checkSvg(folder, folderPath, record.assets.map_source, "assets.map_source");
+    // A committed third-party original must be attributed (license compliance).
+    if (!record.assets?.map_attribution) {
+      err(folder, `assets.map_source is set but assets.map_attribution is missing — a committed third-party source must carry license + credit.`);
+    }
+  }
 
   // 7 satellite derivative (existence only — binary, not parsed)
   const deriv = record.assets?.satellite?.derivative;

@@ -23,7 +23,7 @@ this table automatically.
 
 | Track / map | Source | License | Notes |
 |---|---|---|---|
-| `laguna-seca/map.svg` | [Laguna_Seca.svg](https://commons.wikimedia.org/wiki/File:Laguna_Seca.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Fetched 2026-05-28 from Wikimedia Commons. |
+| `laguna-seca/map.svg` | [Laguna_Seca.svg](https://commons.wikimedia.org/wiki/File:Laguna_Seca.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `laguna-seca/map-source.svg`. Fetched 2026-05-28 from Wikimedia Commons. |
 
 ## Satellite imagery derivatives
 

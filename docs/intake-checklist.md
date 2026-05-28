@@ -33,19 +33,24 @@ repeatable assembly line, not a from-scratch design job.
 
 ## 5. Track map (SVG)
 
-Two-phase: a scripted Phase A grabs a Commons reference and registers its
-license; a manual Phase B traces a single-line centerline in Affinity Designer.
-The repo never commits the raw Commons SVG — only the hand-traced production
-file.
+Two-phase: a scripted Phase A grabs a Commons reference, commits it, and
+records its license; a manual Phase B produces the simplified production map
+from it. Both the original source (`map-source.svg`, SVGO-optimized but
+visually unchanged) and the production map (`map.svg`) are committed — the
+website may render either.
 
 ### Phase A — fetch the source
 - [ ] Identify a Wikimedia Commons SVG of the **selected layout** (named in the
       new-track issue). Public-domain sources are preferred; CC-BY-SA is fine
       but obligates share-alike downstream.
 - [ ] Run `npm run fetch-map -- <slug> --from "<commons-title-or-url>"`.
-      The script downloads to `tracks/<slug>/.map-source.svg` (gitignored) and
-      appends a row to the **Track maps** register in `LICENSE-ASSETS.md` with
-      the source's actual license + attribution.
+      The script:
+      - downloads the original to `tracks/<slug>/map-source.svg` (committed);
+      - writes `assets.map_source` + `assets.map_attribution`
+        (source URL, license, artist, ready-to-render credit, accessed date)
+        into the track YAML — a comment-preserving surgical edit;
+      - upserts the **Track maps** row in `LICENSE-ASSETS.md`.
+      No need to hand-copy any of the license/credit fields.
 
 ### Phase B — produce map.svg
 
@@ -69,7 +74,7 @@ track outline; this was the case for Laguna Seca's `path2538`):
 
 **Affinity-trace fallback** (when the source is too messy to extract —
 multi-segment paths, missing centerline, weird grouping, raster-only):
-- [ ] Open `.map-source.svg` in Affinity Designer.
+- [ ] Open `map-source.svg` in Affinity Designer.
 - [ ] Set the document canvas to **1000×1000**.
 - [ ] Pen-trace a single closed centerline of the selected layout. Discard pit
       lane, runoff fills, color shading, labels, start/finish markings —
