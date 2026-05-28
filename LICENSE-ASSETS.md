@@ -23,6 +23,7 @@ this table automatically.
 
 | Track / map | Source | License | Notes |
 |---|---|---|---|
+| `mugello/map.svg` | [Mugello_Racing_Circuit_track_map_15_turns.svg](https://commons.wikimedia.org/wiki/File:Mugello_Racing_Circuit_track_map_15_turns.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `mugello/map-source.svg`. Fetched 2026-05-28 from Wikimedia Commons. |
 | `laguna-seca/map.svg` | [Laguna_Seca.svg](https://commons.wikimedia.org/wiki/File:Laguna_Seca.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `laguna-seca/map-source.svg`. Fetched 2026-05-28 from Wikimedia Commons. |
 
 ## Satellite imagery derivatives
@@ -45,3 +46,4 @@ flag you add:
 > Many national flags on Wikimedia Commons are Public Domain, but a number are
 > CC-BY-SA 4.0 or carry other terms. Check each file's license page and record it
 > here. Honor the original license in any redistribution (poster + web).
+| `mugello/flag.svg` | [Flag of Italy.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Italy.svg) | Public domain | Artist: See below. Fetched 2026-05-28 from Wikimedia Commons via Wikidata P41. |
