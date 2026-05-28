@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.1.0...pixelsonly-racing-circuits-v1.2.0) (2026-05-28)
+
+
+### New tracks & additive changes
+
+* preserve Wikimedia source map + structured map attribution ([#7](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/7)) ([3612e6d](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/3612e6d3f357d3de56b168f294adb218073efff7))
+
 ## [1.1.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.0.0...pixelsonly-racing-circuits-v1.1.0) (2026-05-28)
 
 
