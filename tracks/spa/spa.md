@@ -1,9 +1,9 @@
 # Spa-Francorchamps
 
-> Narrative content for the apex circuit page. Licensed CC-BY-SA 4.0 (see
-> `LICENSE-CONTENT.md`). Keep claims traceable to the `sources` block in
-> `spa.yaml`; add sources here too if this file introduces facts the
-> record does not already cite.
+<!-- Narrative content for the apex circuit page. Licensed CC-BY-SA 4.0 (see
+     `LICENSE-CONTENT.md`). Keep claims traceable to the `sources` block in
+     `spa.yaml`; add sources here too if this file introduces facts the
+     record does not already cite. -->
 
 The Circuit de Spa-Francorchamps opened in August 1921, running on public
 roads through the Ardennes between the villages of Francorchamps, Malmedy,

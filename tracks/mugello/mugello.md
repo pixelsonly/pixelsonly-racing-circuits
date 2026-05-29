@@ -1,9 +1,9 @@
 # Mugello
 
-> Narrative content for the apex circuit page. Licensed CC-BY-SA 4.0 (see
-> `LICENSE-CONTENT.md`). Keep claims traceable to the `sources` block in
-> `mugello.yaml`; add sources here too if this file introduces facts the
-> record does not already cite.
+<!-- Narrative content for the apex circuit page. Licensed CC-BY-SA 4.0 (see
+     `LICENSE-CONTENT.md`). Keep claims traceable to the `sources` block in
+     `mugello.yaml`; add sources here too if this file introduces facts the
+     record does not already cite. -->
 
 The Autodromo Internazionale del Mugello opened in 1974 in the hills of
 Scarperia e San Piero, north of Florence in Tuscany. Ferrari has owned the

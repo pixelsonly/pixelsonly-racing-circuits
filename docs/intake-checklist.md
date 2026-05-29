@@ -112,7 +112,12 @@ SVGO is configured to preserve comments. **Do not put `--` inside the comment**
 
 ## 7. Editorial + commerce
 - [ ] `editorial.tagline`, `editorial.narrative_md` (write `<slug>.md`),
-      `editorial.available_in`.
+      `editorial.available_in`. Any author note at the top of `<slug>.md` (the
+      licensing/sourcing reminder) must be an **HTML comment** (`<!-- ... -->`),
+      not a Markdown blockquote — the package inlines the narrative and the apex
+      site renders it with `<Content />`, so a blockquote would surface as a
+      pull-quote on the published page. Match the comment convention already used
+      by the "Expand with…" note at the bottom of each existing `<slug>.md`.
 - [ ] `commerce.shopify_product_url` (at launch), `commerce.card_url` (companion
       card short link).
 
