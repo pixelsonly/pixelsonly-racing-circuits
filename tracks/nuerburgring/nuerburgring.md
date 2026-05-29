@@ -1,9 +1,9 @@
 # Nürburgring
 
-> Narrative content for the apex circuit page. Licensed CC-BY-SA 4.0 (see
-> `LICENSE-CONTENT.md`). Keep claims traceable to the `sources` block in
-> `nuerburgring.yaml`; add sources here too if this file introduces facts
-> the record does not already cite.
+<!-- Narrative content for the apex circuit page. Licensed CC-BY-SA 4.0 (see
+     `LICENSE-CONTENT.md`). Keep claims traceable to the `sources` block in
+     `nuerburgring.yaml`; add sources here too if this file introduces facts
+     the record does not already cite. -->
 
 The Nürburgring opened in 1927 in the Eifel mountains of Rhineland-
 Palatinate, originally as a 28-kilometre road course built to give the

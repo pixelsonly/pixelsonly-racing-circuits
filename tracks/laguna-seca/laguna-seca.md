@@ -1,9 +1,9 @@
 # Laguna Seca
 
-> Narrative content for the apex circuit page. Licensed CC-BY-SA 4.0 (see
-> `LICENSE-CONTENT.md`). Keep claims traceable to the `sources` block in
-> `laguna-seca.yaml`; add sources here too if this file introduces facts the
-> record does not already cite.
+<!-- Narrative content for the apex circuit page. Licensed CC-BY-SA 4.0 (see
+     `LICENSE-CONTENT.md`). Keep claims traceable to the `sources` block in
+     `laguna-seca.yaml`; add sources here too if this file introduces facts the
+     record does not already cite. -->
 
 WeatherTech Raceway Laguna Seca opened in 1957 on former U.S. Army land in the
 hills above Monterey, California. The current Grand Prix configuration runs
