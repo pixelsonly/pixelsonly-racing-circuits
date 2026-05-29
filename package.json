@@ -29,6 +29,7 @@
     "build": "node scripts/build.mjs",
     "fetch-flag": "node scripts/fetch-flag.mjs",
     "fetch-map": "node scripts/fetch-map.mjs",
+    "svgo": "svgo --config svgo.config.mjs -rf tracks",
     "prepack": "npm run build"
   },
   "publishConfig": {
@@ -37,6 +38,7 @@
   "devDependencies": {
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "svgo": "^4.0.1",
     "yaml": "^2.5.0"
   },
   "engines": {

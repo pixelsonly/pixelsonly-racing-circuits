@@ -19,12 +19,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
+      - run: npm ci
       - name: Run SVGO
-        run: npx --yes svgo@^3 --config svgo.config.mjs -rf tracks --quiet
+        run: npm run svgo -- --quiet
       - name: Fail if SVGs are not optimized
         run: |
           if ! git diff --quiet -- 'tracks/**/*.svg'; then
-            echo "::error::SVG assets are not optimized. Run 'npx svgo --config svgo.config.mjs -rf tracks' locally and commit the result."
+            echo "::error::SVG assets are not optimized. Run 'npm run svgo' locally and commit the result."
             git --no-pager diff --stat -- 'tracks/**/*.svg'
             exit 1
           fi
