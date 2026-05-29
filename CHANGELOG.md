@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.3](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.6.2...pixelsonly-racing-circuits-v1.6.3) (2026-05-29)
+
+
+### Data corrections & fixes
+
+* convert leading narrative author-note blockquote to HTML comment ([#25](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/25)) ([faa81d5](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/faa81d56df1b9996d438c567536161579194f57d))
+
 ## [1.6.2](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.6.1...pixelsonly-racing-circuits-v1.6.2) (2026-05-29)
 
 
