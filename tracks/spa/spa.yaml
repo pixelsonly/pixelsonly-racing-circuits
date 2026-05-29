@@ -1,0 +1,155 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: spa
+name: Circuit de Spa-Francorchamps
+display_name: Spa-Francorchamps
+subtitle: Circuit
+country_code: BE
+country_name: Belgium
+locality: Stavelot, Wallonia, Belgium
+latitude: 50.4372 # circuit center — 50°26′14″N per Wikipedia
+longitude: 5.9714 # 5°58′17″E per Wikipedia
+year_opened: 1921
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix
+  current: true
+  years: 2007-present # current 7.004 km configuration; the layout has been progressively shortened from the original 14 km road course
+  direction: clockwise
+  turns: 19
+  length_km: 7.004
+  length_mi: 4.352
+  elevation_change_m: 102
+  elevation_change_ft: 335
+  map_svg: map.svg
+  corners:
+  - id: la-source
+    number: "1"
+    name: La Source
+    description: >-
+      A tight, slow right-hand hairpin at the end of the start-finish straight, taken in first or second gear. The opening corner of the lap and a frequent first-lap flashpoint.
+    direction: right
+    apex_type: late
+    landmark: >-
+      Brake at the 100 m board past the pit exit; the corner tightens through the apex so a geometric line will run wide onto the kerb.
+    coaching: >-
+      Resist the urge to dive — La Source rewards a late apex that opens the exit onto the long downhill toward Eau Rouge, where small exit losses compound across the entire run to Les Combes. Patience here is paid back twice on the next straight.
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Circuit de Spa-Francorchamps — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps
+      accessed: 2026-05-28
+  - id: eau-rouge-raidillon
+    number: "2-4"
+    name: Eau Rouge / Raidillon
+    signature: true
+    description: >-
+      A downhill left-hand kink (Eau Rouge) across the bridge over the Eau Rouge stream that flicks immediately into a steeply rising right-left-right (Raidillon) climbing roughly 40 m (130 ft) and cresting blind. Taken flat in top gear in a modern F1 car at over 300 km/h (186 mph).
+    story: |
+      The most famous corner sequence in motorsport. The compression at the
+      base loads the car to roughly 4 g, and the crest hides the next apex
+      until the car is already committed — a test of nerve as much as of
+      machinery. The 2022 redevelopment expanded run-off here after a series
+      of high-speed incidents through the 2010s and early 2020s.
+    direction: left-right
+    apex_type: double
+    elevation_change_m: 40
+    elevation_change_ft: 130
+    landmark: >-
+      Aim for the right-hand kerb at the base of the climb; the second apex (Raidillon) is over the crest and cannot be seen until the car has already turned in.
+    coaching: >-
+      Commit fully or not at all — a mid-corner lift unsettles the rear at the worst possible moment, when the compression is highest and the car is on the steepest part of the climb. The line is a long, single arc through the complex, not three discrete turn-ins. Trust the load.
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Circuit de Spa-Francorchamps — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps
+      accessed: 2026-05-28
+  - id: pouhon
+    number: "10-11"
+    name: Pouhon
+    description: >-
+      A double-apex downhill left-hander in the forest section, taken at high speed with the second apex tightening on entry.
+    direction: left
+    apex_type: double
+    landmark: >-
+      Turn in at the first apex with the steering held; the second apex appears as the car settles, requiring a small steering correction without a lift.
+    coaching: >-
+      Treat the two apices as one long sweeper — too much wheel at the first apex scrubs the speed needed to carry the second. Brake-release timing matters more than the brake pedal here.
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Circuit de Spa-Francorchamps — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps
+      accessed: 2026-05-28
+  - id: blanchimont
+    number: "17"
+    name: Blanchimont
+    description: >-
+      A long, fast left-hand sweeper near the end of the lap, taken near flat in top gear with a narrow run-off backed by a steep drop behind the barriers.
+    direction: left
+    apex_type: geometric
+    landmark: >-
+      The braking marker on the right kerb sets the turn-in — the corner is faster than it looks, and lifting unsettles the rear into the bus-stop chicane that follows.
+    coaching: >-
+      One of the great commitment corners — a sustained high-speed load through a long arc, with minimal margin for error. Settle the car early and ride the throttle through.
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Circuit de Spa-Francorchamps — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps
+      accessed: 2026-05-28
+  lap_records: []
+    # Shape for when records are added (each entry REQUIRES sources):
+    # - class: F1
+    #   time: "1:44.701"
+    #   driver: ""
+    #   team: ""
+    #   car: ""
+    #   year: 2020
+    #   record_type: race
+    #   sources:
+    #     - title: ""
+    #       url: ""
+    #       accessed: "2026-05-28"
+
+editorial:
+  tagline: >-
+    Seven kilometres of Ardennes forest road, defined by the blind, flat-out commitment of Eau Rouge and Raidillon — the most famous corner sequence in motorsport.
+  narrative_md: spa.md
+  available_in:
+  - iRacing
+  - Assetto Corsa Competizione
+  - Gran Turismo 7
+  - rFactor 2
+
+commerce:
+  # shopify_product_url: https://shop.pixelsonly.racing/products/spa-poster
+  card_url: https://pixelsonly.racing/circuits/spa # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Spa-Francorchamps_of_Belgium.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Spa-Francorchamps_of_Belgium.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Spa-Francorchamps_of_Belgium.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-05-29
+
+sources:
+- title: Circuit de Spa-Francorchamps — Wikipedia
+  url: https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps
+  accessed: 2026-05-28
+- title: Circuit de Spa-Francorchamps (official)
+  url: https://www.spa-francorchamps.be
+  accessed: 2026-05-28
+
+status: draft
