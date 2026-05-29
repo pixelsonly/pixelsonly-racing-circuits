@@ -43,11 +43,88 @@ layouts:
       Brake on the 100 m board past the start-finish bridge — the corner crests slightly into the braking zone, hiding the apex until the car is settled.
     coaching: >-
       Threshold-brake in a straight line; the corner is long enough that an early apex compromises both mid-corner stability and the exit onto Luco. Aim for a late apex and roll a little entry speed off rather than trail-braking deep — the surface drops away on exit.
-    position: { x: 0.07, y: 0.33 } # T1 marker from the Wikimedia source, affine-transformed to map.svg
+    position: { x: 0.077, y: 0.330 } # T1 marker from the Wikimedia source, affine-transformed to map.svg
     sources:
     - title: Mugello Circuit — Wikipedia
       url: https://en.wikipedia.org/wiki/Mugello_Circuit
       accessed: 2026-05-28
+  - id: luco
+    number: "2"
+    name: Luco
+    description: >-
+      An uphill left that opens the fast Luco–Poggio Secco esses; little braking is needed after San Donato.
+    direction: left
+    position: { x: 0.173, y: 0.284 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: poggio-secco
+    number: "3"
+    name: Poggio Secco
+    description: >-
+      A fast right that completes the Luco–Poggio Secco sweep near the highest point of the circuit; usually taken with a late apex.
+    direction: right
+    position: { x: 0.248, y: 0.250 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: materassi
+    number: "4"
+    name: Materassi
+    description: >-
+      A fast, flowing left forming a left-right combination with Borgo San Lorenzo.
+    direction: left
+    position: { x: 0.480, y: 0.315 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: borgo-san-lorenzo
+    number: "5"
+    name: Borgo San Lorenzo
+    description: >-
+      A quick right exiting the Materassi combination onto the downhill run toward Casanova.
+    direction: right
+    position: { x: 0.552, y: 0.327 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: casanova
+    number: "6"
+    name: Casanova
+    description: >-
+      A sweeping downhill right that opens the very fast Casanova–Savelli S.
+    direction: right
+    position: { x: 0.723, y: 0.443 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: savelli
+    number: "7"
+    name: Savelli
+    description: >-
+      A faster downhill left completing the Casanova–Savelli sequence; a classic passing place.
+    direction: left
+    position: { x: 0.787, y: 0.521 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: arrabbiata-1
+    number: "8"
+    name: Arrabbiata 1
+    description: >-
+      A wide, very fast uphill right — the first of the two Arrabbiata sweepers, taken with minimal braking.
+    direction: right
+    position: { x: 0.938, y: 0.567 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
   - id: arrabbiata-2
     number: "9"
     name: Arrabbiata 2
@@ -65,11 +142,77 @@ layouts:
       Turn in as the inside kerb of Arrabbiata 1 disappears under the front wheel — the apex of Arrabbiata 2 is hidden behind the rise until commitment is irreversible.
     coaching: >-
       Treat the Arrabbiata pair as one corner: get the car settled and pointed through Arrabbiata 1, then carry the load through the brief straight and commit fully to Arrabbiata 2 before the apex is visible. Lifting mid-corner unsettles the rear; the trust to stay flat is what the corner asks for.
-    position: { x: 0.91, y: 0.78 } # T9 marker from the Wikimedia source, affine-transformed to map.svg
+    position: { x: 0.922, y: 0.777 } # T9 marker from the Wikimedia source, affine-transformed to map.svg
     sources:
     - title: Mugello Circuit — Wikipedia
       url: https://en.wikipedia.org/wiki/Mugello_Circuit
       accessed: 2026-05-28
+  - id: scarperia
+    number: "10"
+    name: Scarperia
+    description: >-
+      A tight downhill right that opens the Scarperia–Palagio combination after a hard downshift.
+    direction: right
+    position: { x: 0.687, y: 0.740 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: palagio
+    number: "11"
+    name: Palagio
+    description: >-
+      A left completing the Scarperia–Palagio combination, leading onto the closing section.
+    direction: left
+    position: { x: 0.626, y: 0.686 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: correntaio
+    number: "12"
+    name: Correntaio
+    description: >-
+      A long downhill right-hand hairpin that doubles back on itself before the fast Biondetti flicks.
+    direction: right
+    position: { x: 0.402, y: 0.587 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: biondetti-1
+    number: "13"
+    name: Biondetti 1
+    description: >-
+      The first, left-hand element of the fast Biondetti chicane, taken near full throttle.
+    direction: left
+    position: { x: 0.534, y: 0.577 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: biondetti-2
+    number: "14"
+    name: Biondetti 2
+    description: >-
+      The second, right-hand element of the Biondetti flicks, leading onto the short straight before the final corner.
+    direction: right
+    position: { x: 0.585, y: 0.614 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
+  - id: bucine
+    number: "15"
+    name: Bucine
+    description: >-
+      A long, downhill, increasing-radius left of roughly 180° onto the main straight — Mugello's defining final corner, where exit speed sets up the run to San Donato.
+    direction: left
+    position: { x: 0.858, y: 0.698 }
+    sources:
+    - title: Mugello track guide — McLaren F1
+      url: https://www.mclaren.com/racing/formula-1/2020/tuscan-grand-prix/mugello-track-guide/
+      accessed: 2026-05-29
   lap_records: []
     # Shape for when records are added (each entry REQUIRES sources):
     # - class: F1

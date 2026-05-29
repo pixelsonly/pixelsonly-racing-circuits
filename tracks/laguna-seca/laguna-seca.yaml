@@ -31,6 +31,90 @@ layouts:
   elevation_change_ft: 180
   map_svg: map.svg
   corners:
+  # Per-corner positions are the source map's numbered turn markers (map-source.svg),
+  # transformed into the map.svg viewBox via the same affine fit that produced map.svg
+  # (uniform scale s≈0.92070, translate ≈ (-669.88, -409.22)). Same basis for all 11.
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    description: >-
+      A fast right-hand kink at the crest of the uphill pit straight, taken nearly flat; the rise leaves the entry blind and the car light over the top.
+    direction: right
+    position: { x: 0.699, y: 0.938 }
+    sources:
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
+  - id: andretti-hairpin
+    number: "2"
+    name: Andretti Hairpin
+    description: >-
+      A tight, technical double-apex left-hand hairpin, renamed in honour of 1978 Formula 1 World Champion Mario Andretti.
+    direction: left
+    apex_type: double
+    position: { x: 0.833, y: 0.764 }
+    sources:
+    - title: Laguna Seca — Wikipedia
+      url: https://en.wikipedia.org/wiki/Laguna_Seca
+      accessed: 2026-05-29
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
+  - id: turn-3
+    number: "3"
+    name: Turn 3
+    description: >-
+      A quick left that opens the fast Turn 3–4–5 sequence; carrying speed through here sets up the run across the complex.
+    direction: left
+    position: { x: 0.555, y: 0.835 }
+    sources:
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
+  - id: turn-4
+    number: "4"
+    name: Turn 4
+    description: >-
+      A very fast right-hander taken with only a light lift or a brush of the brakes.
+    direction: right
+    position: { x: 0.508, y: 0.618 }
+    sources:
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
+  - id: turn-5
+    number: "5"
+    name: Turn 5
+    description: >-
+      A slightly uphill left-hander where the gradient and camber add grip on exit.
+    direction: left
+    position: { x: 0.915, y: 0.399 }
+    sources:
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
+  - id: turn-6
+    number: "6"
+    name: Turn 6
+    description: >-
+      The circuit's most technical corner — a blind right-hander over a crest that then dips, compressing the car as it reaches the apex.
+    direction: right
+    position: { x: 0.725, y: 0.097 }
+    sources:
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
+  - id: turn-7
+    number: "7"
+    name: Turn 7
+    description: >-
+      A left-hand kink on the climbing Rahal Straight that sets up the approach to the Corkscrew.
+    direction: left
+    position: { x: 0.358, y: 0.255 }
+    sources:
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
   - id: corkscrew
     number: "8-8A"
     name: The Corkscrew
@@ -49,11 +133,47 @@ layouts:
       Turn in blind as the track vanishes over the Turn 8 crest; the exit is hidden until the car is committed.
     coaching: >-
       Commit to the blind entry — the apex only reveals itself after turn-in. Prioritise getting the car rotated before the drop and sacrifice entry for a clean, settled exit onto the downhill; a tidy exit matters far more than carrying entry speed.
-    position: { x: 0.20, y: 0.15 } # apex of the Corkscrew on map.svg — picked from the Turn 8 marker in the Wikimedia source
+    position: { x: 0.294, y: 0.242 } # Turn 8 marker from map-source.svg, transformed into the map.svg viewBox (supersedes an earlier 0.20,0.15 hand-pick)
     sources:
     - title: Laguna Seca — Wikipedia
       url: https://en.wikipedia.org/wiki/Laguna_Seca
       accessed: 2026-05-27
+  - id: rainey-curve
+    number: "9"
+    name: Rainey Curve
+    description: >-
+      A fast, downhill left-hand curve immediately after the Corkscrew descent, named in honour of 500cc Grand Prix motorcycle World Champion Wayne Rainey; the car runs light over the drop.
+    direction: left
+    position: { x: 0.100, y: 0.399 }
+    sources:
+    - title: Laguna Seca — Wikipedia
+      url: https://en.wikipedia.org/wiki/Laguna_Seca
+      accessed: 2026-05-29
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
+  - id: turn-10
+    number: "10"
+    name: Turn 10
+    description: >-
+      A medium-speed right-hander on the descent toward the final corner, requiring a short brake on entry.
+    direction: right
+    position: { x: 0.184, y: 0.617 }
+    sources:
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
+  - id: turn-11
+    number: "11"
+    name: Turn 11
+    description: >-
+      A tight left-hand hairpin and the slowest corner on the track — a first-gear corner that leads onto the pit straight, making it a prime overtaking spot.
+    direction: left
+    position: { x: 0.079, y: 0.908 }
+    sources:
+    - title: Laguna Seca Track Guide — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/25/laguna-seca-track-guide/
+      accessed: 2026-05-29
   lap_records: []
     # Shape for when records are added (each entry REQUIRES sources):
     # - class: IMSA GTP

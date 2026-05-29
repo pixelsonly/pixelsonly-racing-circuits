@@ -29,6 +29,7 @@
     "build": "node scripts/build.mjs",
     "fetch-flag": "node scripts/fetch-flag.mjs",
     "fetch-map": "node scripts/fetch-map.mjs",
+    "positions": "node scripts/derive-corner-positions.mjs",
     "svgo": "svgo --config svgo.config.mjs -rf tracks",
     "prepack": "npm run build"
   },
