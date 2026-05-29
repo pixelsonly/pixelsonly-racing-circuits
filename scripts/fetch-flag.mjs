@@ -111,6 +111,13 @@ const svgo = spawnSync(
 );
 if (svgo.status !== 0) fail("SVGO optimization failed.");
 
+// 4b. Guarantee a viewBox. SVGO's removeViewBox:false only prevents removal —
+// it won't synthesize one when the source SVG sizes itself with width/height
+// alone. Without a viewBox, a consumer that CSS-scales the inline SVG (the apex
+// site sizes flags by height) draws the content 1:1 and shows a top-left crop.
+// Derive viewBox="0 0 <width> <height>" from the width/height attributes.
+await ensureViewBox(flagPath);
+
 // 5. Update LICENSE-ASSETS.md register.
 const today = new Date().toISOString().slice(0, 10);
 const noteParts = [];
@@ -171,6 +178,44 @@ async function sparqlFlag(isoAlpha2) {
     );
   }
   return flagValue;
+}
+
+/**
+ * Ensure the SVG at `path` carries a viewBox on its root <svg> element. If one
+ * is already present, leave the file untouched. Otherwise derive it from the
+ * width/height attributes (viewBox="0 0 <width> <height>"). Bare numeric and
+ * px-suffixed dimensions are supported; if either dimension is missing or
+ * non-numeric (e.g. a percentage), we warn and leave the file as-is rather than
+ * write a broken viewBox.
+ */
+async function ensureViewBox(path) {
+  const svg = await readFile(path, "utf8");
+  const openTag = svg.match(/<svg\b[^>]*>/i)?.[0];
+  if (!openTag) {
+    console.warn("  ⚠️  Could not find an <svg> tag to check for a viewBox.");
+    return;
+  }
+  if (/\bviewBox\s*=/i.test(openTag)) return;
+
+  const dim = (name) => {
+    const raw = openTag.match(new RegExp(`\\b${name}\\s*=\\s*["']([^"']+)["']`, "i"))?.[1];
+    const num = raw && Number.parseFloat(raw.replace(/px$/i, "").trim());
+    return Number.isFinite(num) && num > 0 ? num : null;
+  };
+  const width = dim("width");
+  const height = dim("height");
+  if (!width || !height) {
+    console.warn(
+      `  ⚠️  ${relative(path)} has no viewBox and no usable width/height to derive one. ` +
+        `Add a viewBox manually so consumers can scale it.`
+    );
+    return;
+  }
+
+  const viewBox = `viewBox="0 0 ${width} ${height}"`;
+  const patched = svg.replace(openTag, openTag.replace(/<svg\b/i, `<svg ${viewBox}`));
+  await writeFile(path, patched);
+  console.log(`  Added ${viewBox} to ${relative(path)} (derived from width/height)`);
 }
 
 function relative(p) {
