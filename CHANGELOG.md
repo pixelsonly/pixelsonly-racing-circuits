@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.4.1...pixelsonly-racing-circuits-v1.5.0) (2026-05-29)
+
+
+### New tracks & additive changes
+
+* add Spa-Francorchamps (spa) ([#14](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/14)) ([5b7a36b](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/5b7a36be77003cd2561a988744953f98603d704f))
+
 ## [1.4.1](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.4.0...pixelsonly-racing-circuits-v1.4.1) (2026-05-29)
 
 
