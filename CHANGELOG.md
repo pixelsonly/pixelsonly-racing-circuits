@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.6.1...pixelsonly-racing-circuits-v1.6.2) (2026-05-29)
+
+
+### Data corrections & fixes
+
+* add viewBox to Spa flag and guarantee one on fetch ([#23](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/23)) ([e7414f0](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/e7414f08350c41002093b8aacfb070ceedcba710))
+
 ## [1.6.1](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.6.0...pixelsonly-racing-circuits-v1.6.1) (2026-05-29)
 
 
