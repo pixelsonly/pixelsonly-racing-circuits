@@ -1,6 +1,6 @@
 {
   "name": "@pixelsonly/pixelsonly-racing-circuits",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Canonical motorsport circuit data, narrative, and visual assets behind pixelsonly.racing.",
   "author": "Pixelsonly Racing <hello@pixelsonly.racing>",
   "type": "module",
