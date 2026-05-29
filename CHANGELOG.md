@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.4.0...pixelsonly-racing-circuits-v1.4.1) (2026-05-29)
+
+
+### Data corrections & fixes
+
+* **ci:** pin svgo to align local + CI output ([#16](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/16)) ([9ffd152](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/9ffd1529f59481b1ca4e55903a6380c82b34b0f1))
+
 ## [1.4.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.3.0...pixelsonly-racing-circuits-v1.4.0) (2026-05-28)
 
 
