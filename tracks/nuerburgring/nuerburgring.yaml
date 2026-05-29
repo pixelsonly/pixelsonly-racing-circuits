@@ -1,0 +1,169 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: nuerburgring
+name: Nürburgring
+display_name: Nürburgring
+subtitle: Nordschleife + GP-Strecke
+country_code: DE
+country_name: Germany
+locality: Nürburg, Rhineland-Palatinate, Germany
+latitude: 50.3356 # circuit center per Wikipedia (50.33556°N)
+longitude: 6.9475 # 6.94750°E per Wikipedia
+year_opened: 1927
+
+primary_layout: combined-24h
+
+layouts:
+- id: combined-24h
+  name: 24-Hours Combined Circuit
+  current: true
+  years: 2002-present # GP-Strecke (without Mercedes-Arena) linked to the Nordschleife for the 24h race
+  direction: clockwise
+  turns: 170
+  length_km: 25.378
+  length_mi: 15.769
+  elevation_change_m: 300
+  elevation_change_ft: 1000
+  map_svg: map.svg
+  corners:
+  - id: flugplatz
+    name: Flugplatz
+    description: >-
+      A high-speed section on the Nordschleife named after a nearby airfield, with a series of crests that send cars momentarily airborne at speed.
+    direction: right
+    apex_type: geometric
+    landmark: >-
+      The crest is the brake — there is no traditional braking zone. Settle the car before the rise so the unload doesn't pitch the nose.
+    coaching: >-
+      A trust corner. The instinct is to lift over the crest; the line asks you not to. Keep the car straight, accept the brief float, and let the rear settle before any steering input on the way down.
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-28
+  - id: schwedenkreuz
+    name: Schwedenkreuz
+    description: >-
+      A very fast left-hand kink immediately after Flugplatz, taken flat in top gear with drivers committed for an extended period through the following downhill section.
+    direction: left
+    apex_type: geometric
+    landmark: >-
+      No braking marker — the corner is part of one continuous flat-out sequence with Flugplatz and Aremberg approach.
+    coaching: >-
+      Don't think of this as a corner; think of it as a steering input inside a long straight. Hesitation here costs more time than any single mistake elsewhere on the Nordschleife.
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-28
+  - id: bergwerk
+    name: Bergwerk
+    description: >-
+      A tight, slow right-hander deep in the Nordschleife, infamous as the corner where Niki Lauda crashed in 1976. The exit feeds the long uphill climb of the Kesselchen sequence.
+    story: |
+      Often called the most notorious corner on the Nordschleife, not because of
+      its geometry but because of what is at stake on the exit: any time lost
+      here compounds across the long uphill that follows. The 1976 incident
+      with Lauda elevated it from a tricky corner to one of motorsport's
+      historical landmarks.
+    direction: right
+    apex_type: late
+    landmark: >-
+      Brake hard with the car straight as the road dips away; the apex is later than the entry suggests because the corner opens uphill on exit.
+    coaching: >-
+      The exit matters more than the entry — a perfect late apex with full throttle as early as possible buys time across the next kilometre of uphill. Don't chase entry speed here.
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-28
+  - id: karussell
+    name: Karussell
+    signature: true
+    description: >-
+      A 210-degree banked left-hander where the inside lane drops into a concrete bowl, allowing the car to use the banking to rotate at low speed. One of the most recognisable corners in motorsport.
+    story: |
+      The most photographed corner on the Nordschleife. The trick is well known
+      but not easy — drop the inside wheels into the concrete trough and let
+      the banking do the work. Get it wrong and the car bounces back onto the
+      asphalt mid-corner, costing everything you came for.
+    direction: left
+    apex_type: geometric
+    landmark: >-
+      Commit early to the drop — the line aims well before the visual centreline of the corner, which is the lip of the banked concrete.
+    coaching: >-
+      Slow in, full throttle through. The banking carries the car around faster than the asphalt line ever could; trust it and don't try to steer out of the bowl until the corner releases you.
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-28
+  - id: pflanzgarten
+    name: Pflanzgarten
+    description: >-
+      A high-speed downhill section with two pronounced crests that launch the car off the surface, followed by a sequence of fast direction changes. Several fatal accidents have occurred here.
+    direction: right-left
+    apex_type: geometric
+    landmark: >-
+      The first jump is the reference — land straight or the car will be sideways for the next direction change.
+    coaching: >-
+      The car will get light. Plan the steering input for after it lands, not before. Anticipation kills more laps than commitment here.
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-28
+  lap_records: []
+    # Shape for when records are added (each entry REQUIRES sources):
+    # - class: GT3
+    #   time: "7:43.300"
+    #   driver: ""
+    #   team: ""
+    #   car: ""
+    #   year: 2024
+    #   record_type: qualifying
+    #   sources:
+    #     - title: ""
+    #       url: ""
+    #       accessed: "2026-05-28"
+
+editorial:
+  tagline: >-
+    A 25-kilometre, 170-turn fusion of the modern Grand Prix circuit and the Nordschleife — the configuration that hosts the 24 Hours of Nürburgring and remains the longest permanent road course in the world used in international competition.
+  narrative_md: nuerburgring.md
+  available_in:
+  - iRacing
+  - Assetto Corsa Competizione
+  - Automobilista 2
+  - rFactor 2
+
+commerce:
+  # shopify_product_url: https://shop.pixelsonly.racing/products/nuerburgring-poster
+  card_url: https://pixelsonly.racing/circuits/nuerburgring # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Circuit_Nürburgring-2002-vs-1927.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Circuit_N%C3%BCrburgring-2002-vs-1927.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Pitlane02
+    attribution_text: Track map derived from "Circuit_Nürburgring-2002-vs-1927.svg" by Pitlane02, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-05-29
+
+sources:
+- title: Nürburgring — Wikipedia
+  url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+  accessed: 2026-05-28
+- title: Nürburgring (official)
+  url: https://www.nuerburgring.de/en/
+  accessed: 2026-05-28
+
+status: draft
