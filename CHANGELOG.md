@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.5.0...pixelsonly-racing-circuits-v1.6.0) (2026-05-29)
+
+
+### New tracks & additive changes
+
+* add Nürburgring (nuerburgring) ([#15](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/15)) ([40bc079](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/40bc07923ec57ddd9d4937fd0fa27262be29fac3))
+
 ## [1.5.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.4.1...pixelsonly-racing-circuits-v1.5.0) (2026-05-29)
 
 
