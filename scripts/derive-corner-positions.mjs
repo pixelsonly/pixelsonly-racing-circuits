@@ -136,7 +136,6 @@ if (srcAnchors.length === mapAnchors.length) {
   }
 }
 
-const affineMatrix = [s, 0, 0, s, tx, ty];
 const trackSelf = selfMatrix.get(trackPathNode); // d-values render through this
 const invTrack = invert(trackSelf);
 
