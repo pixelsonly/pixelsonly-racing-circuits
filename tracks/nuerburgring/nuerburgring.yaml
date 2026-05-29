@@ -31,6 +31,22 @@ layouts:
   elevation_change_ft: 1000
   map_svg: map.svg
   corners:
+  # Named/notable corners only — the 24h combined circuit has ~170 turns, so this is
+  # a curated set of recognisable Nordschleife (and GP) corners, not every turn.
+  # No numbered turn markers exist on the source map, so positions stay pending.
+  - id: hatzenbach
+    name: Hatzenbach
+    description: >-
+      A tight, flowing sequence of alternating left and right corners that opens the Nordschleife after the link from the GP circuit.
+    direction: left-right
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-29
+    - title: Nürburgring Nordschleife corners — nring.info
+      url: https://nring.info/nurburgring-nordschleife-corners/
+      accessed: 2026-05-29
   - id: flugplatz
     name: Flugplatz
     description: >-
@@ -61,6 +77,65 @@ layouts:
     - title: Nürburgring — Wikipedia
       url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
       accessed: 2026-05-28
+  - id: aremberg
+    name: Aremberg
+    description: >-
+      A downhill right-hand bend that tightens at the exit, ending the high-speed run before the Fuchsröhre plunge.
+    direction: right
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Schwedenkreuz and Aremberg — Nordschleife-BridgeToGantry
+      url: https://www.nordschleife-btg.net/racing-line/schwedenkreuz-and-aremberg/
+      accessed: 2026-05-29
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-29
+  - id: fuchsroehre
+    name: Fuchsröhre
+    description: >-
+      The "Fox Hole" — a steep downhill plunge into a sharp compression and climb, weaving left then right with almost no run-off; one of the fastest and most committed sections of the lap.
+    direction: left-right
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Fuchsröhre and Adenauer Forst — Nordschleife-BridgeToGantry
+      url: https://www.nordschleife-btg.net/racing-line/fuchsroehre-and-adenauer-forst/
+      accessed: 2026-05-29
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-29
+  - id: adenauer-forst
+    name: Adenauer Forst
+    description: >-
+      A slow right into a left-right sequence in the forest; an abrupt line change that catches many drivers out.
+    direction: right-left
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Fuchsröhre and Adenauer Forst — Nordschleife-BridgeToGantry
+      url: https://www.nordschleife-btg.net/racing-line/fuchsroehre-and-adenauer-forst/
+      accessed: 2026-05-29
+    - title: Nürburgring Nordschleife corners — nring.info
+      url: https://nring.info/nurburgring-nordschleife-corners/
+      accessed: 2026-05-29
+  - id: kallenhard
+    name: Kallenhard
+    description: >-
+      A tight downhill right-hander following the fast Metzgesfeld lefts.
+    direction: right
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring Nordschleife corners — nring.info
+      url: https://nring.info/nurburgring-nordschleife-corners/
+      accessed: 2026-05-29
+  - id: wehrseifen
+    name: Wehrseifen
+    description: >-
+      A slow, technical right-left around the Adenau bridge at Breidscheid — among the slowest points on the lap.
+    direction: right-left
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring Nordschleife corners — nring.info
+      url: https://nring.info/nurburgring-nordschleife-corners/
+      accessed: 2026-05-29
   - id: bergwerk
     name: Bergwerk
     description: >-
@@ -103,6 +178,32 @@ layouts:
     - title: Nürburgring — Wikipedia
       url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
       accessed: 2026-05-28
+  - id: hohe-acht
+    name: Hohe Acht
+    description: >-
+      A right-hander shortly after the Karussell at the track's highest point, roughly 300 m above the valley floor at Breidscheid.
+    direction: right
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-29
+    - title: Nürburgring Nordschleife corners — nring.info
+      url: https://nring.info/nurburgring-nordschleife-corners/
+      accessed: 2026-05-29
+  - id: bruennchen
+    name: Brünnchen
+    description: >-
+      A famous pair of right-handers, the second blind and uphill; the best-known spectator and incident spot on tourist days.
+    direction: right
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-29
+    - title: Nürburgring Nordschleife corners — nring.info
+      url: https://nring.info/nurburgring-nordschleife-corners/
+      accessed: 2026-05-29
   - id: pflanzgarten
     name: Pflanzgarten
     description: >-
@@ -118,6 +219,29 @@ layouts:
     - title: Nürburgring — Wikipedia
       url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
       accessed: 2026-05-28
+  - id: schwalbenschwanz
+    name: Schwalbenschwanz
+    description: >-
+      The "swallowtail" esses leading into the Kleines Karussell, a smaller, faster banked left version of the main Karussell.
+    direction: left-right
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring — Wikipedia
+      url: https://en.wikipedia.org/wiki/N%C3%BCrburgring
+      accessed: 2026-05-29
+    - title: Nürburgring Nordschleife corners — nring.info
+      url: https://nring.info/nurburgring-nordschleife-corners/
+      accessed: 2026-05-29
+  - id: galgenkopf
+    name: Galgenkopf
+    description: >-
+      The long final right-hander that feeds onto the Döttinger Höhe straight, the highest-speed stretch of the lap.
+    direction: right
+    # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
+    sources:
+    - title: Nürburgring Nordschleife corners — nring.info
+      url: https://nring.info/nurburgring-nordschleife-corners/
+      accessed: 2026-05-29
   lap_records: []
     # Shape for when records are added (each entry REQUIRES sources):
     # - class: GT3
