@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.6.0...pixelsonly-racing-circuits-v1.6.1) (2026-05-29)
+
+
+### Data corrections & fixes
+
+* **ci:** pass span_km=80 to satellite capture dispatch ([#21](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/21)) ([1d43ead](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/1d43eadb2c21792e4b88b273f40ea06a3d90719a))
+
 ## [1.6.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.5.0...pixelsonly-racing-circuits-v1.6.0) (2026-05-29)
 
 
