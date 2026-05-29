@@ -1,0 +1,91 @@
+name: Dispatch satellite capture for new tracks
+
+# When a new track folder lands on main, trigger the Sentinel-2 capture workflow
+# in the private companion repo pixelsonly/pixelsonly-racing-track-captures,
+# passing slug + lat + lon pulled straight from the merged YAML.
+#
+# Why this trigger (vs PR-open or release-please tag):
+#   - Single source of truth: only YAML that actually merged is captured.
+#   - No wasted Copernicus quota on PRs that never land.
+#   - Edits to existing tracks (data corrections) do NOT re-fire — only
+#     newly-added tracks/<slug>/<slug>.yaml entries trigger a dispatch.
+#
+# What it does NOT do:
+#   - Re-capture on coord edits — manually re-run capture.yml in the
+#     captures repo if a coordinate fix needs a fresh master.
+#   - Touch the stylization or the satellite.webp return path — that step
+#     intentionally stays manual (operational/artistic IP).
+#
+# Auth: requires a fine-grained PAT scoped to the captures repo with
+# Actions: read/write, stored as the CAPTURES_DISPATCH_TOKEN secret.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tracks/**/*.yaml"
+
+permissions:
+  contents: read
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Find newly-added track YAMLs
+        id: find
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          # Brand-new branch pushes report an all-zero `before` SHA; nothing to diff.
+          if [[ "$BEFORE" =~ ^0+$ ]]; then
+            echo "First push to branch; skipping." >&2
+            echo "tracks=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          added=$(git diff --name-only --diff-filter=A "$BEFORE" "$AFTER" -- 'tracks/*/*.yaml' || true)
+          # Keep only canonical track YAMLs where filename matches the parent folder.
+          canonical=$(echo "$added" | awk -F/ 'NF==3 && $3 == $2".yaml"')
+          if [[ -z "$canonical" ]]; then
+            echo "No newly-added canonical track YAMLs in this push." >&2
+            echo "tracks=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Newly-added tracks:" >&2
+          echo "$canonical" >&2
+          {
+            echo "tracks<<EOF"
+            echo "$canonical"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Dispatch capture for each new track
+        if: steps.find.outputs.tracks != ''
+        env:
+          GH_TOKEN: ${{ secrets.CAPTURES_DISPATCH_TOKEN }}
+          TRACKS: ${{ steps.find.outputs.tracks }}
+        run: |
+          set -euo pipefail
+          while IFS= read -r yaml; do
+            [[ -z "$yaml" ]] && continue
+            slug=$(yq -r '.slug' "$yaml")
+            lat=$(yq -r '.latitude' "$yaml")
+            lon=$(yq -r '.longitude' "$yaml")
+            if [[ -z "$slug" || -z "$lat" || -z "$lon" \
+                  || "$slug" == "null" || "$lat" == "null" || "$lon" == "null" ]]; then
+              echo "::error file=$yaml::missing slug/latitude/longitude — skipping dispatch."
+              continue
+            fi
+            echo "Dispatching capture for $slug (lat=$lat lon=$lon)"
+            gh workflow run capture.yml \
+              -R pixelsonly/pixelsonly-racing-track-captures \
+              -f slug="$slug" \
+              -f lat="$lat" \
+              -f lon="$lon"
+          done <<< "$TRACKS"
