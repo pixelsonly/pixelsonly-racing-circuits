@@ -83,9 +83,14 @@ jobs:
               continue
             fi
             echo "Dispatching capture for $slug (lat=$lat lon=$lon)"
+            # span_km=80 forces the captures workflow over the 2500-px tiling
+            # threshold, producing an ~8000x8000 master sized for stylization.
+            # The captures repo defaults to span_km=4 (a 400-px thumbnail),
+            # which is fine for manual smoke tests but useless as a master.
             gh workflow run capture.yml \
               -R pixelsonly/pixelsonly-racing-track-captures \
               -f slug="$slug" \
               -f lat="$lat" \
-              -f lon="$lon"
+              -f lon="$lon" \
+              -f span_km=80
           done <<< "$TRACKS"
