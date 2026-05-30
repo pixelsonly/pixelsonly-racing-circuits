@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.6.3...pixelsonly-racing-circuits-v1.7.0) (2026-05-30)
+
+
+### New tracks & additive changes
+
+* enrich per-corner data (Laguna Seca, Mugello, Spa) + position deriver ([#27](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/27)) ([f12c0eb](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/f12c0eb0727cb9cbf28e0050d1b255f0003f45ab))
+
 ## [1.6.3](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.6.2...pixelsonly-racing-circuits-v1.6.3) (2026-05-29)
 
 
