@@ -1,0 +1,51 @@
+name: Lint PR title
+
+# Guards the release pipeline. Because PRs are squash-merged, the PR title becomes
+# the commit subject on main — and that subject is what release-please parses to
+# compute the next version and write the CHANGELOG.
+#
+# release-please IGNORES commits whose type it does not recognize: a typo'd or
+# unlisted prefix (e.g. `content:` instead of `data:`) produces NO version bump and
+# NO changelog entry, so the change ships to main but never makes it into a release.
+# That failure is silent. This check makes it loud — a bad prefix fails CI here,
+# before merge, instead of quietly dropping a release.
+#
+# Keep `types` below in sync with release-please-config.json `changelog-sections`
+# (feat/fix/data/schema/docs/assets/chore) plus the standard Conventional Commits
+# types used for non-releasing maintenance (ci/build/perf/refactor/revert/style/test).
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
+
+permissions:
+  pull-requests: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Recognized release-please types first, then standard non-releasing types.
+          types: |
+            feat
+            fix
+            data
+            schema
+            assets
+            docs
+            chore
+            ci
+            build
+            perf
+            refactor
+            revert
+            style
+            test

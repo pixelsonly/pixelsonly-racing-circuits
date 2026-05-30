@@ -18,10 +18,12 @@ name: Release
 # So releases are deliberate (one per merged release PR), not one-per-merge — which
 # is what SemVer requires.
 #
-# Note: the default GITHUB_TOKEN is fine for creating the release PR and releasing,
-# but PRs it opens do NOT trigger other workflows (so `validate` won't re-run on the
-# release PR itself — that PR only bumps version + changelog). If you ever want CI to
-# run on the release PR, swap `token:` for a PAT stored as a secret.
+# Note: we use a PAT (secrets.RELEASE_PLEASE_TOKEN) rather than the default
+# GITHUB_TOKEN so the release PR it opens DOES trigger other workflows — in
+# particular the required `pr-title` lint, which would otherwise sit pending forever
+# on the bot's PR and block the merge. (GITHUB_TOKEN-authored events don't trigger
+# workflow runs, by design.) The PAT needs contents:write + pull-requests:write.
+# The publish job below keeps using GITHUB_TOKEN — that's all it needs.
 
 on:
   push:
@@ -41,7 +43,7 @@ jobs:
       - uses: googleapis/release-please-action@v4
         id: rp
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
 
   publish:
     needs: release-please
