@@ -13,7 +13,7 @@ progressively reshaped through the twentieth century, and in 1984 a
 modern Grand Prix circuit (the GP-Strecke) was added alongside it. Since
 2002 the two have been joined for the 24 Hours of Nürburgring on a
 combined layout that links the GP-Strecke (without the Mercedes-Arena
-section) to the full Nordschleife — 25.378 km (15.769 mi) over roughly
+section) to the full Nordschleife: 25.378 km (15.769 mi) over roughly
 170 corners, with more than 300 m (1,000 ft) of elevation change between
 its lowest and highest points. It is the configuration that defines the
 circuit's modern identity.
@@ -38,7 +38,7 @@ Mercedes-Arena, and feeds into the Nordschleife via a purpose-built
 connecting road. After the full Nordschleife loop the lap rejoins the
 GP-Strecke for the run back to the start-finish line. The result is the
 longest permanent road course used in international competition, and the
-canvas for the 24 Hours of Nürburgring — one of the three legs of the
+canvas for the 24 Hours of Nürburgring, one of the three legs of the
 unofficial Triple Crown of endurance racing alongside Le Mans and Daytona.
 
 <!-- Expand with the original 1927 layout history, the 1976 Lauda incident,

@@ -97,7 +97,7 @@ layouts:
     number: "6"
     name: Turn 6
     description: >-
-      The circuit's most technical corner — a blind right-hander over a crest that then dips, compressing the car as it reaches the apex.
+      The circuit's most technical corner: a blind right-hander over a crest that then dips, compressing the car as it reaches the apex.
     direction: right
     position: { x: 0.725, y: 0.097 }
     sources:
@@ -132,7 +132,7 @@ layouts:
     landmark: >-
       Turn in blind as the track vanishes over the Turn 8 crest; the exit is hidden until the car is committed.
     coaching: >-
-      Commit to the blind entry — the apex only reveals itself after turn-in. Prioritise getting the car rotated before the drop and sacrifice entry for a clean, settled exit onto the downhill; a tidy exit matters far more than carrying entry speed.
+      Commit to the blind entry: the apex only reveals itself after turn-in. Prioritise getting the car rotated before the drop and sacrifice entry for a clean, settled exit onto the downhill; a tidy exit matters far more than carrying entry speed.
     position: { x: 0.294, y: 0.242 } # Turn 8 marker from map-source.svg, transformed into the map.svg viewBox (supersedes an earlier 0.20,0.15 hand-pick)
     sources:
     - title: Laguna Seca — Wikipedia
@@ -167,7 +167,7 @@ layouts:
     number: "11"
     name: Turn 11
     description: >-
-      A tight left-hand hairpin and the slowest corner on the track — a first-gear corner that leads onto the pit straight, making it a prime overtaking spot.
+      A tight left-hand hairpin and the slowest corner on the track: a first-gear corner that leads onto the pit straight, making it a prime overtaking spot.
     direction: left
     position: { x: 0.079, y: 0.908 }
     sources:

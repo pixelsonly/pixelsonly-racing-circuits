@@ -40,9 +40,9 @@ layouts:
     direction: right
     apex_type: late
     landmark: >-
-      Brake on the 100 m board past the start-finish bridge — the corner crests slightly into the braking zone, hiding the apex until the car is settled.
+      Brake on the 100 m board past the start-finish bridge. The corner crests slightly into the braking zone, hiding the apex until the car is settled.
     coaching: >-
-      Threshold-brake in a straight line; the corner is long enough that an early apex compromises both mid-corner stability and the exit onto Luco. Aim for a late apex and roll a little entry speed off rather than trail-braking deep — the surface drops away on exit.
+      Threshold-brake in a straight line; the corner is long enough that an early apex compromises both mid-corner stability and the exit onto Luco. Aim for a late apex and roll a little entry speed off rather than trail-braking deep: the surface drops away on exit.
     position: { x: 0.077, y: 0.330 } # T1 marker from the Wikimedia source, affine-transformed to map.svg
     sources:
     - title: Mugello Circuit — Wikipedia
@@ -118,7 +118,7 @@ layouts:
     number: "8"
     name: Arrabbiata 1
     description: >-
-      A wide, very fast uphill right — the first of the two Arrabbiata sweepers, taken with minimal braking.
+      A wide, very fast uphill right, the first of the two Arrabbiata sweepers, taken with minimal braking.
     direction: right
     position: { x: 0.938, y: 0.567 }
     sources:
@@ -139,7 +139,7 @@ layouts:
     direction: right
     apex_type: geometric
     landmark: >-
-      Turn in as the inside kerb of Arrabbiata 1 disappears under the front wheel — the apex of Arrabbiata 2 is hidden behind the rise until commitment is irreversible.
+      Turn in as the inside kerb of Arrabbiata 1 disappears under the front wheel. The apex of Arrabbiata 2 is hidden behind the rise until commitment is irreversible.
     coaching: >-
       Treat the Arrabbiata pair as one corner: get the car settled and pointed through Arrabbiata 1, then carry the load through the brief straight and commit fully to Arrabbiata 2 before the apex is visible. Lifting mid-corner unsettles the rear; the trust to stay flat is what the corner asks for.
     position: { x: 0.922, y: 0.777 } # T9 marker from the Wikimedia source, affine-transformed to map.svg
@@ -206,7 +206,7 @@ layouts:
     number: "15"
     name: Bucine
     description: >-
-      A long, downhill, increasing-radius left of roughly 180° onto the main straight — Mugello's defining final corner, where exit speed sets up the run to San Donato.
+      A long, downhill, increasing-radius left of roughly 180° onto the main straight, Mugello's defining final corner, where exit speed sets up the run to San Donato.
     direction: left
     position: { x: 0.858, y: 0.698 }
     sources:
