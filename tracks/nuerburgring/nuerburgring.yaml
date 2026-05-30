@@ -54,7 +54,7 @@ layouts:
     direction: right
     apex_type: geometric
     landmark: >-
-      The crest is the brake — there is no traditional braking zone. Settle the car before the rise so the unload doesn't pitch the nose.
+      The crest is the brake. There is no traditional braking zone. Settle the car before the rise so the unload doesn't pitch the nose.
     coaching: >-
       A trust corner. The instinct is to lift over the crest; the line asks you not to. Keep the car straight, accept the brief float, and let the rear settle before any steering input on the way down.
     # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
@@ -69,7 +69,7 @@ layouts:
     direction: left
     apex_type: geometric
     landmark: >-
-      No braking marker — the corner is part of one continuous flat-out sequence with Flugplatz and Aremberg approach.
+      No braking marker: the corner is part of one continuous flat-out sequence with Flugplatz and Aremberg approach.
     coaching: >-
       Don't think of this as a corner; think of it as a steering input inside a long straight. Hesitation here costs more time than any single mistake elsewhere on the Nordschleife.
     # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
@@ -93,7 +93,7 @@ layouts:
   - id: fuchsroehre
     name: Fuchsröhre
     description: >-
-      The "Fox Hole" — a steep downhill plunge into a sharp compression and climb, weaving left then right with almost no run-off; one of the fastest and most committed sections of the lap.
+      The "Fox Hole": a steep downhill plunge into a sharp compression and climb, weaving left then right with almost no run-off; one of the fastest and most committed sections of the lap.
     direction: left-right
     # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
     sources:
@@ -129,7 +129,7 @@ layouts:
   - id: wehrseifen
     name: Wehrseifen
     description: >-
-      A slow, technical right-left around the Adenau bridge at Breidscheid — among the slowest points on the lap.
+      A slow, technical right-left around the Adenau bridge at Breidscheid, among the slowest points on the lap.
     direction: right-left
     # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
     sources:
@@ -151,7 +151,7 @@ layouts:
     landmark: >-
       Brake hard with the car straight as the road dips away; the apex is later than the entry suggests because the corner opens uphill on exit.
     coaching: >-
-      The exit matters more than the entry — a perfect late apex with full throttle as early as possible buys time across the next kilometre of uphill. Don't chase entry speed here.
+      The exit matters more than the entry. A perfect late apex with full throttle as early as possible buys time across the next kilometre of uphill. Don't chase entry speed here.
     # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
     sources:
     - title: Nürburgring — Wikipedia
@@ -164,13 +164,13 @@ layouts:
       A 210-degree banked left-hander where the inside lane drops into a concrete bowl, allowing the car to use the banking to rotate at low speed. One of the most recognisable corners in motorsport.
     story: |
       The most photographed corner on the Nordschleife. The trick is well known
-      but not easy — drop the inside wheels into the concrete trough and let
+      but not easy. Drop the inside wheels into the concrete trough and let
       the banking do the work. Get it wrong and the car bounces back onto the
       asphalt mid-corner, costing everything you came for.
     direction: left
     apex_type: geometric
     landmark: >-
-      Commit early to the drop — the line aims well before the visual centreline of the corner, which is the lip of the banked concrete.
+      Commit early to the drop: the line aims well before the visual centreline of the corner, which is the lip of the banked concrete.
     coaching: >-
       Slow in, full throttle through. The banking carries the car around faster than the asphalt line ever could; trust it and don't try to steer out of the bowl until the corner releases you.
     # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
@@ -211,7 +211,7 @@ layouts:
     direction: right-left
     apex_type: geometric
     landmark: >-
-      The first jump is the reference — land straight or the car will be sideways for the next direction change.
+      The first jump is the reference: land straight or the car will be sideways for the next direction change.
     coaching: >-
       The car will get light. Plan the steering input for after it lands, not before. Anticipation kills more laps than commitment here.
     # position: pending — fill once map.svg viewBox is finalized (intake step 5C)
@@ -258,7 +258,7 @@ layouts:
 
 editorial:
   tagline: >-
-    A 25-kilometre, 170-turn fusion of the modern Grand Prix circuit and the Nordschleife — the configuration that hosts the 24 Hours of Nürburgring and remains the longest permanent road course in the world used in international competition.
+    A 25-kilometre, 170-turn fusion of the modern Grand Prix circuit and the Nordschleife, the configuration that hosts the 24 Hours of Nürburgring and remains the longest permanent road course in the world used in international competition.
   narrative_md: nuerburgring.md
   available_in:
   - iRacing

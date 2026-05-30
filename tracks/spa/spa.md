@@ -8,8 +8,8 @@
 The Circuit de Spa-Francorchamps opened in August 1921, running on public
 roads through the Ardennes between the villages of Francorchamps, Malmedy,
 and Stavelot. The original 14.9 km road course has been progressively
-shortened — most decisively in 1979, when the modern permanent circuit
-replaced the public-road sections — but the layout retains the elevation,
+shortened, most decisively in 1979, when the modern permanent circuit
+replaced the public-road sections. But the layout retains the elevation,
 the forest setting, and the high-speed character of the original. The
 current Grand Prix configuration runs 7.004 km (4.352 mi) over nineteen
 turns, clockwise, with roughly 102 m (335 ft) of elevation change across
@@ -17,19 +17,19 @@ the lap.
 
 ## Eau Rouge and Raidillon
 
-The corner sequence that defines the circuit — and, by reputation, the
+The corner sequence that defines the circuit and, by reputation, the
 sport. The car drops downhill toward the bridge over the Eau Rouge stream,
 flicks left at the base, then climbs roughly 40 m (130 ft) through a
 right-left-right sequence that crests blind. In a modern Formula 1 car the
 complex is taken flat in top gear at over 300 km/h (186 mph). The 2022
 redevelopment expanded the run-off area at the top of Raidillon following
-a series of high-speed incidents, but did not alter the geometry — the
+a series of high-speed incidents, but did not alter the geometry. The
 corner still asks the same question it has asked for a hundred years.
 
 ## The middle sector
 
 After Raidillon the lap settles into a long, fast run through the Ardennes
-forest. Pouhon — a double-apex downhill left-hander — is the technical
+forest. Pouhon, a double-apex downhill left-hander, is the technical
 heart of the middle sector: the second apex tightens on entry, and the
 line through both is one long arc rather than two distinct turn-ins. The
 sequence from Fagnes through Stavelot rewards momentum over outright

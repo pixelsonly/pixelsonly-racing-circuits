@@ -41,7 +41,7 @@ layouts:
     landmark: >-
       Brake at the 100 m board past the pit exit; the corner tightens through the apex so a geometric line will run wide onto the kerb.
     coaching: >-
-      Resist the urge to dive — La Source rewards a late apex that opens the exit onto the long downhill toward Eau Rouge, where small exit losses compound across the entire run to Les Combes. Patience here is paid back twice on the next straight.
+      Resist the urge to dive. La Source rewards a late apex that opens the exit onto the long downhill toward Eau Rouge, where small exit losses compound across the entire run to Les Combes. Patience here is paid back twice on the next straight.
     position: { x: 0.235, y: 0.732 } # source marker T1 (scripts/derive-corner-positions.mjs)
     sources:
     - title: Circuit de Spa-Francorchamps — Wikipedia
@@ -56,7 +56,7 @@ layouts:
     story: |
       The most famous corner sequence in motorsport. The compression at the
       base loads the car to roughly 4 g, and the crest hides the next apex
-      until the car is already committed — a test of nerve as much as of
+      until the car is already committed, a test of nerve as much as of
       machinery. The 2022 redevelopment expanded run-off here after a series
       of high-speed incidents through the 2010s and early 2020s.
     direction: left-right
@@ -66,7 +66,7 @@ layouts:
     landmark: >-
       Aim for the right-hand kerb at the base of the climb; the second apex (Raidillon) is over the crest and cannot be seen until the car has already turned in.
     coaching: >-
-      Commit fully or not at all — a mid-corner lift unsettles the rear at the worst possible moment, when the compression is highest and the car is on the steepest part of the climb. The line is a long, single arc through the complex, not three discrete turn-ins. Trust the load.
+      Commit fully or not at all. A mid-corner lift unsettles the rear at the worst possible moment, when the compression is highest and the car is on the steepest part of the climb. The line is a long, single arc through the complex, not three discrete turn-ins. Trust the load.
     position: { x: 0.164, y: 0.448 } # source marker T3 / Raidillon (scripts/derive-corner-positions.mjs)
     sources:
     - title: Circuit de Spa-Francorchamps — Wikipedia
@@ -135,7 +135,7 @@ layouts:
     landmark: >-
       Turn in at the first apex with the steering held; the second apex appears as the car settles, requiring a small steering correction without a lift.
     coaching: >-
-      Treat the two apices as one long sweeper — too much wheel at the first apex scrubs the speed needed to carry the second. Brake-release timing matters more than the brake pedal here.
+      Treat the two apices as one long sweeper: too much wheel at the first apex scrubs the speed needed to carry the second. Brake-release timing matters more than the brake pedal here.
     position: { x: 0.945, y: 0.285 } # source marker T10 (scripts/derive-corner-positions.mjs)
     sources:
     - title: Circuit de Spa-Francorchamps — Wikipedia
@@ -177,9 +177,9 @@ layouts:
     direction: left
     apex_type: geometric
     landmark: >-
-      The braking marker on the right kerb sets the turn-in — the corner is faster than it looks, and lifting unsettles the rear into the bus-stop chicane that follows.
+      The braking marker on the right kerb sets the turn-in. The corner is faster than it looks, and lifting unsettles the rear into the bus-stop chicane that follows.
     coaching: >-
-      One of the great commitment corners — a sustained high-speed load through a long arc, with minimal margin for error. Settle the car early and ride the throttle through.
+      One of the great commitment corners: a sustained high-speed load through a long arc, with minimal margin for error. Settle the car early and ride the throttle through.
     position: { x: 0.666, y: 0.576 } # source marker T17 (scripts/derive-corner-positions.mjs)
     sources:
     - title: Circuit de Spa-Francorchamps — Wikipedia
@@ -189,7 +189,7 @@ layouts:
     number: "18-19"
     name: Bus Stop Chicane
     description: >-
-      The slow right-left chicane before the start-finish line — the final braking zone and primary overtaking point completing the lap.
+      The slow right-left chicane before the start-finish line, the final braking zone and primary overtaking point completing the lap.
     direction: chicane
     position: { x: 0.507, y: 0.518 } # source marker T18 (scripts/derive-corner-positions.mjs)
     sources:
@@ -215,7 +215,7 @@ layouts:
 
 editorial:
   tagline: >-
-    Seven kilometres of Ardennes forest road, defined by the blind, flat-out commitment of Eau Rouge and Raidillon — the most famous corner sequence in motorsport.
+    Seven kilometres of Ardennes forest road, defined by the blind, flat-out commitment of Eau Rouge and Raidillon, the most famous corner sequence in motorsport.
   narrative_md: spa.md
   available_in:
   - iRacing

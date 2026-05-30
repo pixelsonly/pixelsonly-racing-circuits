@@ -20,7 +20,7 @@ most recognized for worldwide.
 
 ## Notable moments
 
-- **1996** — Alex Zanardi's last-lap pass around the outside of Bryan Herta
+- **1996**: Alex Zanardi's last-lap pass around the outside of Bryan Herta
   through the Corkscrew, one of the most replayed overtakes in American
   open-wheel racing.
 
