@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.7.0...pixelsonly-racing-circuits-v1.7.1) (2026-05-30)
+
+
+### Data corrections & fixes
+
+* promote all circuits to verified ([#30](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/30)) ([6d18911](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/6d1891148e57454120bf3fcc8f7779b0276461e1)), closes [#29](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/29)
+
 ## [1.7.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.6.3...pixelsonly-racing-circuits-v1.7.0) (2026-05-30)
 
 
