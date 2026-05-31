@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.3](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.7.2...pixelsonly-racing-circuits-v1.7.3) (2026-05-31)
+
+
+### Documentation
+
+* add AGENTS.md and CLAUDE.md agent-context files ([c66be96](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/c66be96a9bd364e6523403af327f51a0097e8693))
+* add AGENTS.md and CLAUDE.md agent-context files ([#36](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/36)) ([b96b061](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/b96b06105f25340aea4e43359b1f7ee45ad1e64b))
+
 ## [1.7.2](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.7.1...pixelsonly-racing-circuits-v1.7.2) (2026-05-30)
 
 
