@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.7.3...pixelsonly-racing-circuits-v1.8.0) (2026-06-07)
+
+
+### New tracks & additive changes
+
+* add Road America (Full Course) ([#39](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/39)) ([e4e5429](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/e4e5429e75d0b929e60ea3c46044237b23f57f39))
+
 ## [1.7.3](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.7.2...pixelsonly-racing-circuits-v1.7.3) (2026-05-31)
 
 
