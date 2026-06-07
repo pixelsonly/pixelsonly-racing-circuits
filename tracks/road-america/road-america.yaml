@@ -1,0 +1,244 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: road-america
+name: Road America
+display_name: Road America
+subtitle: Elkhart Lake
+country_code: US
+country_name: United States
+locality: Elkhart Lake, Wisconsin, USA
+latitude: 43.7975 # circuit center (43°47′51″N) — confirm against an authoritative source during intake
+longitude: -87.99389 # 87°59′38″W
+year_opened: 1955
+designer: Clif Tufte
+owner: Road America, Inc.
+
+primary_layout: full-course
+
+layouts:
+- id: full-course
+  name: Full Course
+  current: true
+  years: 1955-present # original configuration, essentially unchanged since opening
+  direction: clockwise
+  turns: 14
+  length_km: 6.515
+  length_mi: 4.048
+  elevation_change_m: 46
+  elevation_change_ft: 150
+  map_svg: map.svg
+  corners:
+  # Per-corner positions are the source map's numbered turn markers (map-source.svg),
+  # transformed into the map.svg viewBox via the same affine that produced map.svg
+  # (uniform scale s≈0.70875, translate ≈ (968.91, -527.78)); derived with
+  # scripts/derive-corner-positions.mjs at 0.00px residual. Same basis for all 14.
+  # Handedness cross-checked against the map geometry (the marker loop) and the
+  # NASCAR turn-by-turn; the two agree on the left-hand T5/T6/T8 section.
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    description: >-
+      A fast right-hander at the end of the long start/finish straight, approached downhill under heavy braking; one of the circuit's prime overtaking spots.
+    direction: right
+    position: { x: 0.109, y: 0.779 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: turn-2
+    number: "2"
+    name: Turn 2
+    description: >-
+      A quick right-hand kink, more a flick than a corner, bridging Turn 1 and the braking zone for Turn 3.
+    direction: right
+    position: { x: 0.089, y: 0.679 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: turn-3
+    number: "3"
+    name: Turn 3
+    description: >-
+      A tighter right-hander taken after a short burst of speed, leading onto the run down to the Moraine Sweep.
+    direction: right
+    position: { x: 0.085, y: 0.559 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: moraine-sweep
+    number: "4"
+    name: Moraine Sweep
+    description: >-
+      A fast right-hand sweep that barely scrubs speed, carrying momentum down the straight toward the Turn 5 braking zone.
+    direction: right
+    position: { x: 0.303, y: 0.589 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: turn-5
+    number: "5"
+    name: Turn 5
+    description: >-
+      A heavy braking zone into the first left-hander of the lap, dropping to first gear at one of the slowest points on the circuit.
+    direction: left
+    position: { x: 0.708, y: 0.657 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: turn-6
+    number: "6"
+    name: Turn 6
+    description: >-
+      A left-hander taken up a short uphill chute out of Turn 5.
+    direction: left
+    position: { x: 0.705, y: 0.532 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: turn-7
+    number: "7"
+    name: Turn 7
+    description: >-
+      A right-hander following Turn 6 that opens onto the descent toward the Carousel.
+    direction: right
+    position: { x: 0.605, y: 0.472 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: hurry-downs
+    number: "8"
+    name: Hurry Downs
+    description: >-
+      A quick downhill left that feeds the long, sweeping Carousel.
+    direction: left
+    position: { x: 0.427, y: 0.343 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: carousel-entry
+    number: "9"
+    name: The Carousel
+    description: >-
+      The entry to the Carousel, a long right-hand sweep held in second gear with the throttle feathered to carry speed without running wide.
+    direction: right
+    position: { x: 0.322, y: 0.346 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: carousel-exit
+    number: "10"
+    name: The Carousel
+    description: >-
+      The exit of the long right-hand Carousel, releasing the cars up the chute toward The Kink.
+    direction: right
+    position: { x: 0.294, y: 0.254 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: the-kink
+    number: "11"
+    name: The Kink
+    signature: true
+    description: >-
+      A flat-out, blind right-hand kink on the back stretch — taken at near top speed with no run-off to spare, it is the circuit's signature corner and one of the most committing in North American road racing.
+    story: |
+      The Kink's combination of speed and minimal margin has made it the corner
+      Road America is best known for; a temporary chicane has at times been added
+      ahead of it to slow motorcycles and certain car classes.
+    direction: right
+    position: { x: 0.517, y: 0.210 }
+    sources:
+    - title: Road America — Wikipedia
+      url: https://en.wikipedia.org/wiki/Road_America
+      accessed: 2026-06-07
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: canada-corner
+    number: "12"
+    name: Canada Corner
+    description: >-
+      A heavy-braking right-hander at the end of the back stretch, downshifting several gears; a classic late-braking overtaking spot.
+    direction: right
+    position: { x: 0.918, y: 0.461 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: bill-mitchell-bend
+    number: "13"
+    name: Bill Mitchell Bend
+    description: >-
+      A left-hander climbing out of the Thunder Valley dip toward the final corner, held in gear up the rise.
+    direction: left
+    position: { x: 0.895, y: 0.632 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  - id: turn-14
+    number: "14"
+    name: Turn 14
+    description: >-
+      The final right-hander, releasing the cars onto the long start/finish straight; a clean exit sets up the run to Turn 1.
+    direction: right
+    position: { x: 0.861, y: 0.781 }
+    sources:
+    - title: Road America turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2021/07/01/road-america-turn-by-turn-analysis/
+      accessed: 2026-06-07
+  lap_records: []
+
+editorial:
+  tagline: >-
+    America's National Park of Speed — a 4-mile parkland circuit through the Wisconsin kettle moraine, unchanged since 1955 and defined by the flat-out plunge of The Kink.
+  narrative_md: road-america.md
+  available_in:
+  - iRacing
+  - Assetto Corsa Competizione
+  - Gran Turismo 7
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/road-america # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/road-america/road-america.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Road_America.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Road_America.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Road_America.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-06-07
+
+sources:
+- title: Road America — Wikipedia
+  url: https://en.wikipedia.org/wiki/Road_America
+  accessed: 2026-06-07
+- title: Road America — RacingCircuits.info
+  url: https://www.racingcircuits.info/north-america/usa/road-america.html
+  accessed: 2026-06-07
+- title: Road America Track Guide — Grid Lounge
+  url: https://gridlounge.co/pit-notes/road-america-track-guide-history-corners-and-sim-racing-tips
+  accessed: 2026-06-07
+
+status: verified
