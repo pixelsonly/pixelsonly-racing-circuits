@@ -58,7 +58,7 @@
  * comment; both degrade gracefully if the record or fields are missing.
  */
 
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -252,12 +252,20 @@ const svgText = readFileSync(srcPath, "utf8");
 const { paths, circles } = scanSvg(svgText);
 if (!paths.length) fail(`No <path> elements found in ${srcPath}`);
 
+// loop-based extents: sampled point arrays can exceed the spread-argument limit
+function extent(pts) {
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (const [x, y] of pts) {
+    if (x < x0) x0 = x; if (x > x1) x1 = x;
+    if (y < y0) y0 = y; if (y > y1) y1 = y;
+  }
+  return [x0, y0, x1, y1];
+}
+
 const candidates = paths
   .map((p, idx) => {
     const subs = samplePath(p.d, p.ctm);
-    const all = subs.flatMap((s) => s.pts);
-    const xs = all.map((q) => q[0]), ys = all.map((q) => q[1]);
-    const bbox = [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)];
+    const bbox = extent(subs.flatMap((s) => s.pts));
     return { idx, subs, bbox, area: (bbox[2] - bbox[0]) * (bbox[3] - bbox[1]), dlen: p.d.length };
   })
   .sort((a, b) => b.area - a.area);
@@ -274,9 +282,7 @@ console.log(`Using candidate [${pathIdx}] (path#${band.idx}); override with --pa
 if (arcWarn) console.log("⚠️  Source contains arc commands; approximated by chords — inspect the output.\n");
 
 // rasterize (even-odd) — scanline crossings per row
-const allPts = band.subs.flatMap((s) => s.pts);
-const minX = Math.min(...allPts.map((p) => p[0])), maxX = Math.max(...allPts.map((p) => p[0]));
-const minY = Math.min(...allPts.map((p) => p[1])), maxY = Math.max(...allPts.map((p) => p[1]));
+const [minX, minY, maxX, maxY] = extent(band.subs.flatMap((s) => s.pts));
 const W = Math.ceil((maxX - minX) / PX) + 4, H = Math.ceil((maxY - minY) / PX) + 4;
 const toPx = ([x, y]) => [(x - minX) / PX + 2, (y - minY) / PX + 2];
 const toSrc = ([px, py]) => [(px - 2) * PX + minX, (py - 2) * PX + minY];
@@ -519,8 +525,7 @@ const simp = dp(line.slice(0, half + 1), EPS).slice(0, -1).concat(dp(line.slice(
 console.log(`Simplified: ${N} -> ${simp.length} pts (eps ${EPS}u)`);
 
 // affine fit
-const sx2 = simp.map((p) => p[0]), sy2 = simp.map((p) => p[1]);
-const bx0 = Math.min(...sx2), bx1 = Math.max(...sx2), by0 = Math.min(...sy2), by1 = Math.max(...sy2);
+const [bx0, by0, bx1, by1] = extent(simp);
 const s = (1000 - 2 * MARGIN) / Math.max(bx1 - bx0, by1 - by0);
 const tx = (1000 - (bx1 - bx0) * s) / 2 - bx0 * s;
 const ty = (1000 - (by1 - by0) * s) / 2 - by0 * s;
