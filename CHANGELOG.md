@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.8.0...pixelsonly-racing-circuits-v1.9.0) (2026-06-10)
+
+
+### New tracks & additive changes
+
+* add Daytona International Speedway (Road Course) ([#54](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/54)) ([549f601](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/549f601e2aa0134e555dcc89a961e4c3709aae4e))
+
 ## [1.8.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.7.3...pixelsonly-racing-circuits-v1.8.0) (2026-06-07)
 
 
