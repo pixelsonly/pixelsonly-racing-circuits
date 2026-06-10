@@ -1,0 +1,10 @@
+<!--Daytona International Speedway Road Course, traced single-line outline.
+     Derived from File:Daytona_International_Speedway_Road_Course_2024.svg by
+     Stl66dmk on Wikimedia Commons (CC BY-SA 4.0). The source draws the track as
+     a filled band; its racing-line centerline was extracted programmatically
+     (raster skeleton of the band, pit road excluded) and affine-fit to the
+     normalized 0 0 1000 1000 viewBox. License is recorded in LICENSE-ASSETS.md.
+     To re-fetch the source, see scripts/fetch-map.mjs.-->
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Daytona International Speedway track map" role="img" viewBox="0 0 1000 1000">
+  <path fill="none" stroke="#1f1f21" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" d="m352 681.3 3.5 5.6 2.4 1.8 23.2 9.3 31.6 10.6 32.1 7.8 27.3 4 24.7 1.1 24.4-.5 19.9-2.1 21.7-3.9 25-6.4 25.1-8.3 29.8-11.6 6.7-8.1 12.7-4.5 21.5-10.6 17.7-20 10.8-16.9 2.6-10.2-1.8-9.6-4-6.9-9.8-9.1-12.5-6.3-8.9-2.9-39.1-6.4-6.9-2.8-16.7-10.8-6.2-2.8-9.8-1.7-25.8.9-81.7-2.4-14-2.7-5.4-3.8-3.5-4.3-2.2-6.2-.1-6.3 2.5-5.6 4.2-5 11.7-5.3 19.4-4.3 32.1-4.1 28.2-1 135.2.5 20.9-3 15.7-6.9 23.4-16.9 23.1-20.4 35.3-34.2 9-7 9.6-4.7 7.9-2.5 7.8-.8 5.9.8 5.3 2.9 3.3 3.7 4.7 13.1v10.2l-2.1 7.2-3.2 6-105.9 104.2-9.5 10.6-4.3 9.2-.6 4.3 2.5 6.3 4.1 5.1 8.5 7 28.6 14 13.6 2.6 17.5-3 9.4-3.3 24.6-12.3 18.4-11.4 51.4-49.9 12.8-24.8 7.5-23.1 5.2-31.6-1.1-31.2-3.5-18.4-4.1-14.7-5.5-14-9.3-17.5-58.2-58.5-24.3-11.9-27.7-8.7-31.6-5-40.4-2.5h-298l-15.6 1.7-6.8 2.2-5.8 10.3-9.7 9.9-5.9 1.6-32.6 3-8.8-2.7-16.8-13.8-14.2-7.2-50.6-4.5-22.9-.5-35.4 2-34.8 5-27.5 8.3-24.8 11.7-4.4 2.7-15.7 14.6-38.5 39.6-10.9 20.8-9.7 27.6-2.8 14.6-2.1 21.8 2.5 32.1 7 26.6 7.7 18.7 5.8 11.1 4.1 6.6 5.8 6.2 42.6 40.6 26.6 16 28.9 13.5 62.3 24.8Z"/>
+</svg>
