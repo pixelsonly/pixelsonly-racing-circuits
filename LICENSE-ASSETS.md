@@ -23,6 +23,7 @@ this table automatically.
 
 | Track / map | Source | License | Notes |
 |---|---|---|---|
+| `daytona/map.svg` | [Daytona_International_Speedway_Road_Course_2024.svg](https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg) | CC BY-SA 4.0 | Artist: Stl66dmk. Source committed (SVGO-optimized) as `daytona/map-source.svg`. Fetched 2026-06-10 from Wikimedia Commons. |
 | `road-america/map.svg` | [Road_America.svg](https://commons.wikimedia.org/wiki/File:Road_America.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `road-america/map-source.svg`. Fetched 2026-06-07 from Wikimedia Commons. |
 | `nuerburgring/map.svg` | [Circuit_Nürburgring-2002-vs-1927.svg](https://commons.wikimedia.org/wiki/File:Circuit_N%C3%BCrburgring-2002-vs-1927.svg) | CC BY-SA 3.0 | Artist: Pitlane02. Source committed (SVGO-optimized) as `nuerburgring/map-source.svg`. Fetched 2026-05-29 from Wikimedia Commons. |
 | `spa/map.svg` | [Spa-Francorchamps_of_Belgium.svg](https://commons.wikimedia.org/wiki/File:Spa-Francorchamps_of_Belgium.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `spa/map-source.svg`. Fetched 2026-05-29 from Wikimedia Commons. |
@@ -53,3 +54,4 @@ flag you add:
 | `spa/flag.svg` | [Flag of Belgium.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Belgium.svg) | Public domain | Artist: Dbenbenn and others. Fetched 2026-05-29 from Wikimedia Commons via Wikidata P41. |
 | `nuerburgring/flag.svg` | [Flag of Germany.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Germany.svg) | Public domain | Artist: User:SKopp, User:Madden, and other users. Fetched 2026-05-29 from Wikimedia Commons via Wikidata P41. |
 | `road-america/flag.svg` | [Flag of the United States (DDD-F-416E specifications).svg](https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(DDD-F-416E_specifications).svg) | Public domain | Artist: Vector file created by Dbenbenn, Zscout370, Jacobolus, Indolences, and Technion. Fetched 2026-06-07 from Wikimedia Commons via Wikidata P41. |
+| `daytona/flag.svg` | [Flag of the United States (DDD-F-416E specifications).svg](https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(DDD-F-416E_specifications).svg) | Public domain | Fetched 2026-06-10 from Wikimedia Commons via Wikidata P41. |

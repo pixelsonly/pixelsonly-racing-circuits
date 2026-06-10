@@ -1,0 +1,289 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: daytona
+name: Daytona International Speedway
+display_name: Daytona
+subtitle: Daytona Beach
+country_code: US
+country_name: United States
+locality: Daytona Beach, Florida, USA
+latitude: 29.18556 # circuit center (29°11′08″N), per the Wikipedia geohack entry
+longitude: -81.06944 # 81°04′10″W — western hemisphere, negative
+year_opened: 1959
+designer: Charles Moneypenny # track engineer; conceived and commissioned by NASCAR founder Bill France Sr.
+owner: NASCAR # operator since opening in 1959; outright owner since the 2019 ISC merger
+
+primary_layout: road-course
+
+layouts:
+- id: road-course
+  name: Road Course
+  current: true
+  years: 1985-present # the 3.56-mile sports-car configuration dates to the 1985 infield revisions; the backstretch chicane was widened in 2003 and lost its third leg in 2010
+  direction: anticlockwise # run counterclockwise, the same direction as the NASCAR oval
+  turns: 12
+  length_km: 5.729
+  length_mi: 3.56
+  map_svg: map.svg
+  corners:
+  # Turn numbering and corner names follow the official 24-hour road course map as
+  # mirrored by the 2024 Commons SVG named in issue #41 (Rodríguez International
+  # Horseshoe, Dogleg, West Horseshoe, Le Mans Chicane). The source draws the track
+  # as a filled band, so map.svg's centerline was extracted programmatically (raster
+  # skeleton, pit road excluded) and per-corner positions are the source's numbered
+  # marker circles projected onto that centerline under the same affine — they sit on
+  # the line by construction and trace the lap in turn order. Handedness was computed
+  # from signed curvature along the extracted centerline, calibrated on the four
+  # banked NASCAR corners (left by definition), and cross-checked against NASCAR's
+  # turn-by-turn analysis; the geometry settled Turn 2 as a right-hand kink.
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    description: >-
+      A heavy braking zone at the end of the frontstretch where the cars peel off the tri-oval into the infield through an ever-tightening left-hander; the prime overtaking spot on the road course.
+    direction: left
+    position: { x: 0.709, y: 0.635 }
+    sources:
+    - title: Daytona Road Course turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2020/08/12/daytona-road-course-turn-by-turn-analysis/
+      accessed: 2026-06-10
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: turn-2
+    number: "2"
+    name: Turn 2
+    description: >-
+      A gentle right-hand kink on the run out of Turn 1, lining the cars up for the braking zone into the Rodríguez International Horseshoe.
+    direction: right
+    position: { x: 0.647, y: 0.579 }
+    sources:
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: international-horseshoe
+    number: "3"
+    name: Rodríguez International Horseshoe
+    signature: true
+    description: >-
+      The infield's defining corner — a long 180-degree right-hand hairpin, reprofiled in the 1985 infield revisions and one of the clearest passing opportunities on the road course.
+    story: |
+      Known for decades simply as the International Horseshoe, the hairpin now
+      also carries the name of Mexican sports-car great Pedro Rodríguez, a
+      Daytona favorite of speedway founder Bill France Sr.
+    direction: right
+    position: { x: 0.466, y: 0.537 }
+    sources:
+    - title: Daytona International Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Daytona_International_Speedway
+      accessed: 2026-06-10
+    - title: Daytona — RacingCircuits.info
+      url: https://www.racingcircuits.info/north-america/usa/daytona.html
+      accessed: 2026-06-10
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: dogleg
+    number: "4"
+    name: Dogleg
+    description: >-
+      A fast left-hand kink on the exit of the International Horseshoe, bending the infield straight toward the West Horseshoe braking zone.
+    direction: left
+    position: { x: 0.727, y: 0.504 }
+    sources:
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: west-horseshoe
+    number: "5"
+    name: West Horseshoe
+    description: >-
+      The second infield hairpin, a 180-degree right-hander that wraps the cars back around alongside the oval's first banked turn.
+    direction: right
+    position: { x: 0.863, y: 0.417 }
+    sources:
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: turn-6
+    number: "6"
+    name: Turn 6
+    description: >-
+      The last infield corner, a left-hander that releases the cars onto the oval's 31-degree banking; the speed carried out of here is held flat all the way around to the backstretch.
+    direction: left
+    position: { x: 0.757, y: 0.565 }
+    sources:
+    - title: Daytona Road Course turn-by-turn analysis — NASCAR
+      url: https://www.nascar.com/news-media/2020/08/12/daytona-road-course-turn-by-turn-analysis/
+      accessed: 2026-06-10
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: turn-7
+    number: "7"
+    name: Turn 7
+    description: >-
+      The first stretch of 31-degree superspeedway banking — the NASCAR oval's Turn 1 — a flat-out banked left-hand sweep.
+    direction: left
+    position: { x: 0.922, y: 0.543 }
+    sources:
+    - title: Daytona International Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Daytona_International_Speedway
+      accessed: 2026-06-10
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: turn-8
+    number: "8"
+    name: Turn 8
+    description: >-
+      The continuation of the banking through the NASCAR oval's Turn 2, slinging the cars onto the long backstretch toward the Le Mans Chicane.
+    direction: left
+    position: { x: 0.919, y: 0.357 }
+    sources:
+    - title: Daytona International Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Daytona_International_Speedway
+      accessed: 2026-06-10
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: le-mans-chicane-entry
+    number: "9"
+    name: Le Mans Chicane
+    signature: true
+    description: >-
+      The entry of the backstretch chicane — a hard braking zone reached at near-maximum speed, flicking left-right off the straight; known for decades as the Bus Stop.
+    story: |
+      Added to tame backstretch speeds and reworked repeatedly — widened in
+      2003, its third leg removed in 2010 — the Bus Stop was renamed the
+      Le Mans Chicane in January 2022 in a reciprocal gesture with Circuit de
+      la Sarthe, whose first chicane on the Mulsanne Straight became the
+      Daytona Chicane.
+    direction: left-right
+    position: { x: 0.443, y: 0.279 }
+    sources:
+    - title: Chicanes at Daytona, Le Mans Renamed in Symbol of Unity — IMSA
+      url: https://www.imsa.com/news/2022/01/28/chicanes-at-daytona-le-mans-renamed-in-symbol-of-unity/
+      accessed: 2026-06-10
+    - title: Daytona International Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Daytona_International_Speedway
+      accessed: 2026-06-10
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: le-mans-chicane-exit
+    number: "10"
+    name: Le Mans Chicane
+    description: >-
+      The right-left exit of the chicane, rejoining the backstretch for the short run to the banking of the NASCAR oval's Turn 3.
+    direction: right-left
+    position: { x: 0.355, y: 0.300 }
+    sources:
+    - title: Chicanes at Daytona, Le Mans Renamed in Symbol of Unity — IMSA
+      url: https://www.imsa.com/news/2022/01/28/chicanes-at-daytona-le-mans-renamed-in-symbol-of-unity/
+      accessed: 2026-06-10
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: turn-11
+    number: "11"
+    name: Turn 11
+    description: >-
+      Back onto the 31-degree banking through the NASCAR oval's Turn 3, taken flat-out.
+    direction: left
+    position: { x: 0.081, y: 0.356 }
+    sources:
+    - title: Daytona International Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Daytona_International_Speedway
+      accessed: 2026-06-10
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  - id: turn-12
+    number: "12"
+    name: Turn 12
+    description: >-
+      The final sweep of banking through the NASCAR oval's Turn 4, releasing the field onto the frontstretch and through the 18-degree tri-oval to complete the lap.
+    direction: left
+    position: { x: 0.079, y: 0.545 }
+    sources:
+    - title: Daytona International Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Daytona_International_Speedway
+      accessed: 2026-06-10
+    - title: Daytona International Speedway Road Course 2024 map — Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+      accessed: 2026-06-10
+  lap_records:
+  - class: GTP
+    time: "1:32.656"
+    driver: Pipo Derani
+    car: Cadillac V-Series.R
+    year: 2024
+    record_type: qualifying # outright track record, set in qualifying for the 2024 Rolex 24 At Daytona
+    sources:
+    - title: Daytona International Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Daytona_International_Speedway
+      accessed: 2026-06-10
+  - class: DPi
+    time: "1:33.724"
+    driver: Álex Palou
+    car: Cadillac DPi-V.R
+    year: 2022
+    record_type: race # fastest race lap, set in the closing hours of the 2022 Rolex 24 At Daytona
+    sources:
+    - title: Daytona International Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Daytona_International_Speedway
+      accessed: 2026-06-10
+    - title: Cadillac DPi-V.R posts podium finish in 60th Rolex 24 At Daytona — SpeedwayMedia
+      url: https://speedwaymedia.com/2022/01/30/cadillac-dpi-v-r-posts-podium-finish-in-60th-rolex-24-at-daytona/
+      accessed: 2026-06-10
+
+editorial:
+  tagline: >-
+    The World Center of Racing — a 3.56-mile road course that threads a tight infield through Daytona's 31-degree superspeedway banking, home of the Rolex 24, America's round-the-clock endurance classic.
+  narrative_md: daytona.md
+  available_in:
+  - iRacing
+  - Gran Turismo 7
+  - Automobilista 2
+  - rFactor 2
+  - Forza Motorsport
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/daytona # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/daytona/daytona.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Daytona_International_Speedway_Road_Course_2024.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Daytona_International_Speedway_Road_Course_2024.svg
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    artist: Stl66dmk
+    attribution_text: Track map derived from "Daytona_International_Speedway_Road_Course_2024.svg" by Stl66dmk, CC BY-SA 4.0, via Wikimedia Commons.
+    accessed: 2026-06-10
+
+sources:
+- title: Daytona International Speedway — Wikipedia
+  url: https://en.wikipedia.org/wiki/Daytona_International_Speedway
+  accessed: 2026-06-10
+- title: Daytona International Speedway — Official Site
+  url: https://www.daytonainternationalspeedway.com/
+  accessed: 2026-06-10
+- title: Daytona — RacingCircuits.info
+  url: https://www.racingcircuits.info/north-america/usa/daytona.html
+  accessed: 2026-06-10
+- title: Daytona Road Course turn-by-turn analysis — NASCAR
+  url: https://www.nascar.com/news-media/2020/08/12/daytona-road-course-turn-by-turn-analysis/
+  accessed: 2026-06-10
+
+status: verified
