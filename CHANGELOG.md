@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.10.0...pixelsonly-racing-circuits-v1.11.0) (2026-06-11)
+
+
+### New tracks & additive changes
+
+* add Watkins Glen International (Long Course) ([#59](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/59)) ([8397d82](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/8397d8232168245d3f0064eded7ce9689a4e396a))
+
 ## [1.10.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.9.0...pixelsonly-racing-circuits-v1.10.0) (2026-06-11)
 
 
