@@ -1,0 +1,175 @@
+<!--Created with Inkscape (http://www.inkscape.org/)-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg2" width="1294.489" height="1004.946" viewBox="0 0 1213.583 942.137">
+  <defs id="defs4">
+    <pattern xlink:href="#pattern4256" id="pattern4264" patternTransform="translate(-1395.34 -962.454)scale(-.77603)"/>
+    <pattern id="pattern4256" width="10.794" height="10.774" patternTransform="rotate(223.488 978.448 137.465)scale(.77603)" patternUnits="userSpaceOnUse">
+      <g id="g4248" transform="rotate(.594 69171.93 -57749.58)scale(.588)">
+        <path id="rect4250" d="M1025.535 1215.281h18.173v18.096h-18.173z" style="stroke-width:.5;stroke-linecap:round;stroke-linejoin:round"/>
+        <path id="rect4252" d="M1025.535 1215.281h9.075v9.075h-9.075z" style="fill:#fff;stroke-width:.5;stroke-linecap:round;stroke-linejoin:round"/>
+        <path id="rect4254" d="M1034.641 1224.344h9.075v9.075h-9.075z" style="fill:#fff;stroke-width:.5;stroke-linecap:round;stroke-linejoin:round"/>
+      </g>
+    </pattern>
+    <filter id="filter5277" width="1.073" height="1.333" x="-.037" y="-.167" style="color-interpolation-filters:sRGB">
+      <feGaussianBlur id="feGaussianBlur5279" stdDeviation="4.59"/>
+    </filter>
+  </defs>
+  <g id="layer1" transform="translate(250.005 -195.315)">
+    <use xlink:href="#path4147" id="use6213" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:20;filter:url(#filter5277)"/>
+    <use xlink:href="#path4185" id="use5176" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+    <use xlink:href="#path4179" id="use5158" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:20;filter:url(#filter5277)"/>
+    <path id="path4157" d="m764.464 474.1-9.75 6.438 11.125 9.5zm-105.75 6.75 16.5 17.75 8.25-16.75zM765.9 584.32l-7.601 10.075-17.5 6.541 18.119 17.944zm187.104 269.868L772.32 1039.573c-9.382 9.627-25.043 12.03-38.486 12.045l-825.266.88c-16.35.019-31.142-37.897-31.142-37.897l-25.56 55.82-1.47 28.79 9.108 17.63 19.098 9.107 958.353-2.057 20.86-8.226 17.038-19.096 6.758-37.312 8.227-45.54 71.978-68.745-1.468-81.381c-.072-3.976-7.344-9.403-7.344-9.403" style="color:#000;overflow:visible;color-interpolation-filters:linearRGB;fill:#e6e6e6;enable-background:accumulate"/>
+    <path id="path4147" d="M624.543 924.112c59.228-.29 101.874-47.347 88.726-118.105L680.952 632.08c-2.76-14.848-1.988-30.147-2.35-45.244l-1.763-73.449c-.575-23.953-12.44-33.493-35.843-33.493H620.43c-11.582.001-23.492-4.414-32.905-11.163l-31.142-22.329c-27.085-19.42-65.68-18.038-79.324 18.803l-5.876 15.865C423.88 608.789 294.851 679.605 173.864 680.263l-324.348 1.763c-10.817.059-22.936-7.289-27.617-17.04-4.008-8.352-.912-18.375 5.876-24.679l8.227-7.639c6.766-6.283 10.484-59.705 28.204-76.974l69.335-67.572c14.365-14 48.302-25.04 74.036-33.492l80.5-26.442c28.436-9.34 53.573-28.665 74.623-49.945l161.586-163.349c18-18.197 36.216-5.59 49.358 11.164l23.503 29.967c9.857 12.567 52.185 35.683 79.586 36.45 36.402 1.02 97.865-29.399 97.865-29.399l28.792-17.627c9.174-5.617 20.974-5.95 31.73-5.876l85.2.587c31.89.22 45.584 14.538 45.832 44.657l2.35 286.155c.08 9.629-.09 19.431-2.35 28.792l-4.113 17.04c-3.284 13.603-.831 28.864 4.7 41.718l41.72 96.952c4.616 10.73 11.662 20.588 19.977 28.792l88.138 86.963c13.232 13.055 21.63 53.095 6.464 71.685l-18.216 22.329c-7.334 8.99-11.02 20.873-12.927 32.317l-14.102 84.612c-4.444 26.667-25.173 41.69-45.831 41.72l-825.56 1.174c-19.015.027-38.495-7.29-54.058-18.215l-61.11-42.894c-16.076-11.284-18.073-40.547-9.401-58.17l18.216-37.019c14.741-29.958 78.768-41.51 121.63-41.719z" style="color:#000;overflow:visible;color-interpolation-filters:linearRGB;fill:none;enable-background:accumulate"/>
+    <path id="path4179" d="m6.402 1124.859-126.338.415c-11.302.037-23.744-9.444-27.422-20.13-4.813-13.986-2.692-30.625 3.532-44.042l25.659-55.316m271.15-618.156c17.61-15.954 45.196-31.982 71.23-31.904l248.75.75c10.855.033 20.642-5.612 25.75-18.75l3.5-9c10.775-27.705 37.476-49.47 65.63-62.462m180.204 214.552c12.66.08 19.402-10.232 19.499-26.335m-126.55 25.414 55.52.125m-19.677 33.368c-.19-12.506.709-33.66 19.678-33.368l51.53.796c9.795.152 19.866 14.017 19.888 21.611m-37.161 98.938 21.25-5.113c10.386-2.5 16.58-16.942 16.462-27.4m-89.782 24.84c.067 12.343 7.895 16.957 20.077 14.944m-17.723 24.032c-1.592-10.248 7.903-21.8 17.723-24.032l31.993-7.27c12.942-2.942 29.978 15.256 29.788 27.729" style="color:#000;overflow:visible;color-interpolation-filters:linearRGB;fill:none;enable-background:accumulate"/>
+    <path id="path4185" d="M-67.382 946.72c18.387-7.724 46.423-8.503 69.923-9.402 25.378-.97 50.697 3.918 76.093 3.82l556.541-2.145c79.69-.307 97.618-53.372 81.982-131.102" style="color:#000;overflow:visible;color-interpolation-filters:linearRGB;fill:none;enable-background:accumulate"/>
+    <g id="g3227-9" clip-path="none" transform="translate(-1240.462 -894.876)">
+      <use xlink:href="#path2423-8" id="use4312-4" width="744.094" height="1052.362" x="0" y="0" style="stroke:#fff;stroke-width:9.99994469;stroke-linecap:round;filter:url(#filter5277)"/>
+      <path id="path2423-8" d="M1460.949 1465.094v9.593m-88.937-15.062v15.062m-89.063-9.593v9.593m-88.656-19v19h356v-19" style="fill:none"/>
+      <use xlink:href="#text2441-2" id="use2445-8" width="744.094" height="1052.362" x="0" y="0" style="stroke:#fff;stroke-width:9.99994469;filter:url(#filter5277)"/>
+      <text xml:space="preserve" id="text2441-2" x="1372.107" y="1447.795" style="font-size:20px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan2443-4" x="1372.107" y="1447.795">1150 ft (351 m)</tspan></text>
+      <use xlink:href="#path2423-8" id="use4437" width="744.094" height="1052.362" x="0" y="0" style="stroke:#000"/>
+    </g>
+    <g id="g3804-6" clip-path="none" transform="translate(-4122.361 -1023.836)scale(1.95554)">
+      <g id="g5301-2" transform="rotate(4.5 2327.53 1066.073)">
+        <use xlink:href="#path2745-1" id="use4353" width="483.634" height="533.563" x="0" y="0" style="fill:#fff;stroke:#fff;stroke-width:10.22736168;stroke-miterlimit:20;filter:url(#filter5277)"/>
+        <path id="path2745-1" d="m2163.653 919.976 15.45 52.54-11.765-10.42-9.777 12.306z"/>
+        <use xlink:href="#path2745-1" id="use4863" width="483.634" height="533.563" x="0" y="0" style="fill:red;stroke:red;stroke-miterlimit:20"/>
+      </g>
+      <g id="g5296-1" transform="translate(17.387 -12.509)">
+        <use xlink:href="#text3180-2" id="use4296-4" width="744.094" height="1052.362" x="0" y="0" style="stroke:#fff;stroke-width:7.67056322;filter:url(#filter5277)"/>
+        <text xml:space="preserve" id="text3180-2" x="2073.466" y="967.811" style="font-size:64px;font-family:&quot;Times New Roman&quot;"><tspan id="tspan3182-3" x="2073.466" y="967.811">N</tspan></text>
+      </g>
+    </g>
+    <g id="g5281-5" clip-path="none" transform="translate(876.034 329.867)">
+      <use xlink:href="#text5269-1" id="use5275-5" width="744.094" height="1052.362" x="0" y="0" style="stroke:#fff;stroke-width:9.99994469;filter:url(#filter5277)"/>
+      <text xml:space="preserve" id="text5269-1" x="-429.145" y="445.246" style="color:#000;font-size:32px;line-height:100%;font-family:&quot;Times New Roman&quot;;-inkscape-font-specification:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle;overflow:visible;enable-background:accumulate"><tspan id="tspan5271-7" x="-429.145" y="445.246">Length of black layout:</tspan><tspan id="tspan5273-1" x="-429.145" y="477.246">3.6486 mi (5.8718 km)</tspan></text>
+    </g>
+    <g id="g16029" transform="translate(-1081.217 -531.98)">
+      <circle id="path16031" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(-100.004 -517.647)scale(1.28197)"/>
+      <text xml:space="preserve" id="text16033" x="1416.883" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan16035" x="1416.883" y="808.945">10</tspan></text>
+    </g>
+    <g id="g15963" clip-path="none" transform="translate(-754.449 79.346)">
+      <circle id="path15965" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(76.132 -365.995)scale(1.13333)"/>
+      <text xml:space="preserve" id="text15967" x="1419.084" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan15969" x="1419.084" y="808.945">1</tspan></text>
+    </g>
+    <g id="g6765" transform="translate(-635.275 162.875)">
+      <use xlink:href="#text6750" id="use6763" width="744.094" height="1052.362" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+      <text xml:space="preserve" id="text6750" x="613.367" y="95.186" style="font-size:40px;line-height:100%;font-family:&quot;Times New Roman&quot;;-inkscape-font-specification:&quot;Times New Roman,&quot;;text-align:center;letter-spacing:0;word-spacing:0;text-anchor:middle"><tspan id="tspan6752" x="613.367" y="95.186">Accurate as of</tspan><tspan id="tspan6754" x="613.367" y="135.186">March 25th, 2015</tspan></text>
+    </g>
+    <a xlink:actuate="onRequest" xlink:href="http://wlps-ge-stuff.ucoz.com" xlink:show="new" xlink:title="Visit the site" xlink:type="simple" id="a2045" transform="translate(207.33 432.687)">
+      <g id="g8575" transform="translate(-148.057 -336.061)"><use xlink:href="#text8555" id="use8573" width="1416.262" height="890.143" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+<path id="use8569" d="M368.024 917.918h217.132" style="fill:none;stroke:navy"/>
+<text xml:space="preserve" id="text8555" x="385.401" y="880.771" style="font-size:18px;line-height:100%;font-family:&quot;Times New Roman&quot;;-inkscape-font-specification:&quot;Times New Roman&quot;;text-align:start;letter-spacing:0;word-spacing:0" transform="translate(-333.997 35.762)"><tspan id="tspan8557" x="385.401" y="880.771">KMZ and other data by the image author at <tspan id="tspan8559" style="fill:navy">http://wlps-ge-stuff.ucoz.com/</tspan></tspan></text></g>
+    </a>
+    <use xlink:href="#path4179" id="use5151" width="100%" height="100%" x="0" y="0" style="color:#000;overflow:visible;solid-color:black;solid-opacity:1;fill:none;stroke:#999;stroke-width:10"/>
+    <use xlink:href="#path4185" id="use5169" width="100%" height="100%" x="0" y="0" style="color:#000;overflow:visible;solid-color:black;solid-opacity:1;fill:none;stroke:#000;stroke-width:3"/>
+    <use xlink:href="#path4147" id="use5187" width="100%" height="100%" x="0" y="0" style="color:#000;overflow:visible;solid-color:black;solid-opacity:1;fill:none;stroke:#000;stroke-width:10;stroke-linecap:round"/>
+    <g id="g4801" clip-path="none" transform="translate(-1172.925 1.94)">
+      <use xlink:href="#path3463-1" id="use4865" width="483.634" height="533.563" x="0" y="0" style="fill:#fff;stroke:#fff;stroke-width:10;stroke-miterlimit:10;filter:url(#filter5277)"/>
+      <path id="path3463-1" d="m1398.601 889.26-.145 12.24 31.874-5.834z"/>
+      <rect id="rect3457-7" width="13.012" height="54.204" x="-1416.973" y="-961.298" ry="0" style="fill:url(#pattern4264);stroke:#000;stroke-linecap:round;stroke-linejoin:round" transform="rotate(179.908)"/>
+      <use xlink:href="#path3463-1" id="use5583" width="483.634" height="533.563" x="0" y="0" style="fill:red;stroke:red;stroke-width:1.00029743;stroke-miterlimit:10"/>
+    </g>
+    <use xlink:href="#text5257" id="use5335" width="744.094" height="1052.362" x="0" y="0" style="stroke:#fff;stroke-width:2" transform="translate(-2304.253 -1265.005)"/>
+    <g id="g6156" transform="translate(3.464 140.864)">
+      <use xlink:href="#text5253" id="use6154" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+      <text xml:space="preserve" id="text5253" x="-72.183" y="286.918" style="font-size:28px;font-family:&quot;Times New Roman&quot;" transform="rotate(-14.697)"><tspan id="tspan5255" x="-72.183" y="286.918">Fangio</tspan></text>
+    </g>
+    <text xml:space="preserve" id="text5265" x="793.358" y="302.237" style="font-size:28px;font-family:&quot;Times New Roman&quot;"><tspan id="tspan5267" x="793.358" y="302.237">Tower</tspan></text>
+    <g id="g6199" transform="translate(3.464 140.864)">
+      <use xlink:href="#text5273" id="use6197" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+      <text xml:space="preserve" id="text5273" x="839.167" y="848.96" style="font-size:28px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan5275" x="839.167" y="848.96">Le</tspan><tspan id="tspan6195" x="839.167" y="883.96">Mans</tspan></text>
+    </g>
+    <g id="g6107" transform="translate(3.464 140.864)">
+      <use xlink:href="#text5277" id="use6105" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+      <text xml:space="preserve" id="text5277" x="266.591" y="968.697" style="font-size:28px;font-family:&quot;Times New Roman&quot;"><tspan id="tspan5279" x="266.591" y="968.697">Ullman Straight</tspan></text>
+    </g>
+    <g id="g6114" transform="translate(3.464 140.864)">
+      <use xlink:href="#text5281" id="use6112" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+      <text xml:space="preserve" id="text5281" x="-207.051" y="809.425" style="font-size:28px;font-family:&quot;Times New Roman&quot;"><tspan id="tspan5283" x="-207.051" y="809.425">Sunset</tspan><tspan id="tspan5285" x="-207.051" y="844.425">Bend</tspan></text>
+    </g>
+    <g id="g5985" clip-path="none" transform="translate(-782.653 -156.864)">
+      <circle id="circle5987" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(76.132 -365.995)scale(1.13333)"/>
+      <text xml:space="preserve" id="text5989" x="1419.084" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan5991" x="1419.084" y="808.945">2</tspan></text>
+    </g>
+    <g id="g5993" clip-path="none" transform="translate(-781.478 -268.505)">
+      <circle id="circle5995" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(76.132 -365.995)scale(1.13333)"/>
+      <text xml:space="preserve" id="text5997" x="1419.084" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan5999" x="1419.084" y="808.945">3</tspan></text>
+    </g>
+    <g id="g6001" clip-path="none" transform="translate(-802.63 -351.943)">
+      <circle id="circle6003" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(76.132 -365.995)scale(1.13333)"/>
+      <text xml:space="preserve" id="text6005" x="1419.084" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6007" x="1419.084" y="808.945">4</tspan></text>
+    </g>
+    <g id="g6009" clip-path="none" transform="translate(-897.82 -313.162)">
+      <circle id="circle6011" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(76.132 -365.995)scale(1.13333)"/>
+      <text xml:space="preserve" id="text6013" x="1419.084" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6015" x="1419.084" y="808.945">5</tspan></text>
+    </g>
+    <g id="g6127" transform="translate(3.464 140.864)">
+      <g id="g6122">
+        <use xlink:href="#text5245" id="use6120" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+        <text xml:space="preserve" id="text5245" x="-123.746" y="635.528" style="font-size:28px;font-family:&quot;Times New Roman&quot;" transform="rotate(-45.155)"><tspan id="tspan5247" x="-123.746" y="635.528">Big Bend</tspan></text>
+      </g>
+      <g id="g6017" clip-path="none" transform="translate(-1070.509 -351.786)">
+        <circle id="circle6019" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(76.132 -365.995)scale(1.13333)"/>
+        <text xml:space="preserve" id="text6021" x="1419.084" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6023" x="1419.084" y="808.945">6</tspan></text>
+      </g>
+    </g>
+    <g id="g6144" transform="translate(3.464 140.864)">
+      <g id="g6139">
+        <use xlink:href="#text5249" id="use6137" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+        <text xml:space="preserve" id="text5249" x="-202.858" y="574.371" style="font-size:28px;font-family:&quot;Times New Roman&quot;"><tspan id="tspan5251" x="-202.858" y="574.371">Hairpin</tspan></text>
+      </g>
+      <g id="g6025" clip-path="none" transform="translate(-1640.468 -285.976)">
+        <circle id="circle6027" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(76.132 -365.995)scale(1.13333)"/>
+        <text xml:space="preserve" id="text6029" x="1419.084" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6031" x="1419.084" y="808.945">7</tspan></text>
+      </g>
+    </g>
+    <g id="g6033" clip-path="none" transform="translate(-1480.706 -368.395)">
+      <circle id="circle6035" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(76.132 -365.995)scale(1.13333)"/>
+      <text xml:space="preserve" id="text6037" x="1419.084" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6039" x="1419.084" y="808.945">8</tspan></text>
+    </g>
+    <g id="g6041" clip-path="none" transform="translate(-1305.605 -427.154)">
+      <circle id="circle6043" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(76.132 -365.995)scale(1.13333)"/>
+      <text xml:space="preserve" id="text6045" x="1419.084" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6047" x="1419.084" y="808.945">9</tspan></text>
+    </g>
+    <g id="g6168" transform="translate(3.464 140.864)">
+      <g id="g6163">
+        <use xlink:href="#text5261" id="use6161" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+        <text xml:space="preserve" id="text5261" x="436.981" y="180.005" style="font-size:28px;font-family:&quot;Times New Roman&quot;"><tspan id="tspan5263" x="436.981" y="180.005">Collier</tspan></text>
+      </g>
+      <g id="g6049" transform="translate(-935.433 -685.77)">
+        <circle id="circle6051" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(-100.004 -517.647)scale(1.28197)"/>
+        <text xml:space="preserve" id="text6053" x="1416.883" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6055" x="1416.883" y="808.945">11</tspan></text>
+      </g>
+    </g>
+    <g id="g6057" transform="translate(-792.124 -506.126)">
+      <circle id="circle6059" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(-100.004 -517.647)scale(1.28197)"/>
+      <text xml:space="preserve" id="text6061" x="1416.883" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6063" x="1416.883" y="808.945">12</tspan></text>
+    </g>
+    <g id="g6065" transform="translate(-694.584 -502.6)">
+      <circle id="circle6067" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(-100.004 -517.647)scale(1.28197)"/>
+      <text xml:space="preserve" id="text6069" x="1416.883" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6071" x="1416.883" y="808.945">13</tspan></text>
+    </g>
+    <g id="g6185" transform="translate(3.464 140.864)">
+      <g id="g6180">
+        <use xlink:href="#text5269" id="use6178" width="100%" height="100%" x="0" y="0" style="stroke:#fff;stroke-width:10;filter:url(#filter5277)"/>
+        <text xml:space="preserve" id="text5269" x="778.766" y="463.771" style="font-size:28px;font-family:&quot;Times New Roman&quot;"><tspan id="tspan5271" x="778.766" y="463.771">Bishop</tspan></text>
+      </g>
+      <g id="g6073" transform="translate(-606.385 -280.336)">
+        <circle id="circle6075" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(-100.004 -517.647)scale(1.28197)"/>
+        <text xml:space="preserve" id="text6077" x="1416.883" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6079" x="1416.883" y="808.945">14</tspan></text>
+      </g>
+    </g>
+    <g id="g6081" transform="translate(-528.885 116.716)">
+      <circle id="circle6083" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(-100.004 -517.647)scale(1.28197)"/>
+      <text xml:space="preserve" id="text6085" x="1416.883" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6087" x="1416.883" y="808.945">15</tspan></text>
+    </g>
+    <g id="g6089" transform="translate(-587.644 284.766)">
+      <circle id="circle6091" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(-100.004 -517.647)scale(1.28197)"/>
+      <text xml:space="preserve" id="text6093" x="1416.883" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6095" x="1416.883" y="808.945">16</tspan></text>
+    </g>
+    <g id="g6097" transform="translate(-1588.892 248.336)">
+      <circle id="circle6099" cx="1185.03" cy="1020.305" r="24.45" style="overflow:visible;fill:#fff;stroke:#181818;stroke-width:1.7647059;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:66;enable-background:accumulate" transform="translate(-100.004 -517.647)scale(1.28197)"/>
+      <text xml:space="preserve" id="text6101" x="1416.883" y="808.945" style="font-size:56px;font-family:&quot;Times New Roman&quot;;text-align:center;text-anchor:middle"><tspan id="tspan6103" x="1416.883" y="808.945">17</tspan></text>
+    </g>
+  </g>
+</svg>
