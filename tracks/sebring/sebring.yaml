@@ -1,0 +1,348 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: sebring
+name: Sebring International Raceway
+display_name: Sebring
+subtitle: Sebring
+country_code: US
+country_name: United States
+locality: Sebring, Florida, USA
+latitude: 27.455 # circuit center (27°27′18″N), per the Wikipedia geohack entry
+longitude: -81.35 # 81°21′00″W — western hemisphere, negative
+year_opened: 1950 # first race (Sam Collier Six Hours Memorial) held New Year's Eve, 1950, on the former Hendricks Field airfield
+designer: Alec Ulmann # Russian-American aeronautical engineer who laid the course over the WWII runways
+owner: NASCAR # via IMSA Holdings, LLC, since 2012; operated by Sebring International Raceway, LLC
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix Road Course
+  current: true
+  years: 1999-present # the 17-turn full configuration used for the 12 Hours of Sebring / IMSA
+  direction: clockwise
+  turns: 17
+  length_km: 6.019
+  length_mi: 3.74
+  map_svg: map.svg
+  corners:
+  # Corner names follow the historical naming honored across the lap (Gurney Bend, the
+  # Hairpin, the Fangio chicane, Cunningham Corner, Collier Curve, Tower Turn, Bishop
+  # Bend, Gendebien, Le Mans, Sunset Bend) as documented by the 24h-lemans.com circuit
+  # history and the Le Mans Ultimate circuit guide. Per-corner positions are the source
+  # map's numbered turn markers (map-source.svg) projected onto map.svg's viewBox via the
+  # same affine that produced map.svg (derive-corner-positions.mjs, 0.00px residual).
+  # Handedness is from the turn-by-turn guides, then confirmed against the local curvature
+  # of the map centerline at every marker (race direction, y-down: negative = left); the
+  # geometry agreed with the guides at all 17 corners.
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    signature: true
+    description: >-
+      A blind, bumpy high-speed left-hander immediately off the start/finish straight, taken with a high minimum speed; one of the most important corners for lap time and a corner that sets the tone for the whole lap.
+    story: |
+      Turn 1 plunges into the old airfield over the abrasive, seam-ridden concrete
+      that defines Sebring. Run flat-out and nearly blind on entry, it rewards
+      commitment over a surface that has punished sports cars in the 12 Hours since
+      1950, and is one of the corners the circuit is best known for.
+    direction: left
+    position: { x: 0.739, y: 0.663 }
+    sources:
+    - title: Sebring International Raceway Turn-by-Turn Guide — The Track Source
+      url: https://thetracksource.com/sebring-international-raceway-turn-by-turn-guide/
+      accessed: 2026-06-10
+    - title: Sebring — Turn by Turn — Paddock Pal
+      url: https://www.paddock-pal.com/?page_id=1921
+      accessed: 2026-06-10
+  - id: turn-2
+    number: "2"
+    name: Turn 2
+    description: >-
+      A short right-hand kink on the chute out of Turn 1, used to set up the entry to Turn 3; in most cars little more than a brief direction change.
+    direction: right
+    position: { x: 0.716, y: 0.47 }
+    sources:
+    - title: Sebring — Turn by Turn — Paddock Pal
+      url: https://www.paddock-pal.com/?page_id=1921
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  - id: turn-3
+    number: "3"
+    name: Turn 3
+    description: >-
+      A tighter, low-speed left-hander with grip on entry, beginning the technical infield section.
+    direction: left
+    position: { x: 0.717, y: 0.379 }
+    sources:
+    - title: Sebring International Raceway Turn-by-Turn Guide — The Track Source
+      url: https://thetracksource.com/sebring-international-raceway-turn-by-turn-guide/
+      accessed: 2026-06-10
+    - title: Sebring — Turn by Turn — Paddock Pal
+      url: https://www.paddock-pal.com/?page_id=1921
+      accessed: 2026-06-10
+  - id: turn-4
+    number: "4"
+    name: Turn 4
+    description: >-
+      A brief right-hand transition between Turn 3 and Turn 5, effectively a throwaway corner used to position the car for the long left that follows.
+    direction: right
+    position: { x: 0.699, y: 0.311 }
+    sources:
+    - title: Sebring — Turn by Turn — Paddock Pal
+      url: https://www.paddock-pal.com/?page_id=1921
+      accessed: 2026-06-10
+  - id: turn-5
+    number: "5"
+    name: Turn 5
+    description: >-
+      A long, off-camber, low-to-medium-speed left-hander taken with a late apex, critical because it opens onto a long straight.
+    direction: left
+    position: { x: 0.622, y: 0.342 }
+    sources:
+    - title: Sebring International Raceway Turn-by-Turn Guide — The Track Source
+      url: https://thetracksource.com/sebring-international-raceway-turn-by-turn-guide/
+      accessed: 2026-06-10
+    - title: Sebring — Turn by Turn — Paddock Pal
+      url: https://www.paddock-pal.com/?page_id=1921
+      accessed: 2026-06-10
+  - id: gurney-bend
+    number: "6"
+    name: Gurney Bend
+    description: >-
+      A long, very fast sweeping right-hander, flat-out or nearly so in most cars; long known as Big Bend, it was renamed Gurney Bend in 1996 for Dan Gurney, the 1959 winner.
+    direction: right
+    position: { x: 0.483, y: 0.426 }
+    sources:
+    - title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+      url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  - id: hairpin
+    number: "7"
+    name: Hairpin
+    description: >-
+      The slowest corner on the circuit, a tight right-hand hairpin reached over a bumpy braking zone and demanding heavy trail-braking.
+    direction: right
+    position: { x: 0.018, y: 0.48 }
+    sources:
+    - title: Sebring International Raceway Turn-by-Turn Guide — The Track Source
+      url: https://thetracksource.com/sebring-international-raceway-turn-by-turn-guide/
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  - id: fangio-chicane-entry
+    number: "8"
+    name: Fangio Chicane
+    description: >-
+      The right-hand half of the flat-out Fangio chicane, named for Juan Manuel Fangio, who won the 12 Hours in 1956 and 1957.
+    direction: right
+    position: { x: 0.145, y: 0.297 }
+    sources:
+    - title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+      url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  - id: fangio-chicane-exit
+    number: "9"
+    name: Fangio Chicane
+    description: >-
+      The left-hand half of the Fangio chicane, taken at full throttle and completing the flick before the run to Cunningham Corner.
+    direction: left
+    position: { x: 0.288, y: 0.249 }
+    sources:
+    - title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+      url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  - id: cunningham-corner
+    number: "10"
+    name: Cunningham Corner
+    description: >-
+      A medium-low-speed right-hander offering more than one line, feeding into the long left of Collier Curve; named for three-time winning team owner Briggs Cunningham.
+    direction: right
+    position: { x: 0.472, y: 0.164 }
+    sources:
+    - title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+      url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  - id: collier-curve
+    number: "11"
+    name: Collier Curve
+    description: >-
+      A long, full-throttle left-hander named for Sam Collier, the racer killed at Watkins Glen months before Sebring's first race and honored in the inaugural event's name.
+    direction: left
+    position: { x: 0.594, y: 0.153 }
+    sources:
+    - title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+      url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  - id: turn-12
+    number: "12"
+    name: Turn 12
+    description: >-
+      A right-hand kink taken at speed on the run from Collier Curve toward Tower Turn.
+    direction: right
+    position: { x: 0.708, y: 0.185 }
+    sources:
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+    - title: Sebring — Turn by Turn — Paddock Pal
+      url: https://www.paddock-pal.com/?page_id=1921
+      accessed: 2026-06-10
+  - id: tower-turn
+    number: "13"
+    name: Tower Turn
+    description: >-
+      A tight, bumpy second-gear right-hander beneath the circuit's tower, leading onto a longer straight; named for the tower it passes.
+    direction: right
+    position: { x: 0.788, y: 0.188 }
+    sources:
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+    - title: Sebring International Raceway Turn-by-Turn Guide — The Track Source
+      url: https://thetracksource.com/sebring-international-raceway-turn-by-turn-guide/
+      accessed: 2026-06-10
+  - id: bishop-bend
+    number: "14"
+    name: Bishop Bend
+    description: >-
+      A fast, off-camber left-hand bend taken nearly flat, regarded as one of the most intimidating corners on the lap; named for IMSA founder John Bishop.
+    direction: left
+    position: { x: 0.863, y: 0.484 }
+    sources:
+    - title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+      url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  - id: gendebien-bend
+    number: "15"
+    name: Gendebien Bend
+    description: >-
+      A high-speed right-then-left sweeper named for Olivier Gendebien, the only driver to win the 12 Hours three years running (1959–1961).
+    direction: right-left
+    position: { x: 0.923, y: 0.694 }
+    sources:
+    - title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+      url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+      accessed: 2026-06-10
+    - title: Sebring is a place of names and legends — Goodwood
+      url: https://www.goodwood.com/grr/race/historic/sebring-is-a-place-of-names-and-legends/
+      accessed: 2026-06-10
+  - id: le-mans-corner
+    number: "16"
+    name: Le Mans Corner
+    description: >-
+      A medium-speed right-hander that is the most important corner for lap time as it opens onto the back straight; named in tribute to the 24 Hours of Le Mans that inspired the 12 Hours of Sebring.
+    direction: right
+    position: { x: 0.875, y: 0.831 }
+    sources:
+    - title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+      url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  - id: sunset-bend
+    number: "17"
+    name: Sunset Bend
+    signature: true
+    description: >-
+      Sebring's signature final corner — a long, extremely bumpy high-speed right-hander wide enough to run cars three abreast, where exit speed onto the front straight defines the lap.
+    story: |
+      Universally known simply as "Turn 17," Sunset Bend is the corner Sebring is
+      most identified with. The name comes from the setting sun drivers face here
+      late in the 12 Hours, and the brutal seams of the old runway concrete make
+      its long right-hand sweep one of the hardest corners in sports-car racing to
+      figure out and to execute cleanly.
+    direction: right
+    position: { x: 0.057, y: 0.801 }
+    sources:
+    - title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+      url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+      accessed: 2026-06-10
+    - title: Le Mans Ultimate — Sebring Circuit Guide — RaceControl News
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-sebring-international-raceway-circuit-guide/
+      accessed: 2026-06-10
+  lap_records:
+  - class: LMP1
+    time: "1:41.800"
+    driver: Kamui Kobayashi
+    team: Toyota Gazoo Racing
+    car: Toyota TS050 Hybrid
+    year: 2019
+    record_type: race
+    sources:
+    - title: Sebring International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Sebring_International_Raceway
+      accessed: 2026-06-10
+    - title: 1000 Miles of Sebring Race — TOYOTA GAZOO Racing
+      url: https://toyotagazooracing.com/release/2019/wec/rd06-race/
+      accessed: 2026-06-10
+
+editorial:
+  tagline: >-
+    A WWII bomber base turned 17-turn endurance proving ground — Sebring's abrasive, seam-ridden runway concrete has tortured sports cars in the 12 Hours since 1950, all the way to the signature bumps of Turn 17.
+  narrative_md: sebring.md
+  available_in:
+  - iRacing
+  - Le Mans Ultimate
+  - Forza Motorsport
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/sebring # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/sebring/sebring.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Sebring_International_Raceway.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Sebring_International_Raceway.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Sebring_International_Raceway.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-06-10
+
+sources:
+- title: Sebring International Raceway — Wikipedia
+  url: https://en.wikipedia.org/wiki/Sebring_International_Raceway
+  accessed: 2026-06-10
+- title: Sebring International Raceway — Official Site
+  url: https://www.sebringraceway.com/
+  accessed: 2026-06-10
+- title: Sebring International Raceway — RacingCircuits.info
+  url: https://www.racingcircuits.info/north-america/usa/sebring.html
+  accessed: 2026-06-10
+- title: 12 Hours of Sebring — Legendary race track — 24 Heures du Mans
+  url: https://www.24h-lemans.com/en/news/12-hours-of-sebring-legendary-race-track-6374
+  accessed: 2026-06-10
+
+status: verified
