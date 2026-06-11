@@ -1,0 +1,244 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: long-beach
+name: Long Beach Street Circuit
+display_name: Long Beach
+subtitle: Shoreline Drive
+country_code: US
+country_name: United States
+locality: Long Beach, California, USA
+latitude: 33.7664 # circuit center (33°45′59″N) — Convention Center / Shoreline Drive waterfront
+longitude: -118.1928 # 118°11′34″W (negative — California)
+year_opened: 1975
+designer: Chris Pook
+owner: Penske Entertainment Corp. # operates via the Grand Prix Association of Long Beach; acquired by Penske Entertainment Nov 2024
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix
+  current: true
+  years: 2000-present # current IndyCar Grand Prix of Long Beach configuration
+  direction: clockwise
+  turns: 11
+  length_km: 3.167
+  length_mi: 1.968
+  # Street circuit — essentially flat; no authoritative total elevation figure, so elevation omitted.
+  map_svg: map.svg
+  corners:
+  # Per-corner positions are the source map's numbered turn markers (map-source.svg),
+  # transformed into the map.svg viewBox via the affine that produced map.svg (uniform
+  # scale s≈0.66632, translate ≈ (-471.34, -76.70)); derived with
+  # scripts/derive-corner-positions.mjs at 0.01px residual. Same basis for all 11.
+  # Handedness is settled by the map geometry (signed turn at each marker, traced in race
+  # direction) — geometry wins over guide prose, which for Long Beach is inconsistent. The
+  # geometry agrees with the explicitly-sourced corners (T1 the left-hand "Acura Turn",
+  # T5/T8/T9 right, T10 the sweeping left, T11 the right-hand hairpin) and overrides a
+  # secondary "6 left / 5 right" split that had wrongly implied T1 was a right.
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    description: >-
+      A hard-braking 90-degree left-hander at the end of the Shoreline Drive front straight, decelerating from near top speed; the circuit's prime overtaking spot, where the race is routinely won and lost, leading into the fountain complex.
+    direction: left
+    position: { x: 0.276, y: 0.702 }
+    sources:
+    - title: What makes the 11-turn Grand Prix of Long Beach street course so challenging? — NBC Los Angeles
+      url: https://www.nbclosangeles.com/news/sports/grand-prix-long-beach-street-course-map/3673379/
+      accessed: 2026-06-11
+    - title: IndyCar Reality Check — Long Beach (iRacing)
+      url: https://www.iracing.com/indycar-reality-check-long-beach/
+      accessed: 2026-06-11
+  - id: the-fountain
+    number: "2"
+    name: The Fountain
+    description: >-
+      The roundabout corner curling around the landmark Long Beach dolphin fountain that Turn 1 feeds into — the opening of the signature fountain complex, threaded between flowerbeds and concrete walls.
+    direction: right
+    position: { x: 0.237, y: 0.804 }
+    sources:
+    - title: What makes the 11-turn Grand Prix of Long Beach street course so challenging? — NBC Los Angeles
+      url: https://www.nbclosangeles.com/news/sports/grand-prix-long-beach-street-course-map/3673379/
+      accessed: 2026-06-11
+    - title: The Setup — Long Beach with Chris Simmons (IndyCar)
+      url: https://www.indycar.com/news/2023/04/04-11-setup-longbeach
+      accessed: 2026-06-11
+  - id: turn-3
+    number: "3"
+    name: Turn 3
+    description: >-
+      The second part of the fountain complex, a tight 90-degree corner threading out of the roundabout between the plaza walls toward Turn 4.
+    direction: left
+    position: { x: 0.125, y: 0.811 }
+    sources:
+    - title: The Setup — Long Beach with Chris Simmons (IndyCar)
+      url: https://www.indycar.com/news/2023/04/04-11-setup-longbeach
+      accessed: 2026-06-11
+    - title: Long Beach Street Circuit — Wikipedia
+      url: https://en.wikipedia.org/wiki/Long_Beach_Street_Circuit
+      accessed: 2026-06-11
+  - id: turn-4
+    number: "4"
+    name: Turn 4
+    description: >-
+      A corner where the track falls away on entry, washing out the front end and pushing cars toward the exit wall.
+    direction: right
+    position: { x: 0.096, y: 0.736 }
+    sources:
+    - title: IndyCar Reality Check — Long Beach (iRacing)
+      url: https://www.iracing.com/indycar-reality-check-long-beach/
+      accessed: 2026-06-11
+    - title: How INDYCAR drivers navigate the Grand Prix of Long Beach's unique 11-turn track — FOX Sports
+      url: https://www.foxsports.com/stories/motor/indycar-analysis-james-hinchcliffe-long-beach
+      accessed: 2026-06-11
+  - id: turn-5
+    number: "5"
+    name: Turn 5
+    description: >-
+      A corner where the circuit begins to widen noticeably, with a multi-tiered curb drivers strike to pick up speed onto the following chute — one of two curb-strike spots on the lap.
+    direction: right
+    position: { x: 0.064, y: 0.615 }
+    sources:
+    - title: The Setup — Long Beach with Chris Simmons (IndyCar)
+      url: https://www.indycar.com/news/2023/04/04-11-setup-longbeach
+      accessed: 2026-06-11
+    - title: How INDYCAR drivers navigate the Grand Prix of Long Beach's unique 11-turn track — FOX Sports
+      url: https://www.foxsports.com/stories/motor/indycar-analysis-james-hinchcliffe-long-beach
+      accessed: 2026-06-11
+  - id: turn-6
+    number: "6"
+    name: Turn 6
+    description: >-
+      A tricky corner with a downhill entry that makes the car hard to slow, before the road rises again mid-corner and falls away once more toward Turn 8.
+    direction: left
+    position: { x: 0.365, y: 0.617 }
+    sources:
+    - title: How INDYCAR drivers navigate the Grand Prix of Long Beach's unique 11-turn track — FOX Sports
+      url: https://www.foxsports.com/stories/motor/indycar-analysis-james-hinchcliffe-long-beach
+      accessed: 2026-06-11
+    - title: The Setup — Long Beach with Chris Simmons (IndyCar)
+      url: https://www.indycar.com/news/2023/04/04-11-setup-longbeach
+      accessed: 2026-06-11
+  - id: turn-7
+    number: "7"
+    name: Turn 7
+    description: >-
+      A corner critical to a good lap, setting up the run up the infield toward the Turn 8 left onto Seaside Way.
+    direction: left
+    position: { x: 0.448, y: 0.570 }
+    sources:
+    - title: What makes the 11-turn Grand Prix of Long Beach street course so challenging? — NBC Los Angeles
+      url: https://www.nbclosangeles.com/news/sports/grand-prix-long-beach-street-course-map/3673379/
+      accessed: 2026-06-11
+    - title: Announcing Long Beach GP Street Circuit — Studio-397
+      url: https://www.studio-397.com/2023/02/announcing-long-beach-gp-street-circuit/
+      accessed: 2026-06-11
+  - id: turn-8
+    number: "8"
+    name: Turn 8
+    description: >-
+      The corner onto the Seaside Way back straight, where drivers take extra curb to gain speed down the longest run of the lap.
+    direction: right
+    position: { x: 0.348, y: 0.431 }
+    sources:
+    - title: IndyCar Reality Check — Long Beach (iRacing)
+      url: https://www.iracing.com/indycar-reality-check-long-beach/
+      accessed: 2026-06-11
+    - title: The Setup — Long Beach with Chris Simmons (IndyCar)
+      url: https://www.indycar.com/news/2023/04/04-11-setup-longbeach
+      accessed: 2026-06-11
+  - id: turn-9
+    number: "9"
+    name: Turn 9
+    description: >-
+      A fast corner at the end of the Seaside Way back straight, taken under a pedestrian bridge as one of the quickest corners on the circuit.
+    direction: right
+    position: { x: 0.781, y: 0.227 }
+    sources:
+    - title: IndyCar Reality Check — Long Beach (iRacing)
+      url: https://www.iracing.com/indycar-reality-check-long-beach/
+      accessed: 2026-06-11
+    - title: What makes the 11-turn Grand Prix of Long Beach street course so challenging? — NBC Los Angeles
+      url: https://www.nbclosangeles.com/news/sports/grand-prix-long-beach-street-course-map/3673379/
+      accessed: 2026-06-11
+  - id: turn-10
+    number: "10"
+    name: Turn 10
+    description: >-
+      A long, sweeping left in full view of the grandstands, requiring sustained braking and offering little room to accelerate before it feeds the final hairpin.
+    direction: left
+    position: { x: 0.838, y: 0.323 }
+    sources:
+    - title: IndyCar Reality Check — Long Beach (iRacing)
+      url: https://www.iracing.com/indycar-reality-check-long-beach/
+      accessed: 2026-06-11
+    - title: What makes the 11-turn Grand Prix of Long Beach street course so challenging? — NBC Los Angeles
+      url: https://www.nbclosangeles.com/news/sports/grand-prix-long-beach-street-course-map/3673379/
+      accessed: 2026-06-11
+  - id: the-hairpin
+    number: "11"
+    name: The Hairpin
+    signature: true
+    description: >-
+      The slow right-hand hairpin and final corner of the lap, taken in first gear at around 30 mph; cutting close to the inside wall sets up the launch back onto Shoreline Drive toward the start/finish line.
+    story: |
+      The hairpin is Long Beach's defining corner — arguably one of the most
+      famous corners on any IndyCar track. A tight, first-gear right-hander, it
+      has featured in every iteration of the circuit since 1975, and the slow-
+      motion image of the field threading it onto Shoreline Drive is the picture
+      most associated with the Grand Prix of Long Beach.
+    direction: right
+    apex_type: late
+    position: { x: 0.884, y: 0.247 }
+    sources:
+    - title: What makes the 11-turn Grand Prix of Long Beach street course so challenging? — NBC Los Angeles
+      url: https://www.nbclosangeles.com/news/sports/grand-prix-long-beach-street-course-map/3673379/
+      accessed: 2026-06-11
+    - title: IndyCar Reality Check — Long Beach (iRacing)
+      url: https://www.iracing.com/indycar-reality-check-long-beach/
+      accessed: 2026-06-11
+  lap_records: []
+
+editorial:
+  tagline: >-
+    The crown jewel of American street racing — a 1.968-mile waterfront sprint through downtown Long Beach, down Shoreline Drive and around the dolphin fountain to the famous first-gear hairpin.
+  narrative_md: long-beach.md
+  available_in:
+  - iRacing
+  - rFactor 2
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/long-beach # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/long-beach/long-beach.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Long_Beach_Street_Circuit_IndyCar.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Long_Beach_Street_Circuit_IndyCar.svg
+    license: Public domain
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Long_Beach_Street_Circuit_IndyCar.svg" by Will Pittenger, Public domain, via Wikimedia Commons.
+    accessed: 2026-06-11
+
+sources:
+- title: Long Beach Street Circuit — Wikipedia
+  url: https://en.wikipedia.org/wiki/Long_Beach_Street_Circuit
+  accessed: 2026-06-11
+- title: Acura Grand Prix of Long Beach — Official Site
+  url: https://gplb.com/
+  accessed: 2026-06-11
+- title: Long Beach — RacingCircuits.info
+  url: https://www.racingcircuits.info/north-america/usa/long-beach.html
+  accessed: 2026-06-11
+
+status: verified
