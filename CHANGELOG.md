@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.11.0...pixelsonly-racing-circuits-v1.12.0) (2026-06-11)
+
+
+### New tracks & additive changes
+
+* add Road Atlanta (Grand Prix) ([#61](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/61)) ([900fa0f](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/900fa0ff7d291e8ca626a8b9f0d39335c9629a57))
+
 ## [1.11.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.10.0...pixelsonly-racing-circuits-v1.11.0) (2026-06-11)
 
 
