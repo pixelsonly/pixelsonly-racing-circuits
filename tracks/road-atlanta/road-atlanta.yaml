@@ -1,0 +1,264 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: road-atlanta
+name: Michelin Raceway Road Atlanta
+display_name: Road Atlanta
+subtitle: Braselton
+country_code: US
+country_name: United States
+locality: Braselton, Georgia, USA
+latitude: 34.14667 # circuit center (34°08′48″N) — confirm against an authoritative source during intake
+longitude: -83.81778 # 83°49′04″W
+year_opened: 1970
+designer: David Sloyer, Earl Walker & Arthur Montgomery (1970); Bob Barnard (1997 redesign)
+owner: NASCAR (via IMSA Holdings, LLC)
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix
+  current: true
+  years: 1998-present # full course used by IMSA / Petit Le Mans; back-straight chicane added 1998
+  direction: clockwise
+  turns: 12
+  length_km: 4.088
+  length_mi: 2.540
+  elevation_change_m: 32.6
+  elevation_change_ft: 107
+  map_svg: map.svg
+  corners:
+  # Per-corner positions are the source map's numbered turn markers (map-source.svg),
+  # projected onto the traced racing line and transformed into the map.svg viewBox by the
+  # same affine that produced map.svg (uniform scale s≈0.6736, translate ≈ (44.27, 203.35));
+  # derived with scripts/derive-map-from-band.mjs. Markers 1-9 are the small numbered
+  # circles, 11-12 the larger pair; Turn 10 (the 10A/10B chicane, drawn as labels with no
+  # circle) is placed on the traced line between markers 9 and 11.
+  # Handedness is taken from the MAP GEOMETRY (signed curvature along the racing line in
+  # race direction), which OVERRIDES the prose guides — those flatly contradict each other
+  # across the mid-lap. Geometry settles Turns 2, 6 and 7 as right and Turn 8 as left
+  # (against several guides); Turn 9 is effectively a flat kink. See the PR for the
+  # per-corner reconciliation.
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    description: >-
+      A fast, slightly banked uphill right-hander immediately off the start/finish line, taken on momentum as the track climbs steeply on exit.
+    direction: right
+    position: { x: 0.769, y: 0.739 }
+    sources:
+    - title: Road Atlanta Corner By Corner — Allen Berg Racing Schools
+      url: https://www.allenbergracingschools.com/expert-advice/road-atlanta-corner-by-corner/
+      accessed: 2026-06-10
+    - title: Road Atlanta Track Guide — Hotlap Rentals
+      url: https://hotlaprentals.com/articles/road-atlanta-track-guide-complete-drivers-guide-to-georgias-premier-racing-circuit
+      accessed: 2026-06-10
+  - id: turn-2
+    number: "2"
+    name: Turn 2
+    description: >-
+      A quick right-hand kink at the crest of the Turn 1 climb, bridging the hilltop to the entry of the esses.
+    direction: right
+    position: { x: 0.613, y: 0.663 }
+    sources:
+    - title: Road Atlanta Corner By Corner — Allen Berg Racing Schools
+      url: https://www.allenbergracingschools.com/expert-advice/road-atlanta-corner-by-corner/
+      accessed: 2026-06-10
+    - title: Road Atlanta Track Guide — Hotlap Rentals
+      url: https://hotlaprentals.com/articles/road-atlanta-track-guide-complete-drivers-guide-to-georgias-premier-racing-circuit
+      accessed: 2026-06-10
+  - id: the-esses
+    number: "3-5"
+    name: The Esses
+    signature: true
+    description: >-
+      The fast, downhill esses (Turns 3-5) — a committed right-then-left sequence snaking from the blind crest of Turn 3 down to the foot of the hill, where carrying speed through the compression sets up the whole middle of the lap.
+    story: |
+      Road Atlanta's esses are among the most celebrated fast sequences in North
+      American road racing: a downhill, snaking run that demands the car be placed
+      precisely as the surface falls away from the blind crest of Turn 3. Getting
+      the compression and the exit right is what sets up the long drive to the
+      hairpin and the back straight beyond.
+    direction: right-left
+    position: { x: 0.532, y: 0.571 }
+    sources:
+    - title: Road Atlanta — Wikipedia
+      url: https://en.wikipedia.org/wiki/Road_Atlanta
+      accessed: 2026-06-10
+    - title: Road Atlanta Corner By Corner — Allen Berg Racing Schools
+      url: https://www.allenbergracingschools.com/expert-advice/road-atlanta-corner-by-corner/
+      accessed: 2026-06-10
+  - id: turn-6
+    number: "6"
+    name: Turn 6
+    description: >-
+      A long, heavily banked right-hander at the foot of the esses, working the car back uphill toward the slow corner that feeds the back straight.
+    direction: right
+    position: { x: 0.078, y: 0.348 }
+    sources:
+    - title: Road Atlanta Track Guide — Hotlap Rentals
+      url: https://hotlaprentals.com/articles/road-atlanta-track-guide-complete-drivers-guide-to-georgias-premier-racing-circuit
+      accessed: 2026-06-10
+    - title: Road Atlanta Corner By Corner — Allen Berg Racing Schools
+      url: https://www.allenbergracingschools.com/expert-advice/road-atlanta-corner-by-corner/
+      accessed: 2026-06-10
+  - id: turn-7
+    number: "7"
+    name: Turn 7
+    description: >-
+      The slowest point on the lap, a tight right-hander whose exit launches the cars down the roughly one-mile back straight — the most important corner for lap time.
+    direction: right
+    position: { x: 0.070, y: 0.246 }
+    sources:
+    - title: Road Atlanta Corner By Corner — Allen Berg Racing Schools
+      url: https://www.allenbergracingschools.com/expert-advice/road-atlanta-corner-by-corner/
+      accessed: 2026-06-10
+    - title: Road Atlanta Track Guide — Just Track It
+      url: https://justtrackit.net/tracks/road-atlanta/guide
+      accessed: 2026-06-10
+  - id: turn-8
+    number: "8"
+    name: Turn 8
+    description: >-
+      A gentle left-hand kink along the downhill back straight, barely scrubbing speed.
+    direction: left
+    position: { x: 0.232, y: 0.282 }
+    sources:
+    - title: Road Atlanta Corner By Corner — Allen Berg Racing Schools
+      url: https://www.allenbergracingschools.com/expert-advice/road-atlanta-corner-by-corner/
+      accessed: 2026-06-10
+  - id: turn-9
+    number: "9"
+    name: Turn 9
+    description: >-
+      A second flat-out kink on the back straight, taken at near top speed before the braking zone for the Turn 10 chicane.
+    direction: right
+    position: { x: 0.570, y: 0.285 }
+    sources:
+    - title: Road Atlanta Corner By Corner — Allen Berg Racing Schools
+      url: https://www.allenbergracingschools.com/expert-advice/road-atlanta-corner-by-corner/
+      accessed: 2026-06-10
+  - id: turn-10
+    number: "10A-10B"
+    name: Turn 10
+    description: >-
+      The hard-braking chicane at the end of the back straight: a tight right (10A) into an immediate left (10B) that fires the cars uphill toward the blind crest of Turn 11. The exit of 10B is critical to the run over the hill and down to Turn 12.
+    direction: right-left
+    position: { x: 0.846, y: 0.349 }
+    sources:
+    - title: Road Atlanta, Turns 10A & 10B — Sportscar Digest
+      url: https://sportscardigest.com/road-atlanta-turns-10a-%E2%80%8810b/
+      accessed: 2026-06-10
+    - title: Road Atlanta Corner By Corner — Allen Berg Racing Schools
+      url: https://www.allenbergracingschools.com/expert-advice/road-atlanta-corner-by-corner/
+      accessed: 2026-06-10
+  - id: turn-11
+    number: "11"
+    name: Turn 11
+    description: >-
+      A blind right-hand kink on the crest of the hill, rising out of Turn 10B and taken under the bridge before the track plunges away toward Turn 12; drivers commit over the rise with almost no view of the corner.
+    direction: right
+    position: { x: 0.896, y: 0.378 }
+    sources:
+    - title: Road Atlanta Corner By Corner — Allen Berg Racing Schools
+      url: https://www.allenbergracingschools.com/expert-advice/road-atlanta-corner-by-corner/
+      accessed: 2026-06-10
+    - title: Road Atlanta, Turns 10A & 10B — Sportscar Digest
+      url: https://sportscardigest.com/road-atlanta-turns-10a-%E2%80%8810b/
+      accessed: 2026-06-10
+  - id: turn-12
+    number: "12"
+    name: Turn 12
+    signature: true
+    description: >-
+      The signature corner: a fast, downhill diving right-hander dropping from the crest of Turn 11 to the front straight, approached blind and flat-out — one of the most dramatic finishing corners in North American road racing.
+    story: |
+      Turn 12 is what Road Atlanta is known for. Cars arrive over the blind crest
+      after Turn 11 and dive downhill through a sweeping right-hander toward the
+      start/finish straight, the surface falling away beneath them. The plunge has
+      collected countless cars and reputations over the decades; getting the line
+      and commitment right here defines a lap of Road Atlanta.
+    direction: right
+    position: { x: 0.932, y: 0.551 }
+    sources:
+    - title: Road Atlanta — Wikipedia
+      url: https://en.wikipedia.org/wiki/Road_Atlanta
+      accessed: 2026-06-10
+    - title: Road Atlanta Track Guide — Hotlap Rentals
+      url: https://hotlaprentals.com/articles/road-atlanta-track-guide-complete-drivers-guide-to-georgias-premier-racing-circuit
+      accessed: 2026-06-10
+  lap_records:
+  - class: LMP1
+    time: "1:07.056"
+    driver: Christian Klien
+    car: Peugeot 908 HDi FAP
+    year: 2008
+    record_type: race
+    sources:
+    - title: Road Atlanta — Wikipedia
+      url: https://en.wikipedia.org/wiki/Road_Atlanta
+      accessed: 2026-06-10
+  - class: GT1 (Prototype)
+    time: "1:15.239"
+    driver: Allan McNish
+    car: Porsche 911 GT1-98
+    year: 1998
+    record_type: race
+    sources:
+    - title: Road Atlanta — Wikipedia
+      url: https://en.wikipedia.org/wiki/Road_Atlanta
+      accessed: 2026-06-10
+  - class: GT1 (GTS)
+    time: "1:17.053"
+    driver: Jan Magnussen
+    car: Chevrolet Corvette C6.R
+    year: 2008
+    record_type: race
+    sources:
+    - title: Road Atlanta — Wikipedia
+      url: https://en.wikipedia.org/wiki/Road_Atlanta
+      accessed: 2026-06-10
+
+editorial:
+  tagline: >-
+    A 2.54-mile rollercoaster through the Georgia pines — fast downhill esses, a mile-long back straight, and the blind, plunging dive of Turn 12 onto the front straight.
+  narrative_md: road-atlanta.md
+  available_in:
+  - iRacing
+  - Automobilista 2
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/road-atlanta # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/road-atlanta/road-atlanta.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Road_Atlanta_track_map.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Road_Atlanta_track_map.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Road_Atlanta_track_map.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-06-11
+
+sources:
+- title: Road Atlanta — Wikipedia
+  url: https://en.wikipedia.org/wiki/Road_Atlanta
+  accessed: 2026-06-10
+- title: Michelin Raceway Road Atlanta — Official Site
+  url: https://michelinracewayroadatlanta.com/
+  accessed: 2026-06-10
+- title: Road Atlanta — RacingCircuits.info
+  url: https://www.racingcircuits.info/north-america/usa/road-atlanta.html
+  accessed: 2026-06-10
+
+status: verified

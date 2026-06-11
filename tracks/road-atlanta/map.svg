@@ -1,0 +1,12 @@
+<!--Michelin Raceway Road Atlanta, traced single-line centerline.
+     Derived from File:Road_Atlanta_track_map.svg by Will Pittenger (CC BY-SA 3.0)
+     on Wikimedia Commons (see assets.map_attribution). The source draws the
+     track as a filled band split across an outline path plus a connector
+     segment; the band was reassembled and its racing-line centerline extracted
+     via scripts/derive-map-from-band.mjs (nonzero-winding raster, Zhang-Suen
+     skeleton, cycle walk) and affine-fit to the normalized 0 0 1000 1000
+     viewBox. License is recorded in LICENSE-ASSETS.md. To re-fetch the source,
+     see scripts/fetch-map.mjs.-->
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Road Atlanta track map" role="img" viewBox="0 0 1000 1000">
+  <path fill="none" stroke="#1f1f21" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" d="m171 273.1 35.6 6.5 35.4 3.2 293-1 38.4 3.2 35.1 6.2 35.6 11.2 161.7 68.5 5.5-.4 27.6-20.3 7.3-.9 9.1 1.5 41.1 27.2 26.7 23.5 12.6 35.9 14.1 54.6.2 22.2-6.7 20.3-10.2 15.1-27.7 32-106.3 128.5-23.2 23.2-19.6 13.9-17.2 7-13.2.2-16.1-5.2-16.2-8.1-9.6-7.6-80.8-79.8-30.2-13-5-7.4-11.6-38.3-24.2-23.6-11.4-8.5-57.6-25.2-18.5-16.6-6.6-8.3-13.1-36.7-31.9-41.4-12.7-29.2-18.9-18.8-9.2-3.4-58.8-11.2-88.9-14.3-37.4-4.2-86.9-5.3-14.8-5.5-11.2-12.6-4.3-19.1 2.1-42.4 2.5-14.1 8-7.6 7.6-1.4 15.2 2.4Z"/>
+</svg>
