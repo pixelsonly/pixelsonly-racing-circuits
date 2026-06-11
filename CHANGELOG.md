@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.12.0...pixelsonly-racing-circuits-v1.13.0) (2026-06-11)
+
+
+### New tracks & additive changes
+
+* add Long Beach (Grand Prix) ([#63](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/63)) ([73fea7b](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/73fea7b53a57ee3d78efe8d48f95d19f92cda4d7))
+
 ## [1.12.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.11.0...pixelsonly-racing-circuits-v1.12.0) (2026-06-11)
 
 
