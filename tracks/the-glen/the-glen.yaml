@@ -1,0 +1,252 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: the-glen
+name: Watkins Glen International
+display_name: Watkins Glen
+subtitle: The Glen
+country_code: US
+country_name: United States
+locality: Dix, New York, USA
+latitude: 42.336944 # circuit center (42°20′13″N) — confirm against an authoritative source during intake
+longitude: -76.926944 # 76°55′37″W
+
+year_opened: 1956
+designer: Cornell Aeronautical Laboratory (William F. Milliken)
+owner: NASCAR
+
+primary_layout: long-course
+
+layouts:
+- id: long-course
+  name: Long Course
+  current: true
+  years: 1992-present # "Boot" extension added 1971; the Inner Loop "bus stop" chicane (spring 1992) forms the current long course
+  direction: clockwise
+  turns: 11
+  length_km: 5.552
+  length_mi: 3.450
+  elevation_change_m: 41
+  elevation_change_ft: 135
+  map_svg: map.svg
+  corners:
+  # Turn numbering and corner names follow the official Long Course map mirrored
+  # by the 2024 Commons SVG named in issue #43 (The 90, the Esses, the Outer
+  # Loop, the Chute, the Toe and Heel of the Boot). The 1992 Inner Loop "bus
+  # stop" chicane is drawn on that map but left UNNUMBERED, so it is described in
+  # the narrative rather than carried as a numbered corner — this differs from
+  # the HPDE/sim convention that folds the chicane in as a turn. The source draws
+  # the track as a filled band, so map.svg's centerline was extracted
+  # programmatically (raster skeleton, pit road excluded) and per-corner
+  # positions are the source's 11 numbered marker circles projected onto that
+  # centerline under the same affine — they sit on the line by construction and
+  # trace the lap in turn order 1..11. Handedness was computed from signed
+  # curvature along the extracted centerline (negative = left in the y-down map
+  # space) and cross-checked against the marker loop; geometry settled the
+  # right-left-right of the Esses and the left/right split of Turns 10 and 11.
+  - id: the-90
+    number: "1"
+    name: The 90
+    description: >-
+      A 90-degree, heavily banked downhill right-hander at the end of the start/finish straight, reached under hard braking; it sets up the climb into the Esses and is a prime overtaking spot.
+    direction: right
+    position: { x: 0.056, y: 0.591 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  - id: esses-1
+    number: "2"
+    name: The Esses
+    description: >-
+      The first corner of the Esses, a quick right-hander that begins the fast, uphill S-sequence climbing away from the start/finish area.
+    direction: right
+    position: { x: 0.111, y: 0.453 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  - id: esses-2
+    number: "3"
+    name: The Esses
+    signature: true
+    description: >-
+      The middle of the Esses, a blind left that crests over the brow of the hill, carried near flat-out; the committing heart of the Glen's signature sequence.
+    story: |
+      The Esses are what Watkins Glen is best known for: a fast, uphill,
+      right-left-right flick where this middle left crests blind over the brow of
+      the climb. Taken near flat-out, it rewards commitment and a car that stays
+      settled as the camber rolls underneath it — the corner that defines a quick
+      lap at the Glen.
+    direction: left
+    position: { x: 0.230, y: 0.416 }
+    sources:
+    - title: Watkins Glen International — Wikipedia
+      url: https://en.wikipedia.org/wiki/Watkins_Glen_International
+      accessed: 2026-06-10
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+  - id: esses-3
+    number: "4"
+    name: The Esses
+    description: >-
+      The final part of the Esses, a right-hander where the climb levels off and the cars build speed onto the long back straight.
+    direction: right
+    position: { x: 0.359, y: 0.324 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  - id: outer-loop
+    number: "5"
+    name: Outer Loop
+    description: >-
+      A long, banked right-hand sweeper at the far end of the back straight — the steepest-banked corner on the circuit, known to NASCAR as the Carousel — taken with a late, fall-away apex that launches the lap downhill into the Boot. The 1992 Inner Loop chicane breaks the back straight just before it.
+    direction: right
+    position: { x: 0.868, y: 0.381 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  - id: the-chute
+    number: "6"
+    name: The Chute
+    description: >-
+      A downhill left at the foot of the Chute, dropping off the Outer Loop into the wooded Boot — the slowest section of the circuit.
+    direction: left
+    position: { x: 0.725, y: 0.551 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  - id: toe-of-the-boot
+    number: "7"
+    name: Toe of the Boot
+    description: >-
+      A sharp, near-180-degree right at the far toe of the Boot, climbing hard on exit out of the trees.
+    direction: right
+    position: { x: 0.950, y: 0.606 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  - id: heel-of-the-boot
+    number: "8"
+    name: Heel of the Boot
+    description: >-
+      A slower right completing the Boot loop, where the wooded extension rejoins the original circuit.
+    direction: right
+    position: { x: 0.616, y: 0.634 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  - id: turn-9
+    number: "9"
+    name: Turn 9
+    description: >-
+      A quick left climbing back out of the Boot toward the front of the circuit.
+    direction: left
+    position: { x: 0.663, y: 0.486 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  - id: turn-10
+    number: "10"
+    name: Turn 10
+    description: >-
+      A fast, near-flat left on the run back toward the start/finish area.
+    direction: left
+    position: { x: 0.476, y: 0.512 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  - id: turn-11
+    number: "11"
+    name: Turn 11
+    description: >-
+      The final right-hander onto the main straight, its exit wall close to the racing line; a clean run sets up the lap down to The 90.
+    direction: right
+    position: { x: 0.429, y: 0.674 }
+    sources:
+    - title: Watkins Glen — Race & Track Driving
+      url: https://racetrackdriving.com/track-guide/watkins-glen/
+      accessed: 2026-06-10
+    - title: Watkins Glen International — COM Sports Car Club
+      url: https://www.comscc.org/watkins-glen-international/
+      accessed: 2026-06-10
+  lap_records: []
+
+editorial:
+  tagline: >-
+    Watkins Glen's endurance "Boot" — a 3.45-mile plunge through the fast, blind Esses, the banked Outer Loop, and the wooded four-turn Boot extension that hosts IMSA's 6 Hours of the Glen.
+  narrative_md: the-glen.md
+  available_in:
+  - iRacing
+  - Assetto Corsa Competizione
+  - Gran Turismo 7
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/the-glen # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/the-glen/the-glen.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Watkins_Glen_International_Long_Circuit_2024.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Watkins_Glen_International_Long_Circuit_2024.svg
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    artist: Stl66dmk
+    attribution_text: Track map derived from "Watkins_Glen_International_Long_Circuit_2024.svg" by Stl66dmk, CC BY-SA 4.0, via Wikimedia Commons.
+    accessed: 2026-06-11
+
+sources:
+- title: Watkins Glen International — Wikipedia
+  url: https://en.wikipedia.org/wiki/Watkins_Glen_International
+  accessed: 2026-06-10
+- title: Watkins Glen — RacingCircuits.info
+  url: https://www.racingcircuits.info/north-america/usa/watkins-glen.html
+  accessed: 2026-06-10
+- title: The Gran Turismo 7 June Update — Watkins Glen (Polyphony Digital)
+  url: https://www.gran-turismo.com/us/news/00_5302315.html
+  accessed: 2026-06-10
+
+status: verified
