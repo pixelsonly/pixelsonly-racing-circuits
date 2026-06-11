@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.9.0...pixelsonly-racing-circuits-v1.10.0) (2026-06-11)
+
+
+### New tracks & additive changes
+
+* add Sebring International Raceway (Grand Prix Road Course) ([#57](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/57)) ([9fe3170](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/9fe31706f3814731f958d8f44a3b9e15a4da243b))
+
 ## [1.9.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.8.0...pixelsonly-racing-circuits-v1.9.0) (2026-06-10)
 
 
