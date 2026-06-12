@@ -1,0 +1,29 @@
+{
+  "slug": "mugello",
+  "layout": "grand-prix",
+  "center": {
+    "lat": 43.997406,
+    "lon": 11.370903
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 1.469,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 1.998,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 4.406,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 1.528,
+    "windowPoints": 1787
+  },
+  "derived_from": {
+    "length_km": 5.245,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

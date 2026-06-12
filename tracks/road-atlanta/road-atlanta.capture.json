@@ -1,0 +1,29 @@
+{
+  "slug": "road-atlanta",
+  "layout": "grand-prix",
+  "center": {
+    "lat": 34.145939,
+    "lon": -83.814545
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 1.879,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 2.555,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 5.636,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 2.28,
+    "windowPoints": 607
+  },
+  "derived_from": {
+    "length_km": 4.088,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

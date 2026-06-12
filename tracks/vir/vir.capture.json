@@ -1,0 +1,29 @@
+{
+  "slug": "vir",
+  "layout": "full-course",
+  "center": {
+    "lat": 36.560388,
+    "lon": -79.206115
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 2.074,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 2.821,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 6.222,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 1.965,
+    "windowPoints": 508
+  },
+  "derived_from": {
+    "length_km": 5.262,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

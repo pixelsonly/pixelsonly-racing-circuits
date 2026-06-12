@@ -1,0 +1,29 @@
+{
+  "slug": "suzuka",
+  "layout": "grand-prix",
+  "center": {
+    "lat": 34.84375,
+    "lon": 136.53287
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 2.189,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 2.977,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 6.566,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 2.137,
+    "windowPoints": 1317
+  },
+  "derived_from": {
+    "length_km": 5.807,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

@@ -86,10 +86,17 @@ reason it out from path data.
 
 ```
 npx svgo --config svgo.config.mjs -rf tracks --quiet
+npm run capture-frame -- <slug> --preview --plan-file   # writes <slug>.capture.json
 git status   # ONLY tracks/<slug>/** and LICENSE-ASSETS.md may be dirty
 npm run validate          # zero errors
 node scripts/build.mjs    # must succeed; never commit build/
 ```
+
+After `capture-frame`, **eyeball the preview** (`qlmanage -t -s 1400
+previews/capture/<slug>.svg`): the track must sit centered in the red web frame
+with margin. If the banner says the OSM center fell back, or it looks off-centre,
+add a `center` override in `scripts/capture-frame.overrides.json` and re-run.
+Commit `tracks/<slug>/<slug>.capture.json` — the dispatcher reads it on merge.
 
 ## Phase 6 — commit + PR
 

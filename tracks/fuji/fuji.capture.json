@@ -1,0 +1,29 @@
+{
+  "slug": "fuji",
+  "layout": "grand-prix",
+  "center": {
+    "lat": 35.371201,
+    "lon": 138.929363
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 1.664,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 2.263,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 4.991,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 2.04,
+    "windowPoints": 623
+  },
+  "derived_from": {
+    "length_km": 4.563,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

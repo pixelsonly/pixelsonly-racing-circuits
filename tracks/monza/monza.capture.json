@@ -1,0 +1,29 @@
+{
+  "slug": "monza",
+  "layout": "grand-prix",
+  "center": {
+    "lat": 45.620653,
+    "lon": 9.288644
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 2.446,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 3.327,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 7.339,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 2.634,
+    "windowPoints": 974
+  },
+  "derived_from": {
+    "length_km": 5.793,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

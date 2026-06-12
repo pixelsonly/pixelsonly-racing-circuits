@@ -2,7 +2,11 @@ name: Dispatch satellite capture for new tracks
 
 # When a new track folder lands on main, trigger the Sentinel-2 capture workflow
 # in the private companion repo pixelsonly/pixelsonly-racing-track-captures,
-# passing slug + lat + lon pulled straight from the merged YAML.
+# passing the per-track capture FRAME (refined center + master/web spans + master
+# px size) read from the committed plan, tracks/<slug>/<slug>.capture.json. That
+# plan is produced by `npm run capture-frame -- <slug> --plan-file` (see README)
+# and reviewed via its SVG preview before merge — so dispatch is a plain jq read
+# with no network derivation here. A track without a committed plan fails loud.
 #
 # Why this trigger (vs PR-open or release-please tag):
 #   - Single source of truth: only YAML that actually merged is captured.
@@ -74,23 +78,32 @@ jobs:
           set -euo pipefail
           while IFS= read -r yaml; do
             [[ -z "$yaml" ]] && continue
-            slug=$(yq -r '.slug' "$yaml")
-            lat=$(yq -r '.latitude' "$yaml")
-            lon=$(yq -r '.longitude' "$yaml")
-            if [[ -z "$slug" || -z "$lat" || -z "$lon" \
-                  || "$slug" == "null" || "$lat" == "null" || "$lon" == "null" ]]; then
-              echo "::error file=$yaml::missing slug/latitude/longitude — skipping dispatch."
+            slug=$(basename "$yaml" .yaml)
+            plan="${yaml%.yaml}.capture.json"
+            if [[ ! -f "$plan" ]]; then
+              echo "::error file=$yaml::no capture plan ($plan). Run 'npm run capture-frame -- $slug --plan-file' and commit it, then re-add the track."
               continue
             fi
-            echo "Dispatching capture for $slug (lat=$lat lon=$lon)"
-            # span_km=80 forces the captures workflow over the 2500-px tiling
-            # threshold, producing an ~8000x8000 master sized for stylization.
-            # The captures repo defaults to span_km=4 (a 400-px thumbnail),
-            # which is fine for manual smoke tests but useless as a master.
+            # The deriver resolves the frame from map.svg + length_km (size) and
+            # OSM (center); we just read it. span_km is the wide stylization
+            # master, jpg_span_km the tight web crop, size the master px canvas.
+            lat=$(jq -r '.center.lat' "$plan")
+            lon=$(jq -r '.center.lon' "$plan")
+            master_span=$(jq -r '.master.span_km' "$plan")
+            master_size=$(jq -r '.master.size' "$plan")
+            web_span=$(jq -r '.web.span_km' "$plan")
+            if [[ "$lat" == "null" || "$lon" == "null" || "$master_span" == "null" \
+                  || "$master_size" == "null" || "$web_span" == "null" ]]; then
+              echo "::error file=$plan::capture plan missing center/spans/size — regenerate with capture-frame."
+              continue
+            fi
+            echo "Dispatching capture for $slug (center=$lat,$lon master=${master_span}km@${master_size}px web=${web_span}km)"
             gh workflow run capture.yml \
               -R pixelsonly/pixelsonly-racing-track-captures \
               -f slug="$slug" \
               -f lat="$lat" \
               -f lon="$lon" \
-              -f span_km=80
+              -f span_km="$master_span" \
+              -f size="$master_size" \
+              -f jpg_span_km="$web_span"
           done <<< "$TRACKS"

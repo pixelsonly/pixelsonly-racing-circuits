@@ -1,0 +1,29 @@
+{
+  "slug": "nuerburgring",
+  "layout": "combined-24h",
+  "center": {
+    "lat": 50.352252,
+    "lon": 6.962784
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 7.726,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 10.507,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 23.177,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 7.566,
+    "windowPoints": 1723
+  },
+  "derived_from": {
+    "length_km": 25.378,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

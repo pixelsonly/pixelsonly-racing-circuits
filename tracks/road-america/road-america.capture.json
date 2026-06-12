@@ -1,0 +1,29 @@
+{
+  "slug": "road-america",
+  "layout": "full-course",
+  "center": {
+    "lat": 43.798196,
+    "lon": -87.996411
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 1.756,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 2.388,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 5.268,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 1.742,
+    "windowPoints": 300
+  },
+  "derived_from": {
+    "length_km": 6.515,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

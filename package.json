@@ -31,6 +31,7 @@
     "fetch-map": "node scripts/fetch-map.mjs",
     "positions": "node scripts/derive-corner-positions.mjs",
     "map-band": "node scripts/derive-map-from-band.mjs",
+    "capture-frame": "node scripts/derive-capture-frame.mjs",
     "svgo": "svgo --config svgo.config.mjs -rf tracks",
     "prepack": "npm run build"
   },

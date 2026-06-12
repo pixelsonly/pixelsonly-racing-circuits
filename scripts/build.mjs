@@ -68,6 +68,8 @@ for (const slug of folders) {
     const name = entry.name;
     if (name === `${slug}.yaml`) continue;           // source record — not shipped
     if (name.startsWith("._") || name === ".DS_Store") continue;
+    if (name.endsWith(".capture.json")) continue;    // private satellite-capture frame — not shipped
+
     // copy assets verbatim (svg, webp, md, etc.)
     copyFileSync(join(folderPath, name), join(outDir, name));
   }

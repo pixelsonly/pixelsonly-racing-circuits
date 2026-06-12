@@ -6,6 +6,10 @@ npm-debug.log*
 build/
 dist/
 
+# Capture-frame deriver: OSM response cache + generated framing previews
+.cache/
+previews/
+
 # OS / editor cruft
 .DS_Store
 ._*

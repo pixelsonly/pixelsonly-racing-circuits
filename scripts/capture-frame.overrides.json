@@ -1,0 +1,9 @@
+{
+  "_doc": "Per-track manual overrides for derive-capture-frame.mjs. Keyed by slug. Use ONLY when OSM can't place a circuit (street circuits, public-road layouts) and the declared latitude/longitude isn't the true centroid. Fields (all optional): center [lat, lon] forces the capture center; web_span_km / master_span_km force those spans (km). Anything omitted is derived normally. The leading underscore keeps this doc key from matching any slug.",
+  "_example": {
+    "some-street-circuit": {
+      "center": [33.7664, -118.1928],
+      "note": "OSM has no full loop; centroid read off a basemap"
+    }
+  }
+}
