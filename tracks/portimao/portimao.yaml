@@ -40,11 +40,13 @@ layouts:
   # this sequence 15/15. Remaining low-confidence calls: T9 is single-sourced (RaceControl);
   # T13 is genuinely contested (RaceControl "right" vs Driver61 "left hairpin", right recorded);
   # T14 is effectively single-sourced on direction.
-  # NO corner `position` fields: the source map ("F1 Sectors" diagram) carries NO numbered turn
-  # markers, so scripts/derive-corner-positions.mjs does not apply, and the curvature-derived
-  # apexes could not be locked to turn numbers unambiguously near the main straight — positions
-  # are omitted rather than risk mislabelling. A memorial "Craig Jones" corner exists at ~Turn 9
-  # but is not consistently mapped across sources, so all corners stay "Turn N".
+  # NO corner `position` fields: the source ("F1 Sectors" diagram) labels turns with VECTOR-GLYPH
+  # numbers (e.g. "1 Primeira"), not <text> elements, so scripts/derive-corner-positions.mjs (which
+  # reads numbered text markers) cannot pick them up; deriving positions from the centerline curvature
+  # left the turn-number mapping ambiguous near the main straight, so positions are omitted pending a
+  # manual placement pass rather than risk mislabelling. (map.svg is the racing-line centerline, built
+  # from the diagram's three dashed sector segments chained into one closed loop.) A memorial "Craig
+  # Jones" corner exists at ~Turn 9 but is not consistently mapped across sources, so corners stay "Turn N".
   - id: turn-1
     number: "1"
     name: Turn 1
