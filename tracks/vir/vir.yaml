@@ -1,0 +1,352 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: vir
+name: Virginia International Raceway
+display_name: VIR
+subtitle: Alton
+country_code: US
+country_name: United States
+locality: Alton, Virginia, USA
+latitude: 36.56167 # circuit center (36°33′42″N) — confirm against an authoritative source during intake
+longitude: -79.20472 # 79°12′17″W (WEST — negative)
+year_opened: 1957
+designer: Hooper D. Johnson
+owner: Connie Nyholm # majority owner/CEO since co-founder Harvey Siegel's 2013 retirement
+
+primary_layout: full-course
+
+layouts:
+- id: full-course
+  name: Full Course
+  current: true
+  years: 1957-present # original 1957 layout; track lost to history, reopened March 2000, repaved/widened 2014
+  direction: clockwise
+  turns: 17
+  length_km: 5.262
+  length_mi: 3.270
+  elevation_change_m: 40
+  elevation_change_ft: 130
+  map_svg: map.svg
+  corners:
+  # Per-corner positions are the source map's numbered turn markers (map-source.svg),
+  # transformed into the map.svg viewBox via the same affine that produced map.svg
+  # (uniform scale s≈0.63615, translate ≈ (-660.41, -170.45)); derived with
+  # scripts/derive-corner-positions.mjs at 0.01px residual.
+  # Handedness was checked against the TRUE centerline geometry (heading change through
+  # each corner, traced in race order = clockwise), validated where the map matches known
+  # corners (NASCAR Bend/T3 left, South Bend/T10 left, Hog Pen/T17 right, Climbing Esses/T9
+  # right all agree). GEOMETRY WINS: it corrected Oak Tree (T11) to a RIGHT-hander — one
+  # guide (flat6) called it left, but the centerline (+116° right) and the Peter Krause
+  # hot-lap ("uphill, on-camber right") agree it is a right. The source map carries no
+  # Turn 13 marker (a gentle back-straight kink between markers 12 and 14), so T13 has no
+  # position. Letter sub-apex markers (5a/6a/14a/17a) are folded into their primary corner.
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    description: >-
+      A long right-hander at the end of the 3,000 ft front (pit) straight, entered very fast under heavy braking; positioning here sets up the run to Turn 2.
+    direction: right
+    position: { x: 0.750, y: 0.801 }
+    sources:
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: turn-2
+    number: "2"
+    name: Turn 2
+    description: >-
+      A short connector between the fast Turn 1 entry and the braking zone for NASCAR Bend.
+    direction: right
+    position: { x: 0.761, y: 0.721 }
+    sources:
+    - title: Virginia International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+  - id: nascar-bend
+    number: "3"
+    name: NASCAR Bend
+    description: >-
+      A tricky, decreasing-radius left-hander, named after the trouble Richard Petty, David Pearson and Wendell Scott had here during a 1966 Trans-Am race; the 2014 repave made it noticeably faster.
+    direction: left
+    position: { x: 0.831, y: 0.636 }
+    sources:
+    - title: VIR Turn by Turn — Northern New Jersey Region PCA
+      url: https://nnjr-pca.com/wp-content/uploads/2019/10/VIR-Turn-by-Turn-2019.pdf
+      accessed: 2026-06-11
+    - title: Virginia International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+  - id: turn-4
+    number: "4"
+    name: Turn 4
+    description: >-
+      A slow, tight left-hander used to set up entry to the Snake.
+    direction: left
+    position: { x: 0.746, y: 0.567 }
+    sources:
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: snake
+    number: "5"
+    name: The Snake
+    description: >-
+      The opening of a flowing, alternating left-right complex over cambered surfaces — one of VIR's most rhythmic sections — leading into the run up to the Climbing Esses.
+    direction: chicane
+    position: { x: 0.752, y: 0.652 }
+    sources:
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+    - title: VIR Turn by Turn — Northern New Jersey Region PCA
+      url: https://nnjr-pca.com/wp-content/uploads/2019/10/VIR-Turn-by-Turn-2019.pdf
+      accessed: 2026-06-11
+  - id: turn-6
+    number: "6"
+    name: Turn 6
+    description: >-
+      The exit of the Snake complex, releasing the cars toward the foot of the Climbing Esses.
+    position: { x: 0.637, y: 0.620 }
+    sources:
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: climbing-esses-7
+    number: "7"
+    name: Climbing Esses
+    signature: true
+    description: >-
+      The first of VIR's signature sequence — an uphill left that crests at the apex before flowing into the next esse; the Climbing Esses are the most exciting feature of the course.
+    story: |
+      The Climbing Esses are the corner sequence VIR is best known for: a rapid
+      series of alternating bends that climb the hillside, each cresting near its
+      apex so the car goes light over the rises. Drivers carry minimal steering
+      input over the hilltops and trust the camber — getting the rhythm right
+      sets up the whole second half of the lap toward South Bend and Oak Tree.
+    direction: left
+    position: { x: 0.421, y: 0.482 }
+    sources:
+    - title: Virginia International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: climbing-esses-8
+    number: "8"
+    name: Climbing Esses
+    signature: true
+    description: >-
+      The middle of the Climbing Esses — a left that again crests at the apex and drops slightly before the final rise.
+    direction: left
+    position: { x: 0.349, y: 0.446 }
+    sources:
+    - title: Virginia International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+  - id: climbing-esses-9
+    number: "9"
+    name: Climbing Esses
+    signature: true
+    description: >-
+      The top of the Climbing Esses — a final right that crests onto the plateau before South Bend.
+    direction: right
+    position: { x: 0.267, y: 0.394 }
+    sources:
+    - title: Virginia International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: south-bend
+    number: "10"
+    name: South Bend
+    description: >-
+      A fast, cresting, blind left-hander that finishes in a steep downhill plunge — entry positioning from track-right is critical.
+    direction: left
+    position: { x: 0.202, y: 0.308 }
+    sources:
+    - title: Virginia International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: oak-tree
+    number: "11"
+    name: Oak Tree
+    description: >-
+      An uphill, on-camber right-hander named for the lone oak that once stood on its outside; the tree was removed in 2012 but the corner keeps the name. Among the slowest corners on the lap, it feeds the long back straight, so a patient, clean exit is critical for lap time.
+    direction: right
+    position: { x: 0.058, y: 0.273 }
+    sources:
+    - title: Virginia International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+  - id: turn-12
+    number: "12"
+    name: Turn 12
+    description: >-
+      A fast right-hander completing the Oak Tree complex, taken with a late apex to maximise speed onto the 4,000 ft back straight; the exit runs downhill and off-camber.
+    direction: right
+    position: { x: 0.057, y: 0.179 }
+    sources:
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: turn-13
+    number: "13"
+    name: Turn 13
+    description: >-
+      An uphill left at the end of the back straight, taken over significant elevation gain before the Roller Coaster.
+    direction: left
+    # source map carries no Turn 13 marker (gentle back-straight kink) — position omitted
+    sources:
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: roller-coaster
+    number: "14"
+    name: Roller Coaster
+    description: >-
+      A right-hander cresting a hill, often likened to a scaled-down mirror image of Laguna Seca's Corkscrew; the elevation change demands trail-braking over the crest.
+    direction: right
+    position: { x: 0.664, y: 0.188 }
+    sources:
+    - title: Virginia International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: turn-15
+    number: "15"
+    name: Turn 15
+    description: >-
+      A downhill left-hander dropping off the Roller Coaster toward the Hog Pen sequence.
+    direction: left
+    position: { x: 0.773, y: 0.274 }
+    sources:
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: turn-16
+    number: "16"
+    name: Turn 16
+    description: >-
+      A quick left-hander leading into Hog Pen; taken using the full width of the track with a late apex to carry speed into the final corner.
+    direction: left
+    position: { x: 0.836, y: 0.284 }
+    sources:
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  - id: hog-pen
+    number: "17"
+    name: Hog Pen
+    description: >-
+      The fast, downhill final right-hander that releases the cars onto the front straight; a clean, committed exit is decisive for the run past start/finish.
+    direction: right
+    position: { x: 0.904, y: 0.275 }
+    sources:
+    - title: Virginia International Raceway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+    - title: In-Depth Track Visit — Virginia International Raceway (flat6motorsports)
+      url: https://flat6motorsports.com/blogs/news/in-depth-track-visit-virginia-international-raceway-vir
+      accessed: 2026-06-11
+  lap_records:
+  - class: LMP1
+    time: "1:36.112"
+    driver: Lucas Luhr
+    car: HPD ARX-03a
+    year: 2012
+    record_type: race
+    sources:
+    - title: Virginia International Raceway — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+  - class: LMP2
+    time: "1:39.393"
+    driver: Martin Plowman
+    car: Morgan LMP2
+    year: 2012
+    record_type: race
+    sources:
+    - title: Virginia International Raceway — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+  - class: LMP900
+    time: "1:39.618"
+    driver: Didier Theys
+    car: Dallara SP1
+    year: 2002
+    record_type: race
+    sources:
+    - title: Virginia International Raceway — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+  - class: LM GTE
+    time: "1:40.638"
+    driver: Earl Bamber
+    car: Porsche 911 RSR
+    year: 2019
+    record_type: race
+    sources:
+    - title: Virginia International Raceway — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+  - class: LMP3
+    time: "1:40.735"
+    driver: Garett Grist
+    car: Ligier JS P320
+    year: 2021
+    record_type: race
+    sources:
+    - title: Virginia International Raceway — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+      accessed: 2026-06-11
+
+editorial:
+  tagline: >-
+    A 3.27-mile rollercoaster through the Virginia hills — the Climbing Esses, the ghost of the Oak Tree and a lap of blind crests that has earned VIR a place among America's great road courses.
+  narrative_md: vir.md
+  available_in:
+  - iRacing
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/vir # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/vir/vir.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Virginia_International_Raceway_-_Full_Course.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Virginia_International_Raceway_-_Full_Course.svg
+    license: CC BY 3.0
+    license_url: https://creativecommons.org/licenses/by/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Virginia_International_Raceway_-_Full_Course.svg" by Will Pittenger, CC BY 3.0, via Wikimedia Commons.
+    accessed: 2026-06-12
+
+sources:
+- title: Virginia International Raceway — Wikipedia
+  url: https://en.wikipedia.org/wiki/Virginia_International_Raceway
+  accessed: 2026-06-11
+- title: Configurations — Virginia International Raceway (official site)
+  url: https://virnow.com/track/configurations/
+  accessed: 2026-06-11
+- title: Virginia International Raceway — RacingCircuits.info
+  url: https://www.racingcircuits.info/north-america/usa/virginia-international-raceway.html
+  accessed: 2026-06-11
+
+status: verified
