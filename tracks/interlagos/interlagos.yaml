@@ -1,0 +1,291 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: interlagos
+name: Autódromo José Carlos Pace
+display_name: Interlagos
+subtitle: Senna S
+country_code: BR
+country_name: Brazil
+locality: São Paulo, Brazil
+latitude: -23.70111 # circuit center (23°42′04″S — SOUTH, negative) — geohack via Wikipedia
+longitude: -46.69722 # 46°41′50″W (WEST — negative)
+year_opened: 1940
+owner: City of São Paulo # built under Louis Romero Sanson; sold to the city in 1954
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix
+  current: true
+  years: 2017-present # current 4.309 km configuration; the GP circuit is little changed since the 1990 shortening
+  direction: anticlockwise
+  turns: 15
+  length_km: 4.309
+  length_mi: 2.677
+  elevation_change_m: 43
+  elevation_change_ft: 141
+  map_svg: map.svg
+  corners:
+  # Interlagos runs ANTICLOCKWISE, so handedness is predominantly LEFT — only the Ferradura
+  # (T6-7), Laranjinha (T8) and Bico de Pato (T10) plus the second element of the Senna S are
+  # right-handers. Handedness below was cross-checked against three independent guides plus
+  # the Mercedes-AMG official corner-name article; the build stage re-checks against the map
+  # geometry and GEOMETRY WINS. Numbering follows Wikipedia / Mercedes-AMG: Senna S = T1-2,
+  # Curva do Sol = T3, Descida do Lago = T4-5, Ferradura = T6-7, Laranjinha = T8,
+  # Pinheirinho = T9, Bico de Pato = T10, Mergulho = T11, Junção = T12, Café = T13,
+  # Subida dos Boxes = T14, Arquibancadas = T15.
+  # GEOMETRY CHECK (true-centerline heading-change, traced in race order) CONFIRMED the record's
+  # handedness, resolving every flag in the record's favour: Curva do Sol (T3) is a LEFT (the lone
+  # Total Motorsport "right" is refuted), Ferradura (T6-7) is right-right (not right-then-left), and
+  # Mergulho (T11) is a LEFT. The Senna S opens left then right; Junção/Café/Subida/Arquibancadas all left.
+  # Per-corner positions are from the source map's numbered markers (the map carries two sets of 1-3 — the
+  # GP set spread down the right edge was used, not the bunched duplicate), snapped to the extracted
+  # centerline; complex entries use a representative apex (Senna S between T1/T2, Descida do Lago T4/T5,
+  # Ferradura T6/T7). Affine via scripts/derive-corner-positions.mjs at 0.00px residual.
+  - id: senna-s
+    number: "1-2"
+    name: S do Senna
+    signature: true
+    description: >-
+      The signature corner: a fast downhill left-right plunge (Turns 1-2) dropping off the start/finish straight to one of the lowest points of the lap, named for triple world champion Ayrton Senna. The prime overtaking zone and a frequent opening-lap flashpoint.
+    story: |
+      The S do Senna is the corner Interlagos is known for and the heart of the
+      circuit's identity. Plunging downhill off the long pit straight, the
+      left-right complex rewards commitment on entry and a clean line through to
+      Curva do Sol, where exit speed sets up the whole Reta Oposta back straight.
+      It honours São Paulo's own Ayrton Senna, the three-time world champion who
+      took an emotional, physically gruelling home win here in 1991, and it is
+      both the best overtaking spot on the lap and the scene of regular first-lap
+      chaos.
+    direction: left-right
+    position: { x: 0.939, y: 0.612 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Interlagos Circuit — Wikipedia
+      url: https://en.wikipedia.org/wiki/Interlagos_Circuit
+      accessed: 2026-06-11
+  - id: curva-do-sol
+    number: "3"
+    name: Curva do Sol
+    description: >-
+      A long, large-radius left-hander ("Curve of the Sun") taken at the bottom of the Senna S plunge; a clean, flat exit launches the cars down the Reta Oposta back straight.
+    direction: left
+    position: { x: 0.885, y: 0.376 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  - id: descida-do-lago
+    number: "4-5"
+    name: Descida do Lago
+    description: >-
+      The "descent to the lake" (Turns 4-5): a downhill left-left sequence plunging to one of the lowest points of the circuit, beside the lake that gives the corner — and the Interlagos district — its name. A heavy braking zone and a further overtaking opportunity.
+    direction: left
+    position: { x: 0.282, y: 0.275 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  - id: ferradura
+    number: "6-7"
+    name: Ferradura
+    description: >-
+      The "horseshoe" (Turns 6-7): a quick downhill right-hand sweep shaped like a horse's shoe, beginning the climb back into the twisting infield.
+    direction: right
+    position: { x: 0.561, y: 0.646 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  - id: laranjinha
+    number: "8"
+    name: Laranjinha
+    description: >-
+      A tightening right-hander ("little orange") that opens the slow, twisting infield section, where precision matters more than speed.
+    direction: right
+    position: { x: 0.401, y: 0.687 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  - id: pinheirinho
+    number: "9"
+    name: Pinheirinho
+    description: >-
+      A slow, near-180-degree left-hander ("little pine tree") in the heart of the infield; one of the few corners at Interlagos on flat ground, it drops slightly on entry and rises on exit, demanding careful throttle to avoid losing traction.
+    direction: left
+    position: { x: 0.393, y: 0.611 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  - id: bico-de-pato
+    number: "10"
+    name: Bico de Pato
+    description: >-
+      A tight, slow right-hander ("duck's bill") whose shape gives it its name; delicate braking and a patient exit set up the run through Mergulho.
+    direction: right
+    position: { x: 0.228, y: 0.644 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  - id: mergulho
+    number: "11"
+    name: Mergulho
+    description: >-
+      A constant-radius left-hander ("the dive"), so named for the downhill plunge it takes toward the low point at Junção.
+    direction: left
+    position: { x: 0.286, y: 0.541 }
+    sources:
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+    - title: A Corner-by-Corner Guide to Interlagos — Senate Grand Prix Racing
+      url: https://senategrandprixracing.blogspot.com/2025/11/a-corner-by-corner-guide-to-interlagos.html
+      accessed: 2026-06-11
+  - id: juncao
+    number: "12"
+    name: Junção
+    signature: true
+    description: >-
+      The critical left-hander ("junction") at the lowest point of the lap, where the infield rejoins the climb to the pit straight. A clean, early exit is decisive: it begins the long, full-throttle uphill drag that runs all the way to the line and sets up the most important overtaking move into the Senna S.
+    story: |
+      Junção is the corner that decides the lap. As the lowest and one of the
+      slowest points on the circuit, it opens the long uphill climb back to the
+      start/finish line, so the exit determines top speed all the way up the hill
+      and into the braking zone for the Senna S a lap later. It was here in 2008
+      that Lewis Hamilton passed Timo Glock on the final lap to clinch his first
+      world championship by a single point — one of the most famous moments in
+      Formula 1 history.
+    direction: left
+    position: { x: 0.090, y: 0.429 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  - id: cafe
+    number: "13"
+    name: Café
+    description: >-
+      An open left-hander ("coffee") taken at full speed as the climb back to the pit straight begins.
+    direction: left
+    position: { x: 0.064, y: 0.513 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  - id: subida-dos-boxes
+    number: "14"
+    name: Subida dos Boxes
+    description: >-
+      The "climb to the pits": a long left-hander up a roughly 10% gradient, taken near flat-out as the lap's fastest section begins, past the pit-lane entry.
+    direction: left
+    position: { x: 0.127, y: 0.690 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  - id: arquibancadas
+    number: "15"
+    name: Arquibancadas
+    description: >-
+      The final left-hander ("grandstands"), named for the huge stands of fans lining it; taken at full throttle uphill, it releases the cars onto the start/finish straight to complete the lap.
+    direction: left
+    position: { x: 0.350, y: 0.766 }
+    sources:
+    - title: How the Interlagos corners got their names — Mercedes-AMG PETRONAS F1 Team
+      url: https://www.mercedesamgf1.com/news/how-the-interlagos-corners-got-their-names
+      accessed: 2026-06-11
+    - title: Sao Paulo (Interlagos) Track Guide — One Stop Racing
+      url: https://onestopracing.com/formula-1/tracks/sao-paulo-track-guide/
+      accessed: 2026-06-11
+  lap_records:
+  - class: F1
+    time: "1:10.540"
+    driver: Valtteri Bottas
+    team: Mercedes
+    car: Mercedes-AMG F1 W09 EQ Power+
+    year: 2018
+    record_type: race
+    sources:
+    - title: Interlagos Circuit — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Interlagos_Circuit
+      accessed: 2026-06-11
+
+editorial:
+  tagline: >-
+    São Paulo's anticlockwise classic — 4.309 km dropping through the downhill Senna S to the lake and climbing back up Junção to the line, an undulating, atmospheric circuit that has decided championships and given Brazil its home of Formula 1 since 1973.
+  narrative_md: interlagos.md
+  available_in:
+  - iRacing
+  - Gran Turismo 7
+  - Automobilista 2
+  - rFactor 2
+  - F1 25
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/interlagos # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/interlagos/interlagos.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Autódromo_José_Carlos_Pace_(AKA_Interlagos)_track_map.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_(AKA_Interlagos)_track_map.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Autódromo_José_Carlos_Pace_(AKA_Interlagos)_track_map.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-06-12
+
+sources:
+- title: Interlagos Circuit — Wikipedia
+  url: https://en.wikipedia.org/wiki/Interlagos_Circuit
+  accessed: 2026-06-11
+- title: Autódromo de Interlagos — official site (Prefeitura de São Paulo)
+  url: https://autodromodeinterlagos.prefeitura.sp.gov.br/en/
+  accessed: 2026-06-11
+- title: Interlagos — RacingCircuits.info
+  url: https://www.racingcircuits.info/south-america/brazil/interlagos.html
+  accessed: 2026-06-11
+
+status: verified
