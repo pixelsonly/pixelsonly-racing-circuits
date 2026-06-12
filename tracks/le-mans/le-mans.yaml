@@ -1,0 +1,283 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: le-mans
+name: Circuit des 24 Heures du Mans
+display_name: Le Mans
+subtitle: Circuit de la Sarthe
+country_code: FR
+country_name: France
+locality: Le Mans, Sarthe, France
+latitude: 47.946389 # circuit center (47°56′47″N) per the Wikipedia geohack entry
+longitude: 0.2075 # 0°12′27″E — eastern hemisphere, positive
+year_opened: 1923 # first 24 Hours of Le Mans run 26-27 May 1923 on the original public-road course
+owner: Automobile Club de l'Ouest / Ville du Mans # ACO operates the permanent circuit and runs the 24 Hours; the Ville du Mans owns much of the public-road portion
+
+primary_layout: circuit-des-24-heures
+
+layouts:
+- id: circuit-des-24-heures
+  name: Circuit des 24 Heures du Mans
+  current: true
+  years: 2018-present # current 13.626 km configuration; the circuit has been modified repeatedly since 1923, partly on closed-off public roads (the Mulsanne / Ligne Droite des Hunaudières is the D338)
+  direction: clockwise
+  turns: 38
+  length_km: 13.626
+  length_mi: 8.467
+  # Elevation change omitted: no per-lap figure published by an authoritative source (RacingCircuits.info
+  # notes only that the Mulsanne hump was lowered ~8 m / 26 ft in 2000-01). Add both members of the pair if sourced.
+  map_svg: map.svg
+  corners:
+  # This is a ~38-turn circuit (well over the ~20-turn threshold), so the lap is covered by its
+  # famous NAMED corners and complexes rather than every numbered turn — the Spa/Nürburgring precedent.
+  # The "number" field gives the official numbered turns each named complex spans (Wikipedia counts 38).
+  # Handedness is from two independent turn-by-turn guides (RaceControl/Le Mans Ultimate and the Le Mans
+  # Ultimate wiki), cross-checked against the 24h-lemans.com descriptions where they state a direction.
+  # The build stage re-checks every corner against the map.svg geometry: geometry confirmed Arnage
+  # (right, +95°) and that Indianapolis and the Porsche Curves open right (right-left); the noisy
+  # readings (Tertre Rouge, Mulsanne Corner) are snapping artifacts where sources firmly give right.
+  # Per-corner positions are the source map's NAMED labels (Dunlop, Tertre Rouge, Mulsanne,
+  # Indianapolis, Arnage, Porsche Curves, Ford Chicanes, ...) snapped to the extracted centerline and
+  # mapped through the same affine that produced map.svg (no numbered markers, so
+  # scripts/derive-corner-positions.mjs does not apply here).
+  - id: dunlop-curve
+    number: "1"
+    name: Dunlop Curve
+    description: >-
+      A fast uphill right-hand bend off the pit straight, running beneath the famous Dunlop Bridge; it climbs away from the start before dropping toward the Esses.
+    direction: right
+    position: { x: 0.239, y: 0.810 }
+    sources:
+    - title: Circuit de la Sarthe — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+      accessed: 2026-06-11
+    - title: Le Mans Ultimate — Circuit de la Sarthe Track Guide (RaceControl News)
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-circuit-de-la-sarthe-le-mans-track-guide/
+      accessed: 2026-06-11
+  - id: dunlop-chicane
+    number: "2-3"
+    name: Dunlop Chicane
+    description: >-
+      A tight left-right chicane added in 1987 (and later tightened) immediately after the Dunlop Curve, scrubbing speed before the plunge into the Esses.
+    direction: chicane
+    position: { x: 0.175, y: 0.776 }
+    sources:
+    - title: Circuit de la Sarthe — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+      accessed: 2026-06-11
+    - title: Le Mans Ultimate — Circuit de la Sarthe Track Guide (RaceControl News)
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-circuit-de-la-sarthe-le-mans-track-guide/
+      accessed: 2026-06-11
+  - id: esses-de-la-foret
+    number: "4-7"
+    name: Esses de la Forêt
+    description: >-
+      The Forest Esses, a fast sweeping left-right sequence first cut through the trees in the 1930s, dropping downhill toward Tertre Rouge; rhythm and a clean exit matter more than outright entry speed.
+    direction: left-right
+    position: { x: 0.132, y: 0.741 }
+    sources:
+    - title: 24 Hours of Le Mans — The legendary spots on the Circuit de la Sarthe (24h-lemans.com)
+      url: https://www.24h-lemans.com/en/news/24-hours-of-le-mans-the-legendary-spots-on-the-circuit-de-la-sarthe-19372
+      accessed: 2026-06-11
+    - title: Le Mans Ultimate — Circuit de la Sarthe Track Guide (RaceControl News)
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-circuit-de-la-sarthe-le-mans-track-guide/
+      accessed: 2026-06-11
+  - id: tertre-rouge
+    number: "8-9"
+    name: Tertre Rouge
+    description: >-
+      A critical medium-to-fast right-hander, re-profiled in 1979 into a double-apex curve, that launches the cars onto the Mulsanne Straight; exit speed here sets the lap's longest acceleration zone.
+    direction: right
+    position: { x: 0.114, y: 0.709 }
+    sources:
+    - title: 24 Hours of Le Mans — The legendary spots on the Circuit de la Sarthe (24h-lemans.com)
+      url: https://www.24h-lemans.com/en/news/24-hours-of-le-mans-the-legendary-spots-on-the-circuit-de-la-sarthe-19372
+      accessed: 2026-06-11
+    - title: Le Mans Ultimate — Circuit de la Sarthe Track Guide (RaceControl News)
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-circuit-de-la-sarthe-le-mans-track-guide/
+      accessed: 2026-06-11
+  - id: mulsanne-straight
+    number: "10-15"
+    name: Mulsanne Straight (Ligne Droite des Hunaudières)
+    signature: true
+    description: >-
+      The roughly 6 km Mulsanne Straight, known in French as the Ligne Droite des Hunaudières and run on the public D338; since 1990 it has been broken by two roughly equally spaced chicanes (the first a left-right-left, the second its mirror) to cap top speed.
+    story: |
+      Before the 1990 chicanes, cars ran the full straight unbroken and the
+      fastest prototypes touched well over 400 km/h (250 mph) — a WM P88-Peugeot
+      driven by Roger Dorchy was timed at 407 km/h here in 1988. The FIA's rule barring any straight longer
+      than about 2 km forced the two chicanes, and the straight is still where the
+      24 Hours is won or lost on top speed and bravery: the bulk of a Le Mans lap
+      is spent flat in top gear, and most of that is the Mulsanne.
+    direction: chicane
+    position: { x: 0.600, y: 0.310 }
+    sources:
+    - title: Circuit de la Sarthe — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+      accessed: 2026-06-11
+    - title: 24 Hours of Le Mans — The legendary spots on the Circuit de la Sarthe (24h-lemans.com)
+      url: https://www.24h-lemans.com/en/news/24-hours-of-le-mans-the-legendary-spots-on-the-circuit-de-la-sarthe-19372
+      accessed: 2026-06-11
+  - id: mulsanne-corner
+    number: "16-17"
+    name: Mulsanne Corner (Virage du Mulsanne)
+    description: >-
+      The heavy-braking right-hand corner at the end of the Mulsanne Straight, scrubbing from over 320 km/h to walking pace; a classic late-braking spot, with a right-hand kink added in 1986 to skirt a roundabout.
+    direction: right
+    position: { x: 0.860, y: 0.203 }
+    sources:
+    - title: Circuit de la Sarthe — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+      accessed: 2026-06-11
+    - title: 24 Hours of Le Mans — The legendary spots on the Circuit de la Sarthe (24h-lemans.com)
+      url: https://www.24h-lemans.com/en/news/24-hours-of-le-mans-the-legendary-spots-on-the-circuit-de-la-sarthe-19372
+      accessed: 2026-06-11
+  - id: indianapolis
+    number: "20-21"
+    name: Indianapolis
+    description: >-
+      A fast right-hand sweep that flicks into a tighter left, taken between the Mulsanne and Arnage at high speed; the entry sweep is the section often cited as essentially unchanged since 1923.
+    direction: right-left
+    position: { x: 0.859, y: 0.517 }
+    sources:
+    - title: Circuit de la Sarthe — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+      accessed: 2026-06-11
+    - title: Le Mans Ultimate — Circuit de la Sarthe Track Guide (RaceControl News)
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-circuit-de-la-sarthe-le-mans-track-guide/
+      accessed: 2026-06-11
+  - id: arnage
+    number: "22"
+    name: Arnage
+    description: >-
+      A slow, tight 90-degree right-hander — the slowest corner on the circuit — taken in a low gear before the run back toward the Porsche Curves.
+    direction: right
+    position: { x: 0.858, y: 0.586 }
+    sources:
+    - title: 24 Hours of Le Mans — The legendary spots on the Circuit de la Sarthe (24h-lemans.com)
+      url: https://www.24h-lemans.com/en/news/24-hours-of-le-mans-the-legendary-spots-on-the-circuit-de-la-sarthe-19372
+      accessed: 2026-06-11
+    - title: Le Mans Ultimate — Circuit de la Sarthe Track Guide (RaceControl News)
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-circuit-de-la-sarthe-le-mans-track-guide/
+      accessed: 2026-06-11
+  - id: porsche-curves
+    number: "23-27"
+    name: Porsche Curves (Virages Porsche)
+    signature: true
+    description: >-
+      A fast, flowing right-left-right sequence added in 1972, threaded with little run-off and a high minimum speed; widely regarded by drivers as the most satisfying and most committing part of the lap.
+    story: |
+      Built in 1972 to bypass the dangerous old Maison Blanche kink, the Porsche
+      Curves are the technical and emotional heart of the modern lap: a rapid
+      succession of barely-braked sweepers where the car is never quite straight
+      and a mistake puts it into the barriers with almost no margin. Drivers prize
+      a flat-out run through here above almost anything else at Le Mans; the kerbs
+      and run-off were revised for the 2015 (83rd) running to add a little safety
+      margin without softening the challenge.
+    direction: right-left
+    position: { x: 0.572, y: 0.724 }
+    sources:
+    - title: Circuit de la Sarthe — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+      accessed: 2026-06-11
+    - title: 24 Hours of Le Mans — The legendary spots on the Circuit de la Sarthe (24h-lemans.com)
+      url: https://www.24h-lemans.com/en/news/24-hours-of-le-mans-the-legendary-spots-on-the-circuit-de-la-sarthe-19372
+      accessed: 2026-06-11
+  - id: ford-chicanes
+    number: "30-33"
+    name: Ford Chicanes
+    description: >-
+      Two slow left-right chicanes in quick succession before the start/finish line — the first dating to the late 1960s, the second added in the early 1970s — feeding the cars back onto the pit straight to complete the lap.
+    direction: chicane
+    position: { x: 0.491, y: 0.730 }
+    sources:
+    - title: 24 Hours of Le Mans — The legendary spots on the Circuit de la Sarthe (24h-lemans.com)
+      url: https://www.24h-lemans.com/en/news/24-hours-of-le-mans-the-legendary-spots-on-the-circuit-de-la-sarthe-19372
+      accessed: 2026-06-11
+    - title: Le Mans Ultimate — Circuit de la Sarthe Track Guide (RaceControl News)
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-circuit-de-la-sarthe-le-mans-track-guide/
+      accessed: 2026-06-11
+  lap_records:
+  - class: LMP1
+    time: "3:14.791"
+    driver: Kamui Kobayashi
+    team: Toyota Gazoo Racing
+    car: Toyota TS050 Hybrid
+    year: 2017
+    record_type: qualifying
+    sources:
+    - title: A century of lap records at the 24 Hours of Le Mans (24h-lemans.com)
+      url: https://www.24h-lemans.com/en/news/a-century-of-lap-records-at-the-24-hours-of-le-mans-56746
+      accessed: 2026-06-11
+    - title: Circuit de la Sarthe — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+      accessed: 2026-06-11
+  - class: LMP1
+    time: "3:17.297"
+    driver: Mike Conway
+    team: Toyota Gazoo Racing
+    car: Toyota TS050 Hybrid
+    year: 2019
+    record_type: race
+    sources:
+    - title: A century of lap records at the 24 Hours of Le Mans (24h-lemans.com)
+      url: https://www.24h-lemans.com/en/news/a-century-of-lap-records-at-the-24-hours-of-le-mans-56746
+      accessed: 2026-06-11
+    - title: Circuit de la Sarthe — Wikipedia
+      url: https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+      accessed: 2026-06-11
+  - class: Hypercar
+    time: "3:26.063"
+    driver: Sébastien Bourdais
+    car: Cadillac V-Series.R
+    year: 2025
+    record_type: race # current top-class (Hypercar/LMH) race lap record; supersedes the 2024 3:27.749
+    sources:
+    - title: Firsts and superlatives in Hypercar at the 2025 Le Mans (DailySportscar)
+      url: https://www.dailysportscar.com/2025/06/16/firsts-superlatives-in-hypercar-as-ferrari-dominates-at-le-mans.html
+      accessed: 2026-06-11
+
+editorial:
+  tagline: >-
+    Thirteen and a half kilometres of racetrack and closed-off public road through the Sarthe countryside — home of the 24 Hours of Le Mans, defined by the 6 km Mulsanne Straight and the flat-out commitment of the Porsche Curves.
+  narrative_md: le-mans.md
+  available_in:
+  - iRacing
+  - Le Mans Ultimate
+  - Gran Turismo 7
+  - Forza Motorsport
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/le-mans # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/le-mans/le-mans.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Circuit_de_la_Sarthe_track_map.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Circuit_de_la_Sarthe_track_map.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Circuit_de_la_Sarthe_track_map.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-06-12
+
+sources:
+- title: Circuit de la Sarthe — Wikipedia
+  url: https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe
+  accessed: 2026-06-11
+- title: 24 Hours of Le Mans — official site (24h-lemans.com)
+  url: https://www.24h-lemans.com/en
+  accessed: 2026-06-11
+- title: Le Mans (Circuit de la Sarthe) — RacingCircuits.info
+  url: https://www.racingcircuits.info/europe/france/le-mans.html
+  accessed: 2026-06-11
+
+status: verified

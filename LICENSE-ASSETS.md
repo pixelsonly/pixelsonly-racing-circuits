@@ -23,6 +23,7 @@ this table automatically.
 
 | Track / map | Source | License | Notes |
 |---|---|---|---|
+| `le-mans/map.svg` | [Circuit_de_la_Sarthe_track_map.svg](https://commons.wikimedia.org/wiki/File:Circuit_de_la_Sarthe_track_map.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `le-mans/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `vir/map.svg` | [Virginia_International_Raceway_-_Full_Course.svg](https://commons.wikimedia.org/wiki/File:Virginia_International_Raceway_-_Full_Course.svg) | CC BY 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `vir/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `mosport/map.svg` | [Mosport-CTMP.svg](https://commons.wikimedia.org/wiki/File:Mosport-CTMP.svg) | CC BY-SA 4.0 | Artist: Apex-Ash. Source committed (SVGO-optimized) as `mosport/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `long-beach/map.svg` | [Long_Beach_Street_Circuit_IndyCar.svg](https://commons.wikimedia.org/wiki/File:Long_Beach_Street_Circuit_IndyCar.svg) | Public domain | Artist: Will Pittenger. Source committed (SVGO-optimized) as `long-beach/map-source.svg`. Fetched 2026-06-11 from Wikimedia Commons. |
@@ -67,3 +68,4 @@ flag you add:
 | `long-beach/flag.svg` | [Flag of the United States (DDD-F-416E specifications).svg](https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(DDD-F-416E_specifications).svg) | Public domain | Artist: Vector file created by Dbenbenn, Zscout370, Jacobolus, Indolences, and Technion. Fetched 2026-06-11 from Wikimedia Commons via Wikidata P41. |
 | `mosport/flag.svg` | [Flag of Canada (Pantone).svg](https://commons.wikimedia.org/wiki/File:Flag_of_Canada_(Pantone).svg) | Public domain | Artist: Original: George F. G. Stanley Modified by: The original uploader was Illegitimate Barrister at Wikimedia Commons. The current SVG encoding is a rewrite performed by MapGrid. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
 | `vir/flag.svg` | [Flag of the United States (DDD-F-416E specifications).svg](https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(DDD-F-416E_specifications).svg) | Public domain | Artist: Vector file created by Dbenbenn, Zscout370, Jacobolus, Indolences, and Technion. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
+| `le-mans/flag.svg` | [Flag of France.svg](https://commons.wikimedia.org/wiki/File:Flag_of_France.svg) | Public domain | Artist: Original: Unknown Vector: SKopp. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
