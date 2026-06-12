@@ -1,0 +1,299 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: portimao
+name: Autódromo Internacional do Algarve
+display_name: Portimão
+subtitle: Algarve
+country_code: PT
+country_name: Portugal
+locality: Portimão, Algarve, Portugal
+latitude: 37.23194 # circuit center (37°13′55″N) — geohack via Wikipedia
+longitude: -8.63194 # 8°37′55″W (WEST — negative)
+year_opened: 2008
+designer: Ricardo Pina
+owner: Portugal Capital Ventures # state-owned; operated by Parkalgar S.A. (control acquired 2013)
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix
+  current: true
+  years: 2008-present # full FIA Grade 1 circuit used for the F1 Portuguese GP in 2020-2021
+  direction: clockwise
+  turns: 15
+  length_km: 4.653
+  length_mi: 2.891
+  elevation_change_m: 24 # 24 m between the circuit's lowest and highest points
+  elevation_change_ft: 79
+  map_svg: map.svg
+  corners:
+  # Most corners on this modern circuit are unnamed and carry only a turn number.
+  # Handedness was cross-checked across independent turn-by-turn guides (RaceControl/
+  # Le Mans Ultimate, FIA WEC, Driver61), and the left/right SEQUENCE below is corroborated by
+  # the map geometry: the centerline's per-corner turn directions, traced in race order, match
+  # this sequence 15/15. Remaining low-confidence calls: T9 is single-sourced (RaceControl);
+  # T13 is genuinely contested (RaceControl "right" vs Driver61 "left hairpin", right recorded);
+  # T14 is effectively single-sourced on direction.
+  # NO corner `position` fields: the source ("F1 Sectors" diagram) labels turns with VECTOR-GLYPH
+  # numbers (e.g. "1 Primeira"), not <text> elements, so scripts/derive-corner-positions.mjs (which
+  # reads numbered text markers) cannot pick them up; deriving positions from the centerline curvature
+  # left the turn-number mapping ambiguous near the main straight, so positions are omitted pending a
+  # manual placement pass rather than risk mislabelling. (map.svg is the racing-line centerline, built
+  # from the diagram's three dashed sector segments chained into one closed loop.) A memorial "Craig
+  # Jones" corner exists at ~Turn 9 but is not consistently mapped across sources, so corners stay "Turn N".
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    signature: true
+    description: >-
+      A medium-speed right-hander reached at the foot of the long main straight, which drops downhill into a heavy braking zone before the track climbs back up; the circuit's prime overtaking spot and the start of an opening run of corners.
+    story: |
+      Turn 1 is where the Portimão rollercoaster announces itself: the main
+      straight plunges downhill into the braking zone, the cars compress at the
+      bottom, then climb away again on exit. The combination of a fast approach,
+      a blind dip and an uphill release makes it the circuit's signature braking
+      point and its best passing opportunity.
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: "Portimão: the track explained — FIA WEC"
+      url: https://www.fiawec.com/en/news/portimao-the-track-explained/7057
+      accessed: 2026-06-12
+  - id: turn-2
+    number: "2"
+    name: Turn 2
+    description: >-
+      A fast right-hand kink taken close to flat out, bridging the Turn 1 complex and the braking zone for the tight Turn 3 hairpin.
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: "Portimão: the track explained — FIA WEC"
+      url: https://www.fiawec.com/en/news/portimao-the-track-explained/7057
+      accessed: 2026-06-12
+  - id: turn-3
+    number: "3"
+    name: Turn 3
+    description: >-
+      The circuit's first hairpin, a very tight, slow first-gear right-hander and one of the slowest points on the lap, taken after the run down from Turn 2.
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: "Portimão: the track explained — FIA WEC"
+      url: https://www.fiawec.com/en/news/portimao-the-track-explained/7057
+      accessed: 2026-06-12
+  - id: turn-4
+    number: "4"
+    name: Turn 4
+    description: >-
+      A fast left-hander that runs uphill over a blind crest, where the lightening of the car at the top can provoke oversteer; one of the most distinctive corners on the circuit.
+    direction: left
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: "Portimão: the track explained — FIA WEC"
+      url: https://www.fiawec.com/en/news/portimao-the-track-explained/7057
+      accessed: 2026-06-12
+  - id: turn-5
+    number: "5"
+    name: Turn 5
+    description: >-
+      A left-hand hairpin preceded by a downhill braking zone, taken slow with a slight helping camber before the track opens out again.
+    direction: left
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: The Definitive Track Guide to Portimão — Driver61
+      url: https://driver61.com/circuit-guide/portimao/
+      accessed: 2026-06-12
+  - id: turn-6
+    number: "6"
+    name: Turn 6
+    description: >-
+      A flat-out, blind left-hand kink taken at speed out of Turn 5, leading toward the quick right of Turn 7.
+    direction: left
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: "Portimão: the track explained — FIA WEC"
+      url: https://www.fiawec.com/en/news/portimao-the-track-explained/7057
+      accessed: 2026-06-12
+  - id: turn-7
+    number: "7"
+    name: Turn 7
+    description: >-
+      A quick right-hander following the flat-out Turn 6, setting the cars up for the tricky braking into Turn 8.
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: "Portimão: the track explained — FIA WEC"
+      url: https://www.fiawec.com/en/news/portimao-the-track-explained/7057
+      accessed: 2026-06-12
+  - id: turn-8
+    number: "8"
+    name: Turn 8
+    description: >-
+      An uphill, open right-hand corner where braking is tricky because the car is still turning from the previous corner; the climb makes the entry blind.
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: "Portimão: the track explained — FIA WEC"
+      url: https://www.fiawec.com/en/news/portimao-the-track-explained/7057
+      accessed: 2026-06-12
+  - id: turn-9
+    number: "9"
+    name: Turn 9
+    description: >-
+      A fast, brave, undulating left-hander taken after the circuit falls away, where good vision over the crest is critical; its handedness is single-sourced (RaceControl).
+    direction: left
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+  - id: turn-10
+    number: "10"
+    name: Turn 10
+    description: >-
+      The first half of a blind double-right complex with a steep uphill, climbing roughly 12 metres into a blind entry; one of the most technical sections on the circuit.
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: "Portimão: the track explained — FIA WEC"
+      url: https://www.fiawec.com/en/news/portimao-the-track-explained/7057
+      accessed: 2026-06-12
+  - id: turn-11
+    number: "11"
+    name: Turn 11
+    description: >-
+      The second half of the blind double-right, cresting the circuit's high point before a steep downhill drop of around 16 metres on the exit — the steepest descent on the lap.
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: Why Portimão's elevation changes impact F1 drivers more than cars — RacingNews365
+      url: https://racingnews365.com/why-portimaos-elevation-changes-impacts-f1-drivers-more-than-cars
+      accessed: 2026-06-12
+  - id: turn-12
+    number: "12"
+    name: Turn 12
+    description: >-
+      A fast, near-flat-out left-hander approached downhill to the apex before the track climbs away again; carries high speed through the back of the lap.
+    direction: left
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: The Definitive Track Guide to Portimão — Driver61
+      url: https://driver61.com/circuit-guide/portimao/
+      accessed: 2026-06-12
+  - id: turn-13
+    number: "13"
+    name: Turn 13
+    description: >-
+      A slow braking-zone corner taken uphill with a drop-off on the outside; sources disagree on its handedness (a right-hand braking corner versus a left-hand hairpin), and the right-hand reading is recorded.
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: The Definitive Track Guide to Portimão — Driver61
+      url: https://driver61.com/circuit-guide/portimao/
+      accessed: 2026-06-12
+  - id: turn-14
+    number: "14"
+    name: Turn 14
+    description: >-
+      A technically difficult, off-camber downhill U-shaped right-hander where the adverse camber limits entry speed; handedness is taken from the most complete guide (RaceControl).
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: The Definitive Track Guide to Portimão — Driver61
+      url: https://driver61.com/circuit-guide/portimao/
+      accessed: 2026-06-12
+  - id: turn-15
+    number: "15"
+    name: Turn 15
+    description: >-
+      A fast, undulating right-hand final corner that releases the cars uphill onto the long main straight; a clean exit is critical for the long run to Turn 1.
+    direction: right
+    sources:
+    - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-portimao-circuit-guide/
+      accessed: 2026-06-12
+    - title: "Portimão: the track explained — FIA WEC"
+      url: https://www.fiawec.com/en/news/portimao-the-track-explained/7057
+      accessed: 2026-06-12
+  lap_records:
+  - class: F1
+    time: "1:18.750"
+    driver: Lewis Hamilton
+    team: Mercedes
+    car: Mercedes-AMG F1 W11
+    year: 2020
+    record_type: race
+    sources:
+    - title: Algarve International Circuit — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Algarve_International_Circuit
+      accessed: 2026-06-12
+
+editorial:
+  tagline: >-
+    Portugal's rollercoaster — Ricardo Pina's 2008 Algarve circuit near Portimão, 4.653 km of blind crests, steep gradients and a downhill plunge into Turn 1 that hosted the F1 Portuguese Grand Prix in 2020 and 2021.
+  narrative_md: portimao.md
+  available_in:
+  - iRacing
+  - Le Mans Ultimate
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/portimao # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/portimao/portimao.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Autódromo_do_Algarve_F1_Sectors.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Aut%C3%B3dromo_do_Algarve_F1_Sectors.svg
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    artist: GabrielStella
+    attribution_text: Track map derived from "Autódromo_do_Algarve_F1_Sectors.svg" by GabrielStella, CC BY-SA 4.0, via Wikimedia Commons.
+    accessed: 2026-06-12
+
+sources:
+- title: Algarve International Circuit — Wikipedia
+  url: https://en.wikipedia.org/wiki/Algarve_International_Circuit
+  accessed: 2026-06-12
+- title: Autódromo do Algarve — official site
+  url: https://autodromodoalgarve.com/
+  accessed: 2026-06-12
+- title: Autódromo Internacional do Algarve — RacingCircuits.info
+  url: https://www.racingcircuits.info/europe/portugal/algarve-portimao.html
+  accessed: 2026-06-12
+
+status: verified
