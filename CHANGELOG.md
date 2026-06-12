@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.14.0...pixelsonly-racing-circuits-v1.15.0) (2026-06-12)
+
+
+### New tracks & additive changes
+
+* add Virginia International Raceway (Full Course) ([#67](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/67)) ([dd6a19e](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/dd6a19ecb7f2d5c182e4724b7facce6e7ac5f2a1))
+
 ## [1.14.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.13.0...pixelsonly-racing-circuits-v1.14.0) (2026-06-12)
 
 
