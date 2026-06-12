@@ -23,6 +23,7 @@ this table automatically.
 
 | Track / map | Source | License | Notes |
 |---|---|---|---|
+| `suzuka/map.svg` | [Suzuka_circuit_map--2005.svg](https://commons.wikimedia.org/wiki/File:Suzuka_circuit_map--2005.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `suzuka/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `monza/map.svg` | [Monza_track_map.svg](https://commons.wikimedia.org/wiki/File:Monza_track_map.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `monza/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `le-mans/map.svg` | [Circuit_de_la_Sarthe_track_map.svg](https://commons.wikimedia.org/wiki/File:Circuit_de_la_Sarthe_track_map.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `le-mans/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `vir/map.svg` | [Virginia_International_Raceway_-_Full_Course.svg](https://commons.wikimedia.org/wiki/File:Virginia_International_Raceway_-_Full_Course.svg) | CC BY 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `vir/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
@@ -71,3 +72,4 @@ flag you add:
 | `vir/flag.svg` | [Flag of the United States (DDD-F-416E specifications).svg](https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(DDD-F-416E_specifications).svg) | Public domain | Artist: Vector file created by Dbenbenn, Zscout370, Jacobolus, Indolences, and Technion. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
 | `le-mans/flag.svg` | [Flag of France.svg](https://commons.wikimedia.org/wiki/File:Flag_of_France.svg) | Public domain | Artist: Original: Unknown Vector: SKopp. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
 | `monza/flag.svg` | [Flag of Italy.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Italy.svg) | Public domain | Artist: See below. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
+| `suzuka/flag.svg` | [Flag of Japan.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg) | Public domain | Artist: Various. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
