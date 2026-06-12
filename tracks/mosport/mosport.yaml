@@ -1,0 +1,254 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: mosport
+name: Canadian Tire Motorsport Park
+display_name: Mosport
+subtitle: Bowmanville
+country_code: CA
+country_name: Canada
+locality: Bowmanville, Ontario, Canada
+latitude: 44.05 # circuit center (44°03′00″N) — confirm against an authoritative source during intake
+longitude: -78.67778 # 78°40′40″W (WEST — negative)
+year_opened: 1961
+designer: Alan Bunting
+owner: Peter Thomson # Thomson-led group acquired CTMP from Canadian Motorsports Ventures Ltd. (2011–2025) in Dec 2025
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix
+  current: true
+  years: 1961-present # original Bunting layout, essentially unchanged; repaved to FIA spec in 2001
+  direction: clockwise
+  turns: 10
+  length_km: 3.957
+  length_mi: 2.459
+  # elevation: official site cites "several dramatic elevation changes" but no figure;
+  # Wikipedia/RacingCircuits give none — omitted rather than publish an unsourced number.
+  map_svg: map.svg
+  corners:
+  # Per-corner positions are the source map's numbered turn markers (map-source.svg),
+  # transformed into the map.svg viewBox via the same affine that produced map.svg
+  # (uniform scale s≈0.69340, translate ≈ (-633.12, -261.42)); derived with
+  # scripts/derive-corner-positions.mjs at 0.00px residual. Same basis for all entries.
+  # Handedness independently cross-checked against the map geometry (signed turn, traced
+  # clockwise) and the corner guides — the two agree: T1/T3/T8/T10 right, T2 Clayton/T4/T9
+  # left, Moss 5a+5b right. Compound Moss = markers 5a+5b (placed at 5a); Clayton = marker 2
+  # (2a is its second apex); T6/T7 are flat back-straight kinks (negligible signed turn) so
+  # direction is left unset.
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    signature: true
+    description: >-
+      A fast, committing right-hander taken near flat-out at the end of the start/finish straight, opening the lap into the circuit's run of long, sweeping bends; one of the most daunting opening corners in North American road racing.
+    story: |
+      Turn 1 sets the tone for Mosport: a high-speed right-hander with little
+      margin that flows straight into the Clayton/Quebec sequence. The
+      circuit's reputation as fast and unforgiving is built on corners like
+      this, where commitment matters more than braking.
+    direction: right
+    position: { x: 0.617, y: 0.801 }
+    sources:
+    - title: Canadian Tire Motorsport Park — Wikipedia
+      url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+      accessed: 2026-06-11
+    - title: Canadian Tire Motorsport Park — iRacing
+      url: https://www.iracing.com/tracks/canadian-tire-motorsport-park/
+      accessed: 2026-06-11
+  - id: clayton-corner
+    number: "2"
+    name: Clayton Corner
+    description: >-
+      A long, sweeping left-hander following Turn 1, the second of the fast opening bends that rise and fall over the natural contours of the site.
+    direction: left
+    position: { x: 0.524, y: 0.599 }
+    sources:
+    - title: Canadian Tire Motorsport Park — Wikipedia
+      url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+      accessed: 2026-06-11
+    - title: Mosport Park — Motorsports Calendar
+      url: https://motorsportscalendar.com/circuit/mosport-park
+      accessed: 2026-06-11
+  - id: quebec-corner
+    number: "3"
+    name: Quebec Corner
+    description: >-
+      A long right-hand sweep completing the right-left-right opening trio, carrying speed toward the gentle left that sets up Moss Corner.
+    direction: right
+    position: { x: 0.263, y: 0.637 }
+    sources:
+    - title: Canadian Tire Motorsport Park — Wikipedia
+      url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+      accessed: 2026-06-11
+    - title: Mosport Park — Motorsports Calendar
+      url: https://motorsportscalendar.com/circuit/mosport-park
+      accessed: 2026-06-11
+  - id: turn-4
+    number: "4"
+    name: Turn 4
+    description: >-
+      A wide, gentle left-hander that leads immediately into the Moss Corner complex.
+    direction: left
+    position: { x: 0.164, y: 0.379 }
+    sources:
+    - title: Mosport Park — Motorsports Calendar
+      url: https://motorsportscalendar.com/circuit/mosport-park
+      accessed: 2026-06-11
+  - id: moss-corner
+    number: "5a-5b"
+    name: Moss Corner
+    signature: true
+    description: >-
+      A two-part right-hand complex named for Stirling Moss: a longer-radius, downhill right (5a) blending into a tighter, flat 90-degree right (5b) that launches the cars onto the long back straight. Moss proposed splitting the original single-radius hairpin into this combination after visiting the site in 1960.
+    story: |
+      During a 1960 visit Stirling Moss suggested replacing the planned
+      single-radius "carousel" hairpin at the south end of the circuit with a
+      two-corner combination — a longer-radius uphill/downhill entry blending
+      into a tight 90-degree exit — arguing it would be a greater test of
+      driving skill and a better spectacle. The corner has carried his name
+      ever since and is the circuit's signature feature, demanding a setup
+      compromise between high-speed stability and low-speed grip.
+    direction: right
+    position: { x: 0.055, y: 0.266 }
+    sources:
+    - title: History — Canadian Tire Motorsport Park (official site)
+      url: https://canadiantiremotorsportpark.com/pages/history
+      accessed: 2026-06-11
+    - title: Canadian Tire Motorsport Park — Wikipedia
+      url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+      accessed: 2026-06-11
+  - id: turn-6
+    number: "6"
+    name: Turn 6
+    description: >-
+      A gentle bend along the early part of the Mario Andretti Straightaway, the three-quarter-mile back straight that carries several subtle bends and elevation changes.
+    position: { x: 0.406, y: 0.267 }
+    sources:
+    - title: Mosport Park — Motorsports Calendar
+      url: https://motorsportscalendar.com/circuit/mosport-park
+      accessed: 2026-06-11
+  - id: turn-7
+    number: "7"
+    name: Turn 7
+    description: >-
+      A further bend along the Mario Andretti Straightaway as it runs toward the braking zone for the Esses.
+    position: { x: 0.629, y: 0.290 }
+    sources:
+    - title: Mosport Park — Motorsports Calendar
+      url: https://motorsportscalendar.com/circuit/mosport-park
+      accessed: 2026-06-11
+  - id: esses-8
+    number: "8"
+    name: The Esses
+    description: >-
+      The entry to the Esses at the end of the back straight, a quick right-left combination that flows the cars down toward the final corner.
+    direction: right
+    position: { x: 0.960, y: 0.392 }
+    sources:
+    - title: Canadian Tire Motorsport Park — Wikipedia
+      url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+      accessed: 2026-06-11
+    - title: Mosport Park — Motorsports Calendar
+      url: https://motorsportscalendar.com/circuit/mosport-park
+      accessed: 2026-06-11
+  - id: esses-9
+    number: "9"
+    name: The Esses
+    description: >-
+      The exit of the Esses, the left half of the right-left combination, releasing the cars toward White's Corner.
+    direction: left
+    position: { x: 0.928, y: 0.557 }
+    sources:
+    - title: Mosport Park — Motorsports Calendar
+      url: https://motorsportscalendar.com/circuit/mosport-park
+      accessed: 2026-06-11
+  - id: whites-corner
+    number: "10"
+    name: White's Corner
+    description: >-
+      A 90-degree right-hander that completes the lap and releases the cars back onto the start/finish straight.
+    direction: right
+    position: { x: 0.962, y: 0.666 }
+    sources:
+    - title: Canadian Tire Motorsport Park — Wikipedia
+      url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+      accessed: 2026-06-11
+    - title: Mosport Park — Motorsports Calendar
+      url: https://motorsportscalendar.com/circuit/mosport-park
+      accessed: 2026-06-11
+  lap_records:
+  - class: LMP1
+    time: "1:05.823"
+    driver: Marco Werner
+    car: Audi R10 TDI
+    year: 2008
+    record_type: race
+    sources:
+    - title: Canadian Tire Motorsport Park — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+      accessed: 2026-06-11
+  - class: DPi
+    time: "1:05.987"
+    driver: Tom Blomqvist
+    car: Acura ARX-05
+    year: 2022
+    record_type: race
+    sources:
+    - title: Canadian Tire Motorsport Park — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+      accessed: 2026-06-11
+  - class: Formula One
+    time: "1:13.299"
+    driver: Mario Andretti
+    car: Lotus 78
+    year: 1977
+    record_type: race
+    sources:
+    - title: Canadian Tire Motorsport Park — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+      accessed: 2026-06-11
+
+editorial:
+  tagline: >-
+    Fast, blind and committing — the historic Bowmanville road course where Stirling Moss's hairpin and a lap full of elevation reward bravery over braking.
+  narrative_md: mosport.md
+  available_in:
+  - iRacing
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/mosport # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/mosport/mosport.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Mosport-CTMP.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Mosport-CTMP.svg
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    artist: Apex-Ash
+    attribution_text: Track map derived from "Mosport-CTMP.svg" by Apex-Ash, CC BY-SA 4.0, via Wikimedia Commons.
+    accessed: 2026-06-12
+
+sources:
+- title: Canadian Tire Motorsport Park — Wikipedia
+  url: https://en.wikipedia.org/wiki/Canadian_Tire_Motorsport_Park
+  accessed: 2026-06-11
+- title: Grand Prix Circuit — Canadian Tire Motorsport Park (official site)
+  url: https://canadiantiremotorsportpark.com/pages/grand-prix-track
+  accessed: 2026-06-11
+- title: Mosport Park — RacingCircuits.info
+  url: https://www.racingcircuits.info/north-america/canada/mosport-park.html
+  accessed: 2026-06-11
+
+status: verified
