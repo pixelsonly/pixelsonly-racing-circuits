@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.13.0...pixelsonly-racing-circuits-v1.14.0) (2026-06-12)
+
+
+### New tracks & additive changes
+
+* add Canadian Tire Motorsport Park (Grand Prix) ([#65](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/65)) ([750042c](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/750042cc6f35bc1132dd9282d7fef148bc836b22))
+
 ## [1.13.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.12.0...pixelsonly-racing-circuits-v1.13.0) (2026-06-11)
 
 
