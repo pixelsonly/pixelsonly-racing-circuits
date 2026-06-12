@@ -23,6 +23,7 @@ this table automatically.
 
 | Track / map | Source | License | Notes |
 |---|---|---|---|
+| `interlagos/map.svg` | [Autódromo_José_Carlos_Pace_(AKA_Interlagos)_track_map.svg](https://commons.wikimedia.org/wiki/File:Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_(AKA_Interlagos)_track_map.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `interlagos/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `fuji/map.svg` | [Fuji.svg](https://commons.wikimedia.org/wiki/File:Fuji.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `fuji/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `suzuka/map.svg` | [Suzuka_circuit_map--2005.svg](https://commons.wikimedia.org/wiki/File:Suzuka_circuit_map--2005.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `suzuka/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `monza/map.svg` | [Monza_track_map.svg](https://commons.wikimedia.org/wiki/File:Monza_track_map.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `monza/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
@@ -75,3 +76,4 @@ flag you add:
 | `monza/flag.svg` | [Flag of Italy.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Italy.svg) | Public domain | Artist: See below. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
 | `suzuka/flag.svg` | [Flag of Japan.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg) | Public domain | Artist: Various. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
 | `fuji/flag.svg` | [Flag of Japan.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg) | Public domain | Artist: Various. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
+| `interlagos/flag.svg` | [Flag of Brazil.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Brazil.svg) | Public domain | Artist: Raimundo Teixeira Mendes. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
