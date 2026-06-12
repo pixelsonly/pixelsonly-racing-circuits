@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.20.0...pixelsonly-racing-circuits-v1.21.0) (2026-06-12)
+
+
+### New tracks & additive changes
+
+* add Autódromo Internacional do Algarve (Portimão) ([#79](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/79)) ([3e6cb89](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/3e6cb8941c0b7ba5369e5186d3ac034ad9472cbd))
+
 ## [1.20.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.19.0...pixelsonly-racing-circuits-v1.20.0) (2026-06-12)
 
 
