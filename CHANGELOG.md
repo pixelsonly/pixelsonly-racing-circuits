@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.16.0...pixelsonly-racing-circuits-v1.17.0) (2026-06-12)
+
+
+### New tracks & additive changes
+
+* add Autodromo Nazionale Monza (Grand Prix) ([#71](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/71)) ([458d70f](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/458d70f8e1081f285c14d85685dff1036c79e798))
+
 ## [1.16.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.15.0...pixelsonly-racing-circuits-v1.16.0) (2026-06-12)
 
 
