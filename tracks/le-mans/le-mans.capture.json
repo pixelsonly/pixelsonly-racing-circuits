@@ -1,0 +1,29 @@
+{
+  "slug": "le-mans",
+  "layout": "circuit-des-24-heures",
+  "center": {
+    "lat": 47.93765,
+    "lon": 0.225651
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 6.051,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 8.23,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 18.154,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 5.995,
+    "windowPoints": 2019
+  },
+  "derived_from": {
+    "length_km": 13.626,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "mosport",
+  "layout": "grand-prix",
+  "center": {
+    "lat": 44.048467,
+    "lon": -78.678969
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 1.539,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 2.092,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 4.616,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 1.782,
+    "windowPoints": 265
+  },
+  "derived_from": {
+    "length_km": 3.957,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

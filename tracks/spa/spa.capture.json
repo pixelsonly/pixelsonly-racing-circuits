@@ -1,0 +1,29 @@
+{
+  "slug": "spa",
+  "layout": "grand-prix",
+  "center": {
+    "lat": 50.436969,
+    "lon": 5.968565
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 2.251,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 3.061,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 6.753,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 2.191,
+    "windowPoints": 487
+  },
+  "derived_from": {
+    "length_km": 7.004,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

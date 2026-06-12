@@ -1,0 +1,29 @@
+{
+  "slug": "laguna-seca",
+  "layout": "grand-prix",
+  "center": {
+    "lat": 36.584282,
+    "lon": -121.753385
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 1.109,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 1.508,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 4,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 1.067,
+    "windowPoints": 267
+  },
+  "derived_from": {
+    "length_km": 3.602,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

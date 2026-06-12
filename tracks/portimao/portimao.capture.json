@@ -1,0 +1,29 @@
+{
+  "slug": "portimao",
+  "layout": "grand-prix",
+  "center": {
+    "lat": 37.231284,
+    "lon": -8.630772
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 1.206,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 1.641,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 4,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 1.361,
+    "windowPoints": 729
+  },
+  "derived_from": {
+    "length_km": 4.653,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

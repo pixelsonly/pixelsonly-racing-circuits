@@ -17,8 +17,20 @@ repeatable assembly line, not a from-scratch design job.
       authoritative source — not a single dropped map pin.
 
 ## 3. Satellite imagery (separate private tooling)
-- [ ] Run the capture tool (private repo) with the coordinates + span (default
-      4 km). It writes the Sentinel-2 master + sidecar to private R2.
+- [ ] Run `npm run capture-frame -- <slug> --preview --plan-file` (needs
+      `map.svg` + `length_km`, i.e. do this after step 5/6). It derives the
+      capture frame — center (OSM-refined, else the declared coords) + master/web
+      spans + master px size — writes the committed `tracks/<slug>/<slug>.capture.json`,
+      and renders `previews/capture/<slug>.svg`.
+- [ ] **Review the preview** (`qlmanage -t -s 1400 previews/capture/<slug>.svg`):
+      the track must sit centered in the red web frame with margin, on the blue
+      OSM geometry. If OSM fell back (banner says so) or the center looks off,
+      add a `center`/span override in `scripts/capture-frame.overrides.json` and
+      re-run. Commit the `.capture.json` — the dispatcher reads it on merge and
+      fails loud if it's missing.
+- [ ] On merge, [`dispatch-capture.yml`](../.github/workflows/dispatch-capture.yml)
+      fires the private capture repo, which writes the Sentinel-2 master + the
+      web JPG derivative + sidecars to private R2.
 - [ ] Produce the **stylized derivative** and place it in the track folder as
       `satellite.*`; set `assets.satellite.attribution` to
       "Contains modified Copernicus Sentinel data <year>".

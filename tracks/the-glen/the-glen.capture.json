@@ -1,0 +1,29 @@
+{
+  "slug": "the-glen",
+  "layout": "long-course",
+  "center": {
+    "lat": 42.33637,
+    "lon": -76.924703
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 1.855,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 2.523,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 5.564,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 1.848,
+    "windowPoints": 229
+  },
+  "derived_from": {
+    "length_km": 5.552,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

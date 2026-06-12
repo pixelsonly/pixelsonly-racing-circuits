@@ -58,6 +58,20 @@ asset reference, a duplicate slug, or no source citation.
   [`LICENSE-ASSETS.md`](LICENSE-ASSETS.md) register row with the flag's actual
   license and attribution. The full per-track sequence is in
   [`docs/intake-checklist.md`](docs/intake-checklist.md).
+- `npm run capture-frame -- <slug> --preview --plan-file` — derives the
+  **satellite capture frame** for a track: a square centered on the circuit,
+  sized so the track sits prominently with a safe no-clip margin. Size comes
+  from the layout's `map.svg` outline + `length_km` (the track's true ground
+  diameter); the center is refined from OpenStreetMap and sanity-checked against
+  that diameter (falling back to the record's declared center when OSM can't
+  place the circuit). `--preview` writes a georeferenced SVG to
+  `previews/capture/<slug>.svg` to review **before** any satellite quota is
+  spent; `--plan-file` writes the committed `tracks/<slug>/<slug>.capture.json`
+  that [`dispatch-capture.yml`](.github/workflows/dispatch-capture.yml) reads to
+  drive the private capture repo. `--all` does every track; `--json` prints the
+  plan. Tuning lives in the `CONFIG` block of
+  [`scripts/derive-capture-frame.mjs`](scripts/derive-capture-frame.mjs);
+  per-track center/span overrides go in `scripts/capture-frame.overrides.json`.
 
 ## How consumers read it
 
