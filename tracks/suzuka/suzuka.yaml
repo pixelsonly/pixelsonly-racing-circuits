@@ -1,0 +1,290 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: suzuka
+name: Suzuka International Racing Course
+display_name: Suzuka
+subtitle: Figure Eight
+country_code: JP
+country_name: Japan
+locality: Suzuka, Mie Prefecture, Japan
+latitude: 34.8417 # circuit center (34°50′30″N) — geohack via Wikipedia
+longitude: 136.5389 # 136°32′20″E (EAST — positive)
+year_opened: 1962
+designer: John Hugenholtz
+owner: Honda Motor Co., Ltd. # operated by its subsidiary Honda Mobilityland
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix
+  current: true
+  years: 2003-present # current 5.807 km configuration following the 2002-03 modifications to the chicane and 130R
+  direction: clockwise
+  turns: 18
+  length_km: 5.807
+  length_mi: 3.608
+  # elevation: Suzuka has notable elevation through the Esses, but no authoritative source
+  # gives a single layout-level elevation-change figure, so both members of the pair are
+  # omitted rather than guessed.
+  map_svg: map.svg
+  corners:
+  # The only figure-8 layout in F1: the 1.2 km back straight crosses OVER the front section
+  # by an overpass between Turn 10 and Turn 11. Because handedness genuinely varies corner to
+  # corner on a figure-8, every direction below was cross-checked against two independent
+  # turn-by-turn guides; the build stage re-checks against the map geometry and GEOMETRY WINS.
+  # Numbering settled by consensus across total-motorsport, f1chronicle and DIY Sim Studio:
+  # S Curves = Turns 3-6, Dunlop = 7, Degner 1/2 = 8/9, crossover at 10, Hairpin = 11,
+  # 200R = 12, Spoon = 13-14, 130R = 15, Casio Triangle chicane = 16-18.
+  # GEOMETRY CHECK (true-centerline heading-change, traced in race order) confirmed: Turn 2 RIGHT
+  # (resolving the lone f1chronicle "left"); the S Curves as left-right-left-right (T3 L, T4 R, T5 L,
+  # T6 R); Dunlop left, Degners right, Hairpin left, 200R right, Spoon left, 130R left; and Turn 10 a
+  # (marginal) right. Per-corner positions: this map's numbered circles sit BESIDE the track with leader
+  # lines, so each was snapped onto the extracted centerline under a race-order arc-length constraint
+  # (the figure-8 crosses itself, so naive nearest-point would jump branches). Complex/chicane entries
+  # use a representative apex (S Curves between T4/T5, Spoon between T13/T14, Casio at T17).
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    description: >-
+      A fast right-hander entered downhill at full throttle off the start/finish straight, tightening on the way in; the first half of the high-speed Turn 1-2 complex and a frequent first-lap flashpoint.
+    direction: right
+    position: { x: 0.103, y: 0.801 }
+    sources:
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+    - title: "Suzuka: Key Corners, Sectors and What Makes It Unique — F1 Chronicle"
+      url: https://f1chronicle.com/suzuka-international-racing-course-corners-guide/
+      accessed: 2026-06-11
+  - id: turn-2
+    number: "2"
+    name: Turn 2
+    description: >-
+      The downhill continuation of the opening complex, taken fast as the track keeps falling away toward the Esses; some guides call it a right-hander that tightens on exit, others a left, so its handedness is flagged for the build-stage geometry check.
+    direction: right
+    position: { x: 0.083, y: 0.729 }
+    sources:
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+  - id: s-curves
+    number: "3-6"
+    name: S Curves (Esses)
+    signature: true
+    description: >-
+      The celebrated uphill esses: a flowing left-right-left-right sequence (Turns 3-6) climbing away from the opening complex, taken at high speed where rhythm and a connected line through every apex set up the whole first sector.
+    story: |
+      The S Curves are Suzuka's signature rhythm test. Climbing uphill in a
+      continuous left-right-left-right flow, each apex feeds the next, so a
+      mistake at the first compromises the entire sequence and the long run
+      that follows. Drivers rate carrying speed cleanly through the Esses as
+      one of the most satisfying — and most lap-time-critical — challenges in
+      Formula 1, a section that rewards commitment and a perfectly connected
+      line above outright braking or traction.
+    direction: left-right
+    position: { x: 0.244, y: 0.686 }
+    sources:
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+    - title: Suzuka Track Guide for Sim Racing — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/30/suzuka-track-guide/
+      accessed: 2026-06-11
+  - id: dunlop-curve
+    number: "7"
+    name: Dunlop Curve
+    description: >-
+      A quick uphill left-hander closing out the Esses sector, taken with commitment as the track continues to climb toward the Degner braking zone.
+    direction: left
+    position: { x: 0.431, y: 0.691 }
+    sources:
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+    - title: "Suzuka: Key Corners, Sectors and What Makes It Unique — F1 Chronicle"
+      url: https://f1chronicle.com/suzuka-international-racing-course-corners-guide/
+      accessed: 2026-06-11
+  - id: degner-1
+    number: "8"
+    name: Degner 1
+    description: >-
+      The first Degner curve, a fast, blind-entry right-hander where misjudging entry speed sends a car straight into the gravel; named for East German rider Ernst Degner.
+    direction: right
+    position: { x: 0.478, y: 0.488 }
+    sources:
+    - title: "Suzuka: Key Corners, Sectors and What Makes It Unique — F1 Chronicle"
+      url: https://f1chronicle.com/suzuka-international-racing-course-corners-guide/
+      accessed: 2026-06-11
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+  - id: degner-2
+    number: "9"
+    name: Degner 2
+    description: >-
+      The second, slower and sharper Degner right-hander, taken with careful throttle control on exit; the corner was split into two discrete radii in 1987.
+    direction: right
+    position: { x: 0.511, y: 0.418 }
+    sources:
+    - title: "Suzuka: Key Corners, Sectors and What Makes It Unique — F1 Chronicle"
+      url: https://f1chronicle.com/suzuka-international-racing-course-corners-guide/
+      accessed: 2026-06-11
+    - title: A challenging Suzuka corner's hidden history — Motorsport.com
+      url: https://www.motorsport.com/f1/news/degner-suzuka-corners-hidden-history/10709382/
+      accessed: 2026-06-11
+  - id: turn-10
+    number: "10"
+    name: Turn 10
+    description: >-
+      A near-flat slight right-hander taken under the iconic crossover bridge, where the back section of the figure-8 passes over the front; it feeds the braking zone for the Hairpin.
+    direction: right
+    position: { x: 0.651, y: 0.462 }
+    sources:
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+    - title: Suzuka Track Guide for Sim Racing — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/30/suzuka-track-guide/
+      accessed: 2026-06-11
+  - id: hairpin
+    number: "11"
+    name: The Hairpin
+    description: >-
+      A tight, slow left-hand hairpin reached after the crossover; a prime overtaking opportunity and a corner where a clean exit is critical for the run to 200R.
+    direction: left
+    position: { x: 0.713, y: 0.502 }
+    sources:
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+    - title: "Suzuka: Key Corners, Sectors and What Makes It Unique — F1 Chronicle"
+      url: https://f1chronicle.com/suzuka-international-racing-course-corners-guide/
+      accessed: 2026-06-11
+  - id: r200
+    number: "12"
+    name: 200R
+    description: >-
+      A long, gentle right-hand sweep taken at or near full throttle, named for its approximate radius; carries speed out of the Hairpin toward the Spoon.
+    direction: right
+    position: { x: 0.690, y: 0.349 }
+    sources:
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+    - title: Suzuka Track Guide for Sim Racing — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/30/suzuka-track-guide/
+      accessed: 2026-06-11
+  - id: spoon-curve
+    number: "13-14"
+    name: Spoon Curve
+    description: >-
+      A long, double-apex left-hander (Turns 13-14) named for its spoon-like shape; precise braking and a patient throttle release through the second apex maximise exit speed onto the long back straight to 130R.
+    direction: left
+    apex_type: double
+    position: { x: 0.940, y: 0.227 }
+    sources:
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+    - title: Suzuka Track Guide for Sim Racing — DIY Sim Studio
+      url: https://www.diysimstudio.com/2024/08/30/suzuka-track-guide/
+      accessed: 2026-06-11
+  - id: r130
+    number: "15"
+    name: 130R
+    signature: true
+    description: >-
+      A legendary, near-flat-out left-hander at the end of the long back straight, taken at well over 300 km/h in a modern F1 car; named for its original 130-metre radius, it is one of the most committing high-speed corners in motorsport.
+    story: |
+      130R is the corner that defines Suzuka's reputation for high-speed
+      bravery: a long left taken at full or near-full throttle, where the
+      margin for error at over 300 km/h is tiny. The corner was reprofiled
+      for 2003 into a two-part radius after safety concerns, but it remains a
+      flat-out test of nerve — the kind of corner where lap time and courage
+      are the same thing. It sets up the final braking zone into the Casio
+      Triangle chicane that decides so many races.
+    direction: left
+    position: { x: 0.527, y: 0.487 }
+    sources:
+    - title: "Suzuka: Key Corners, Sectors and What Makes It Unique — F1 Chronicle"
+      url: https://f1chronicle.com/suzuka-international-racing-course-corners-guide/
+      accessed: 2026-06-11
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+  - id: casio-triangle
+    number: "16-18"
+    name: Casio Triangle
+    description: >-
+      The tight right-left-right chicane (Turns 16-18) that closes the lap, reached under heavy braking from near top speed after 130R; the last real overtaking spot and the scene of many decisive — and infamous — moments before the cars accelerate onto the start/finish straight. Some sources count the chicane as Turns 16-17 with Turn 18 as a separate final right-hander.
+    direction: chicane
+    position: { x: 0.527, y: 0.689 }
+    sources:
+    - title: "Japanese Grand Prix track guide: Suzuka Circuit — Total Motorsport"
+      url: https://www.total-motorsport.com/japanese-grand-prix-track-guide-suzuka/
+      accessed: 2026-06-11
+    - title: "Suzuka: Key Corners, Sectors and What Makes It Unique — F1 Chronicle"
+      url: https://f1chronicle.com/suzuka-international-racing-course-corners-guide/
+      accessed: 2026-06-11
+  lap_records:
+  - class: F1
+    time: "1:30.965"
+    driver: Andrea Kimi Antonelli
+    team: Mercedes
+    car: Mercedes-AMG W16
+    year: 2025
+    record_type: race
+    sources:
+    - title: Suzuka Circuit — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Suzuka_Circuit
+      accessed: 2026-06-11
+
+editorial:
+  tagline: >-
+    Formula 1's only figure-8 — 5.807 km of John Hugenholtz's 1962 masterpiece near Suzuka, where the back straight crosses over the front and the uphill Esses, the Spoon and the flat-out 130R define a driver's circuit like no other.
+  narrative_md: suzuka.md
+  available_in:
+  - iRacing
+  - Assetto Corsa Competizione
+  - Gran Turismo 7
+  - rFactor 2
+  - Automobilista 2
+  - Forza Motorsport
+  - F1 25
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/suzuka # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/suzuka/suzuka.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Suzuka_circuit_map--2005.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Suzuka_circuit_map--2005.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Suzuka_circuit_map--2005.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-06-12
+
+sources:
+- title: Suzuka Circuit — Wikipedia
+  url: https://en.wikipedia.org/wiki/Suzuka_Circuit
+  accessed: 2026-06-11
+- title: Suzuka Circuit — official site
+  url: https://www.suzukacircuit.jp/eng/
+  accessed: 2026-06-11
+- title: Suzuka — RacingCircuits.info
+  url: https://www.racingcircuits.info/asia/japan/suzuka.html
+  accessed: 2026-06-11
+
+status: verified
