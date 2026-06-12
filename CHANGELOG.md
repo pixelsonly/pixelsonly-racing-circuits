@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.15.0...pixelsonly-racing-circuits-v1.16.0) (2026-06-12)
+
+
+### New tracks & additive changes
+
+* add Circuit de la Sarthe (Le Mans 24h Circuit) ([#69](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/69)) ([3cfbf0a](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/3cfbf0a3143e6a52bb15499fc4849fdd2693b286))
+
 ## [1.15.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.14.0...pixelsonly-racing-circuits-v1.15.0) (2026-06-12)
 
 
