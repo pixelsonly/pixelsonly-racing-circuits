@@ -1,0 +1,318 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: fuji
+name: Fuji Speedway
+display_name: Fuji Speedway
+subtitle: Foot of Mt. Fuji
+country_code: JP
+country_name: Japan
+locality: Oyama, Shizuoka Prefecture, Japan
+latitude: 35.37167 # circuit center (35°22′18″N) — geohack via Wikipedia
+longitude: 138.92667 # 138°55′36″E (EAST — positive)
+year_opened: 1966
+designer: Hermann Tilke # 2005 redesign of the current Grand Prix layout (original circuit opened 1966)
+owner: Toyota Motor Corporation # operated by Fuji Motorsports Forest, Inc.
+
+primary_layout: grand-prix
+
+layouts:
+- id: grand-prix
+  name: Grand Prix
+  current: true
+  years: 2005-present # current 4.563 km configuration following Hermann Tilke's redesign
+  direction: clockwise
+  turns: 16
+  length_km: 4.563
+  length_mi: 2.835 # dominant figure (Wikipedia + official site); RacingCircuits.info's 4.549 km / 2.827 mi is an outlier, not used
+  # elevation omitted: the only figure found (~35 m) traces to a single non-primary guide
+  # (samuraicarjapanjdm); Wikipedia, the official site and RacingCircuits.info publish none, so both
+  # members of the pair are omitted rather than publish an unsourced number.
+  map_svg: map.svg
+  corners:
+  # Numbering and positions follow the SOURCE MAP's 16 numbered markers (map-source.svg), mapped to
+  # map.svg via the affine that produced it (scripts/derive-corner-positions.mjs, 0.03px residual).
+  # Per-corner HANDEDNESS was settled against the true map geometry (heading-change traced in race
+  # order, clockwise) — GEOMETRY WINS — which corrected 100R (Turn 4) to a RIGHT-hander. The guides
+  # disagreed badly on the named-corner -> turn-number mapping, so only corners that are firmly named
+  # at Fuji are labelled (TGR T1, Coca-Cola T3, 100R T4, 300R T8, GR Supra T11, Dunlop T13, Panasonic
+  # T16); the rest are "Turn N", and the mid-lap name->number mapping is approximate. A guide-invented
+  # "Netz Corner" was REMOVED (no such corner exists at Fuji), as was a "Hairpin" label not in the
+  # official corner list (its turn, T10, is geometrically a right-hander).
+  - id: turn-1
+    number: "1"
+    name: TGR Corner
+    signature: true
+    description: >-
+      A tight right-hand corner reached under heavy braking from top speed at the end of the ~1.475 km main straight; the circuit's marquee braking zone and prime overtaking spot, currently carrying TGR (Toyota Gazoo Racing) signage.
+    story: |
+      Turn 1 is where Fuji's defining feature pays off: cars arrive at their
+      highest speed of the lap after nearly a mile and a half flat out, then
+      brake hard for a tight right-hander. It is the most common accident spot
+      on the circuit and the scene of the most dramatic passes, rewarding late
+      braking and punishing any car that arrives with cold tyres or brakes.
+    direction: right
+    position: { x: 0.103, y: 0.610 }
+    sources:
+    - title: Fuji Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Fuji_Speedway
+      accessed: 2026-06-11
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+  - id: turn-2
+    number: "2"
+    name: Turn 2
+    description: >-
+      A quick kink following Turn 1, taken at speed as the track begins to flow downhill toward the Coca-Cola Corner.
+    direction: right
+    position: { x: 0.112, y: 0.544 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+  - id: coca-cola
+    number: "3"
+    name: Coca-Cola Corner
+    description: >-
+      A downhill, off-camber corner (the 80R) closing the opening complex and feeding the run toward 100R.
+    direction: left
+    position: { x: 0.315, y: 0.493 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+    - title: "Le Mans Ultimate: Fuji Speedway Track Guide — RaceControl News"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-fuji-speedway-track-guide/
+      accessed: 2026-06-11
+  - id: r100
+    number: "4"
+    name: 100R
+    description: >-
+      A fast, sweeping ~100-metre-radius corner taken on a downhill approach, one of the most respected corners on the circuit and near-flat in high-downforce cars.
+    direction: right
+    radius_m: 100
+    position: { x: 0.354, y: 0.384 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+    - title: "Le Mans Ultimate: Fuji Speedway Track Guide — RaceControl News"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-fuji-speedway-track-guide/
+      accessed: 2026-06-11
+  - id: turn-5
+    number: "5"
+    name: Turn 5
+    description: >-
+      A medium-speed corner continuing out of the 100R section toward the slower infield.
+    direction: right
+    position: { x: 0.514, y: 0.396 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+  - id: turn-6
+    number: "6"
+    name: Turn 6
+    description: >-
+      A medium-speed corner on the descent toward the slower part of the lap.
+    direction: left
+    position: { x: 0.470, y: 0.529 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+  - id: turn-7
+    number: "7"
+    name: Turn 7
+    description: >-
+      A corner linking the descent to the 300R sweep.
+    direction: left
+    position: { x: 0.571, y: 0.514 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+  - id: r300
+    number: "8"
+    name: 300R
+    description: >-
+      A long, high-speed right-hand sweep of roughly 300-metre radius taken at or near full throttle.
+    direction: right
+    radius_m: 300
+    position: { x: 0.602, y: 0.397 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+    - title: "Le Mans Ultimate: Fuji Speedway Track Guide — RaceControl News"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-fuji-speedway-track-guide/
+      accessed: 2026-06-11
+  - id: turn-9
+    number: "9"
+    name: Turn 9
+    description: >-
+      A corner bridging the 300R sweep and the slow technical infield.
+    direction: right
+    position: { x: 0.730, y: 0.387 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+  - id: turn-10
+    number: "10"
+    name: Turn 10
+    description: >-
+      A sharp right-hander at the far end of the high-speed section, turning the lap back toward the slow technical infield that closes the lap.
+    direction: right
+    position: { x: 0.906, y: 0.375 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+  - id: gr-supra
+    number: "11"
+    name: GR Supra Corner
+    description: >-
+      A tight technical corner (the 25R) opening the slow infield sequence that closes the lap, currently carrying GR Supra signage.
+    direction: left
+    position: { x: 0.843, y: 0.414 }
+    sources:
+    - title: Fuji Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Fuji_Speedway
+      accessed: 2026-06-11
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+  - id: turn-12
+    number: "12"
+    name: Turn 12
+    description: >-
+      A slow corner in the technical infield near the highest point of the circuit.
+    direction: right
+    position: { x: 0.884, y: 0.445 }
+    sources:
+    - title: "Fuji Speedway Track Map: Every Corner, Straight, and Section Explained — Samurai Car Japan JDM"
+      url: https://samuraicarjapanjdm.jp/fuji-speedway-track-map-corners-layout-guide/
+      accessed: 2026-06-11
+  - id: dunlop
+    number: "13"
+    name: Dunlop Corner
+    description: >-
+      A tight, off-camber corner (the 15R) in the slow final-sector infield, marked by the Dunlop bridge and branding.
+    direction: right
+    position: { x: 0.900, y: 0.498 }
+    sources:
+    - title: Fuji Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Fuji_Speedway
+      accessed: 2026-06-11
+    - title: "Le Mans Ultimate: Fuji Speedway Track Guide — RaceControl News"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-fuji-speedway-track-guide/
+      accessed: 2026-06-11
+  - id: turn-14
+    number: "14"
+    name: Turn 14
+    description: >-
+      A corner in the flowing close of the technical final sector feeding the final-corner sequence.
+    direction: left
+    position: { x: 0.800, y: 0.525 }
+    sources:
+    - title: "Le Mans Ultimate: Fuji Speedway Track Guide — RaceControl News"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-fuji-speedway-track-guide/
+      accessed: 2026-06-11
+  - id: turn-15
+    number: "15"
+    name: Turn 15
+    description: >-
+      A very tight, off-camber left-hander with a blind apex in the final-sector infield, demanding gentle throttle on exit before the final corner.
+    direction: left
+    position: { x: 0.795, y: 0.589 }
+    sources:
+    - title: "Le Mans Ultimate: Fuji Speedway Track Guide — RaceControl News"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-fuji-speedway-track-guide/
+      accessed: 2026-06-11
+  - id: panasonic
+    number: "16"
+    name: Panasonic Corner
+    signature: true
+    description: >-
+      The uphill final corner (the 12R), a medium-speed right-hander with a blind turn-in that closes the technical infield and releases the cars onto the ~1.475 km main straight; a clean exit is critical to the entire following straight.
+    story: |
+      Panasonic is the corner that sets up Fuji's signature straight. After a
+      slow, technical infield sequence that closes the lap, drivers climb to
+      this blind, medium-speed right-hander and must nail the exit, because
+      what follows is one of the longest main straights in motorsport — nearly
+      a mile and a half to the Turn 1 braking zone, where any exit speed gained
+      here is multiplied all the way down the front straight.
+    direction: right
+    radius_m: 12
+    position: { x: 0.919, y: 0.607 }
+    sources:
+    - title: Fuji Speedway — Wikipedia
+      url: https://en.wikipedia.org/wiki/Fuji_Speedway
+      accessed: 2026-06-11
+    - title: "Le Mans Ultimate: Fuji Speedway Track Guide — RaceControl News"
+      url: https://news.racecontrol.gg/tracks/le-mans-ultimate-fuji-speedway-track-guide/
+      accessed: 2026-06-11
+  lap_records:
+  # F1 race lap record for the current layout. The WEC Hypercar 1:27.794 (Kobayashi, GR010, 2023)
+  # is a QUALIFYING/pole lap, not a race lap, so it is deliberately excluded.
+  - class: F1
+    time: "1:18.426"
+    driver: Felipe Massa
+    team: Ferrari
+    car: Ferrari F2008
+    year: 2008
+    record_type: race
+    sources:
+    - title: Fuji Speedway — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Fuji_Speedway
+      accessed: 2026-06-11
+    - title: 2008 Japanese Grand Prix — Wikipedia
+      url: https://en.wikipedia.org/wiki/2008_Japanese_Grand_Prix
+      accessed: 2026-06-11
+
+editorial:
+  tagline: >-
+    At the foot of Mt. Fuji — 4.563 km of Hermann Tilke's 2005 redesign, where one of motorsport's longest main straights, nearly 1.475 km, fires the cars into the Turn 1 braking zone before a tight, technical final sector closes the lap.
+  narrative_md: fuji.md
+  available_in:
+  - iRacing
+  - Gran Turismo 7
+  - Le Mans Ultimate
+  - Assetto Corsa Evo
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/fuji # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/fuji/fuji.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Fuji.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Fuji.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Will Pittenger
+    attribution_text: Track map derived from "Fuji.svg" by Will Pittenger, CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-06-12
+
+sources:
+- title: Fuji Speedway — Wikipedia
+  url: https://en.wikipedia.org/wiki/Fuji_Speedway
+  accessed: 2026-06-11
+- title: Fuji Speedway — official site
+  url: https://en.fujispeedway.jp/
+  accessed: 2026-06-11
+- title: Fuji Speedway — RacingCircuits.info
+  url: https://www.racingcircuits.info/asia/japan/fuji-speedway.html
+  accessed: 2026-06-11
+
+status: verified
