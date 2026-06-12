@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.17.0...pixelsonly-racing-circuits-v1.18.0) (2026-06-12)
+
+
+### New tracks & additive changes
+
+* add Suzuka International Racing Course (Grand Prix) ([#73](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/73)) ([d0da9c2](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/d0da9c249b6910c1b2d23b56a52e93ae6e2b6153))
+
 ## [1.17.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.16.0...pixelsonly-racing-circuits-v1.17.0) (2026-06-12)
 
 
