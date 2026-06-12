@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.19.0...pixelsonly-racing-circuits-v1.20.0) (2026-06-12)
+
+
+### New tracks & additive changes
+
+* add Autódromo José Carlos Pace (Interlagos) ([#77](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/77)) ([5b9cbb3](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/5b9cbb317ddfef6d21c9fde476cf7bbaea921d1c))
+
 ## [1.19.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.18.0...pixelsonly-racing-circuits-v1.19.0) (2026-06-12)
 
 
