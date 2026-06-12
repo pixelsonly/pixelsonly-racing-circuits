@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.18.0...pixelsonly-racing-circuits-v1.19.0) (2026-06-12)
+
+
+### New tracks & additive changes
+
+* add Fuji Speedway (Grand Prix) ([#75](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/75)) ([e2fbc0c](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/e2fbc0ccaae5f0774df4a9f7df7308e5f162c158))
+
 ## [1.18.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.17.0...pixelsonly-racing-circuits-v1.18.0) (2026-06-12)
 
 
