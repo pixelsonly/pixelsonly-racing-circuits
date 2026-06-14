@@ -50,7 +50,7 @@ jobs:
     if: ${{ needs.release-please.outputs.release_created == 'true' }}
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write # upload the data bundle as a release asset
       packages: write
     steps:
       - uses: actions/checkout@v4
@@ -61,6 +61,28 @@ jobs:
           scope: "@pixelsonly"
       - run: npm ci
       - run: npm run build
+
+      # Attach a versioned, language-agnostic data bundle to the GitHub Release so
+      # non-npm consumers can fetch + checksum-verify the built data without a Node
+      # toolchain. build/ is gitignored, so this asset — not git — is the durable
+      # artifact. Done before npm publish so the release still carries the data even
+      # if the registry push hiccups.
+      - name: Package data bundle
+        env:
+          TAG: ${{ needs.release-please.outputs.tag_name }}
+        run: |
+          VERSION="${TAG#v}"
+          cp schema/circuit.schema.json build/   # ship the schema alongside the data
+          tar -czf "circuits-${VERSION}.tar.gz" -C build .
+          shasum -a 256 "circuits-${VERSION}.tar.gz" > SHA256SUMS
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ needs.release-please.outputs.tag_name }}
+        run: |
+          VERSION="${TAG#v}"
+          gh release upload "$TAG" "circuits-${VERSION}.tar.gz" SHA256SUMS --clobber
+
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
