@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.1](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.21.0...pixelsonly-racing-circuits-v1.21.1) (2026-06-15)
+
+
+### Data corrections & fixes
+
+* clean em-dashes from editorial copy and enforce the no-em-dash rule ([#84](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/84)) ([23f668b](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/23f668b0789c7a76b3ed87e7273c8f2fb4f4d877))
+
 ## [1.21.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.20.0...pixelsonly-racing-circuits-v1.21.0) (2026-06-12)
 
 
