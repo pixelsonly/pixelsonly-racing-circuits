@@ -185,7 +185,7 @@ layouts:
     number: "11"
     name: Turn 11
     description: >-
-      The second half of the blind double-right, cresting the circuit's high point before a steep downhill drop of around 16 metres on the exit — the steepest descent on the lap.
+      The second half of the blind double-right, cresting the circuit's high point before a steep downhill drop of around 16 metres on the exit, the steepest descent on the lap.
     direction: right
     sources:
     - title: "Le Mans Ultimate: Portimão Circuit Guide — RaceControl"
@@ -261,7 +261,7 @@ layouts:
 
 editorial:
   tagline: >-
-    Portugal's rollercoaster — Ricardo Pina's 2008 Algarve circuit near Portimão, 4.653 km of blind crests, steep gradients and a downhill plunge into Turn 1 that hosted the F1 Portuguese Grand Prix in 2020 and 2021.
+    Portugal's rollercoaster: Ricardo Pina's 2008 Algarve circuit near Portimão, 4.653 km of blind crests, steep gradients and a downhill plunge into Turn 1 that hosted the F1 Portuguese Grand Prix in 2020 and 2021.
   narrative_md: portimao.md
   available_in:
   - iRacing

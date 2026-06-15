@@ -96,7 +96,7 @@ layouts:
     number: "5"
     name: The Snake
     description: >-
-      The opening of a flowing, alternating left-right complex over cambered surfaces — one of VIR's most rhythmic sections — leading into the run up to the Climbing Esses.
+      The opening of a flowing, alternating left-right complex over cambered surfaces, one of VIR's most rhythmic sections, leading into the run up to the Climbing Esses.
     direction: chicane
     position: { x: 0.752, y: 0.652 }
     sources:
@@ -121,12 +121,12 @@ layouts:
     name: Climbing Esses
     signature: true
     description: >-
-      The first of VIR's signature sequence — an uphill left that crests at the apex before flowing into the next esse; the Climbing Esses are the most exciting feature of the course.
+      The first of VIR's signature sequence: an uphill left that crests at the apex before flowing into the next esse; the Climbing Esses are the most exciting feature of the course.
     story: |
       The Climbing Esses are the corner sequence VIR is best known for: a rapid
       series of alternating bends that climb the hillside, each cresting near its
       apex so the car goes light over the rises. Drivers carry minimal steering
-      input over the hilltops and trust the camber — getting the rhythm right
+      input over the hilltops and trust the camber; getting the rhythm right
       sets up the whole second half of the lap toward South Bend and Oak Tree.
     direction: left
     position: { x: 0.421, y: 0.482 }
@@ -142,7 +142,7 @@ layouts:
     name: Climbing Esses
     signature: true
     description: >-
-      The middle of the Climbing Esses — a left that again crests at the apex and drops slightly before the final rise.
+      The middle of the Climbing Esses: a left that again crests at the apex and drops slightly before the final rise.
     direction: left
     position: { x: 0.349, y: 0.446 }
     sources:
@@ -154,7 +154,7 @@ layouts:
     name: Climbing Esses
     signature: true
     description: >-
-      The top of the Climbing Esses — a final right that crests onto the plateau before South Bend.
+      The top of the Climbing Esses: a final right that crests onto the plateau before South Bend.
     direction: right
     position: { x: 0.267, y: 0.394 }
     sources:
@@ -168,7 +168,7 @@ layouts:
     number: "10"
     name: South Bend
     description: >-
-      A fast, cresting, blind left-hander that finishes in a steep downhill plunge — entry positioning from track-right is critical.
+      A fast, cresting, blind left-hander that finishes in a steep downhill plunge. Entry positioning from track-right is critical.
     direction: left
     position: { x: 0.202, y: 0.308 }
     sources:
@@ -315,7 +315,7 @@ layouts:
 
 editorial:
   tagline: >-
-    A 3.27-mile rollercoaster through the Virginia hills — the Climbing Esses, the ghost of the Oak Tree and a lap of blind crests that has earned VIR a place among America's great road courses.
+    A 3.27-mile rollercoaster through the Virginia hills: the Climbing Esses, the ghost of the Oak Tree and a lap of blind crests that has earned VIR a place among America's great road courses.
   narrative_md: vir.md
   available_in:
   - iRacing

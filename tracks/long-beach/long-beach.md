@@ -23,14 +23,14 @@ straight along the waterfront.
 
 The fastest moment of the lap is the run down Shoreline Drive into Turn 1. Cars
 reach roughly 170 mph along the waterfront front straight before braking hard
-for the tight 90-degree left-hander — the headline overtaking spot, where the
-race is routinely decided — which spills the field into the fountain complex.
+for the tight 90-degree left-hander (the headline overtaking spot, where the
+race is routinely decided) which spills the field into the fountain complex.
 
 ## The Fountain and the Hairpin
 
 After Turn 1 the cars thread the slow fountain complex (Turns 2–3), curling
 around the landmark Long Beach dolphin fountain between flowerbeds and concrete
-walls. The circuit's signature corner is the hairpin at Turn 11 — a tight,
+walls. The circuit's signature corner is the hairpin at Turn 11: a tight,
 first-gear right-hander taken at around 30 mph and arguably one of the most
 famous corners in IndyCar. It has anchored every layout since 1975. Reached
 after the long, sweeping left of Turn 10, the hairpin dominates lap time and

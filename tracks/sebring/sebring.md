@@ -8,7 +8,7 @@
 Sebring International Raceway sits on the former Hendricks Field, a WWII heavy-bomber
 training base near Sebring, Florida. Russian-American aeronautical engineer Alec
 Ulmann, inspired by the 24 Hours of Le Mans, laid a race course over the old runways
-and taxiways, and the first event — the Sam Collier Six Hours Memorial — ran on New
+and taxiways, and the first event, the Sam Collier Six Hours Memorial, ran on New
 Year's Eve, 1950. The Grand Prix Road Course measures 3.74 mi (6.019 km) over
 seventeen turns, run clockwise, and has hosted the 12 Hours of Sebring, one of the
 world's great endurance races, ever since.
@@ -20,7 +20,7 @@ runway spliced with patches of asphalt. The result is famously rough and bumpy, 
 on cars and drivers alike across twelve hours, and it is the reason a Sebring finish
 is treated as a test of durability as much as speed.
 
-## Turn 17 — Sunset Bend
+## Turn 17: Sunset Bend
 
 The circuit's identity is its final corner. Universally called "Turn 17," Sunset Bend
 is a long, extremely bumpy high-speed right-hander wide enough to run cars three

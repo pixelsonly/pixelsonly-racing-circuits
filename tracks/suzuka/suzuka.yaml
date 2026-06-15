@@ -84,7 +84,7 @@ layouts:
       continuous left-right-left-right flow, each apex feeds the next, so a
       mistake at the first compromises the entire sequence and the long run
       that follows. Drivers rate carrying speed cleanly through the Esses as
-      one of the most satisfying — and most lap-time-critical — challenges in
+      one of the most satisfying, and most lap-time-critical, challenges in
       Formula 1, a section that rewards commitment and a perfectly connected
       line above outright braking or traction.
     direction: left-right
@@ -206,7 +206,7 @@ layouts:
       bravery: a long left taken at full or near-full throttle, where the
       margin for error at over 300 km/h is tiny. The corner was reprofiled
       for 2003 into a two-part radius after safety concerns, but it remains a
-      flat-out test of nerve — the kind of corner where lap time and courage
+      flat-out test of nerve: the kind of corner where lap time and courage
       are the same thing. It sets up the final braking zone into the Casio
       Triangle chicane that decides so many races.
     direction: left
@@ -222,7 +222,7 @@ layouts:
     number: "16-18"
     name: Casio Triangle
     description: >-
-      The tight right-left-right chicane (Turns 16-18) that closes the lap, reached under heavy braking from near top speed after 130R; the last real overtaking spot and the scene of many decisive — and infamous — moments before the cars accelerate onto the start/finish straight. Some sources count the chicane as Turns 16-17 with Turn 18 as a separate final right-hander.
+      The tight right-left-right chicane (Turns 16-18) that closes the lap, reached under heavy braking from near top speed after 130R; the last real overtaking spot and the scene of many decisive, and infamous, moments before the cars accelerate onto the start/finish straight. Some sources count the chicane as Turns 16-17 with Turn 18 as a separate final right-hander.
     direction: chicane
     position: { x: 0.527, y: 0.689 }
     sources:
@@ -247,7 +247,7 @@ layouts:
 
 editorial:
   tagline: >-
-    Formula 1's only figure-8 — 5.807 km of John Hugenholtz's 1962 masterpiece near Suzuka, where the back straight crosses over the front and the uphill Esses, the Spoon and the flat-out 130R define a driver's circuit like no other.
+    Formula 1's only figure-8: 5.807 km of John Hugenholtz's 1962 masterpiece near Suzuka, where the back straight crosses over the front and the uphill Esses, the Spoon and the flat-out 130R define a driver's circuit like no other.
   narrative_md: suzuka.md
   available_in:
   - iRacing

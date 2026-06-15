@@ -17,8 +17,8 @@ that grew into the Rolex 24 At Daytona, run around the clock since 1966.
 
 What separates Daytona from every other stop on the sports-car calendar is the
 banking. From the exit of Turn 6 the cars run flat-out around the NASCAR
-oval's Turns 1 and 2, down the backstretch, and through Turns 3 and 4 — long
-stretches held at 31 degrees, interrupted only by the Le Mans Chicane — before
+oval's Turns 1 and 2, down the backstretch, and through Turns 3 and 4 (long
+stretches held at 31 degrees, interrupted only by the Le Mans Chicane) before
 the 18-degree tri-oval completes the lap past the start/finish line.
 
 ## The Le Mans Chicane
@@ -32,8 +32,8 @@ Daytona Chicane.
 
 ## The infield
 
-The infield opens with an ever-tightening left-hander at Turn 1 — the lap's
-prime overtaking spot — and is anchored by two 180-degree right-hand hairpins:
+The infield opens with an ever-tightening left-hander at Turn 1, the lap's
+prime overtaking spot, and is anchored by two 180-degree right-hand hairpins:
 the Rodríguez International Horseshoe (Turn 3), which carries the name of
 Mexican sports-car great Pedro Rodríguez, and the West Horseshoe (Turn 5),
 linked by the fast left-hand Dogleg. Motorcycles use a modified infield with a

@@ -108,7 +108,7 @@ layouts:
       The roughly 6 km Mulsanne Straight, known in French as the Ligne Droite des Hunaudières and run on the public D338; since 1990 it has been broken by two roughly equally spaced chicanes (the first a left-right-left, the second its mirror) to cap top speed.
     story: |
       Before the 1990 chicanes, cars ran the full straight unbroken and the
-      fastest prototypes touched well over 400 km/h (250 mph) — a WM P88-Peugeot
+      fastest prototypes touched well over 400 km/h (250 mph): a WM P88-Peugeot
       driven by Roger Dorchy was timed at 407 km/h here in 1988. The FIA's rule barring any straight longer
       than about 2 km forced the two chicanes, and the straight is still where the
       24 Hours is won or lost on top speed and bravery: the bulk of a Le Mans lap
@@ -154,7 +154,7 @@ layouts:
     number: "22"
     name: Arnage
     description: >-
-      A slow, tight 90-degree right-hander — the slowest corner on the circuit — taken in a low gear before the run back toward the Porsche Curves.
+      A slow, tight 90-degree right-hander (the slowest corner on the circuit) taken in a low gear before the run back toward the Porsche Curves.
     direction: right
     position: { x: 0.858, y: 0.586 }
     sources:
@@ -191,7 +191,7 @@ layouts:
     number: "30-33"
     name: Ford Chicanes
     description: >-
-      Two slow left-right chicanes in quick succession before the start/finish line — the first dating to the late 1960s, the second added in the early 1970s — feeding the cars back onto the pit straight to complete the lap.
+      Two slow left-right chicanes in quick succession before the start/finish line (the first dating to the late 1960s, the second added in the early 1970s) feeding the cars back onto the pit straight to complete the lap.
     direction: chicane
     position: { x: 0.491, y: 0.730 }
     sources:
@@ -243,7 +243,7 @@ layouts:
 
 editorial:
   tagline: >-
-    Thirteen and a half kilometres of racetrack and closed-off public road through the Sarthe countryside — home of the 24 Hours of Le Mans, defined by the 6 km Mulsanne Straight and the flat-out commitment of the Porsche Curves.
+    Thirteen and a half kilometres of racetrack and closed-off public road through the Sarthe countryside: home of the 24 Hours of Le Mans, defined by the 6 km Mulsanne Straight and the flat-out commitment of the Porsche Curves.
   narrative_md: le-mans.md
   available_in:
   - iRacing

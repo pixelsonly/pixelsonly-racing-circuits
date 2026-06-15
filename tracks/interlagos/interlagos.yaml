@@ -90,7 +90,7 @@ layouts:
     number: "4-5"
     name: Descida do Lago
     description: >-
-      The "descent to the lake" (Turns 4-5): a downhill left-left sequence plunging to one of the lowest points of the circuit, beside the lake that gives the corner — and the Interlagos district — its name. A heavy braking zone and a further overtaking opportunity.
+      The "descent to the lake" (Turns 4-5): a downhill left-left sequence plunging to one of the lowest points of the circuit, beside the lake that gives the corner, and the Interlagos district, its name. A heavy braking zone and a further overtaking opportunity.
     direction: left
     position: { x: 0.282, y: 0.275 }
     sources:
@@ -182,7 +182,7 @@ layouts:
       start/finish line, so the exit determines top speed all the way up the hill
       and into the braking zone for the Senna S a lap later. It was here in 2008
       that Lewis Hamilton passed Timo Glock on the final lap to clinch his first
-      world championship by a single point — one of the most famous moments in
+      world championship by a single point: one of the most famous moments in
       Formula 1 history.
     direction: left
     position: { x: 0.090, y: 0.429 }
@@ -250,7 +250,7 @@ layouts:
 
 editorial:
   tagline: >-
-    São Paulo's anticlockwise classic — 4.309 km dropping through the downhill Senna S to the lake and climbing back up Junção to the line, an undulating, atmospheric circuit that has decided championships and given Brazil its home of Formula 1 since 1973.
+    São Paulo's anticlockwise classic: 4.309 km dropping through the downhill Senna S to the lake and climbing back up Junção to the line, an undulating, atmospheric circuit that has decided championships and given Brazil its home of Formula 1 since 1973.
   narrative_md: interlagos.md
   available_in:
   - iRacing

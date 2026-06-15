@@ -245,7 +245,7 @@ layouts:
       Panasonic is the corner that sets up Fuji's signature straight. After a
       slow, technical infield sequence that closes the lap, drivers climb to
       this blind, medium-speed right-hander and must nail the exit, because
-      what follows is one of the longest main straights in motorsport — nearly
+      what follows is one of the longest main straights in motorsport: nearly
       a mile and a half to the Turn 1 braking zone, where any exit speed gained
       here is multiplied all the way down the front straight.
     direction: right
@@ -278,7 +278,7 @@ layouts:
 
 editorial:
   tagline: >-
-    At the foot of Mt. Fuji — 4.563 km of Hermann Tilke's 2005 redesign, where one of motorsport's longest main straights, nearly 1.475 km, fires the cars into the Turn 1 braking zone before a tight, technical final sector closes the lap.
+    At the foot of Mt. Fuji: 4.563 km of Hermann Tilke's 2005 redesign, where one of motorsport's longest main straights, nearly 1.475 km, fires the cars into the Turn 1 braking zone before a tight, technical final sector closes the lap.
   narrative_md: fuji.md
   available_in:
   - iRacing

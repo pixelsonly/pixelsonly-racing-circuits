@@ -110,8 +110,8 @@ layouts:
     story: |
       During a 1960 visit Stirling Moss suggested replacing the planned
       single-radius "carousel" hairpin at the south end of the circuit with a
-      two-corner combination — a longer-radius uphill/downhill entry blending
-      into a tight 90-degree exit — arguing it would be a greater test of
+      two-corner combination, a longer-radius uphill/downhill entry blending
+      into a tight 90-degree exit, arguing it would be a greater test of
       driving skill and a better spectacle. The corner has carried his name
       ever since and is the circuit's signature feature, demanding a setup
       compromise between high-speed stability and low-speed grip.
@@ -217,7 +217,7 @@ layouts:
 
 editorial:
   tagline: >-
-    Fast, blind and committing — the historic Bowmanville road course where Stirling Moss's hairpin and a lap full of elevation reward bravery over braking.
+    Fast, blind and committing: the historic Bowmanville road course where Stirling Moss's hairpin and a lap full of elevation reward bravery over braking.
   narrative_md: mosport.md
   available_in:
   - iRacing

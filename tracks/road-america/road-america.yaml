@@ -154,7 +154,7 @@ layouts:
     name: The Kink
     signature: true
     description: >-
-      A flat-out, blind right-hand kink on the back stretch — taken at near top speed with no run-off to spare, it is the circuit's signature corner and one of the most committing in North American road racing.
+      A flat-out, blind right-hand kink on the back stretch, taken at near top speed with no run-off to spare, it is the circuit's signature corner and one of the most committing in North American road racing.
     story: |
       The Kink's combination of speed and minimal margin has made it the corner
       Road America is best known for; a temporary chicane has at times been added
@@ -205,7 +205,7 @@ layouts:
 
 editorial:
   tagline: >-
-    America's National Park of Speed — a 4-mile parkland circuit through the Wisconsin kettle moraine, unchanged since 1955 and defined by the flat-out plunge of The Kink.
+    America's National Park of Speed: a 4-mile parkland circuit through the Wisconsin kettle moraine, unchanged since 1955 and defined by the flat-out plunge of The Kink.
   narrative_md: road-america.md
   available_in:
   - iRacing

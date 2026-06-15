@@ -272,7 +272,7 @@ layouts:
     name: Sunset Bend
     signature: true
     description: >-
-      Sebring's signature final corner — a long, extremely bumpy high-speed right-hander wide enough to run cars three abreast, where exit speed onto the front straight defines the lap.
+      Sebring's signature final corner: a long, extremely bumpy high-speed right-hander wide enough to run cars three abreast, where exit speed onto the front straight defines the lap.
     story: |
       Universally known simply as "Turn 17," Sunset Bend is the corner Sebring is
       most identified with. The name comes from the setting sun drivers face here
@@ -306,7 +306,7 @@ layouts:
 
 editorial:
   tagline: >-
-    A WWII bomber base turned 17-turn endurance proving ground — Sebring's abrasive, seam-ridden runway concrete has tortured sports cars in the 12 Hours since 1950, all the way to the signature bumps of Turn 17.
+    A WWII bomber base turned 17-turn endurance proving ground: Sebring's abrasive, seam-ridden runway concrete has tortured sports cars in the 12 Hours since 1950, all the way to the signature bumps of Turn 17.
   narrative_md: sebring.md
   available_in:
   - iRacing

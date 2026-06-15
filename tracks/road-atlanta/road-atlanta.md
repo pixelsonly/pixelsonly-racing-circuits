@@ -9,7 +9,7 @@ Road Atlanta opened on September 13, 1970 on a wooded 750-acre tract near
 Braselton, Georgia, conceived by David Sloyer, Earl Walker, and Arthur
 Montgomery. After Dr. Don Panoz bought the circuit in 1996, a 1997 redesign led
 by Bob Barnard reshaped the back-straight section, and the current Grand Prix
-configuration — the full course raced by IMSA at the Petit Le Mans — has stood
+configuration, the full course raced by IMSA at the Petit Le Mans, has stood
 since 1998. It measures 2.540 mi (4.088 km) over twelve turns, clockwise, with
 about 107 ft (32.6 m) of total elevation change. Now operated by NASCAR through
 IMSA Holdings, it carries the title sponsor name Michelin Raceway Road Atlanta.
@@ -17,8 +17,8 @@ IMSA Holdings, it carries the title sponsor name Michelin Raceway Road Atlanta.
 ## The Esses
 
 The character of the lap is set early: after the fast, banked uphill climb of
-Turn 1, the track crests at the blind Turn 3 and tips into the esses — a quick,
-downhill right-left sequence (Turns 3–5) that snakes to the foot of the hill. It is one of
+Turn 1, the track crests at the blind Turn 3 and tips into the esses, a quick,
+downhill right-left sequence (Turns 3-5) that snakes to the foot of the hill. It is one of
 the most celebrated flowing sections in North American road racing, rewarding
 precise placement as the surface falls away.
 

@@ -26,7 +26,7 @@ commitment where lap time and courage are the same thing.
 
 The first sector is dominated by the uphill S Curves (Turns 3–6), a flowing
 left-right-left-right sequence where a single connected line through every apex
-sets up the whole lap — the rhythm test that drivers prize above all else at
+sets up the whole lap: the rhythm test that drivers prize above all else at
 Suzuka. The back half of the circuit threads the two blind Degner right-handers
 (Turns 8–9), passes under the crossover bridge to the Hairpin (Turn 11), and
 sweeps through the long double-apex Spoon Curve (Turns 13–14) onto the straight

@@ -14,7 +14,7 @@ climbing and falling around the foothills of the mountain.
 
 ## The main straight and Turn 1
 
-Fuji's identity is its main straight — at roughly 1.475 km (0.917 mi), one of
+Fuji's identity is its main straight: at roughly 1.475 km (0.917 mi), one of
 the longest in motorsport. Cars reach their highest speed of the lap before
 braking hard for the tight right-hander at Turn 1, now carrying Toyota Gazoo
 Racing (TGR) branding. It is the circuit's marquee overtaking zone and its most

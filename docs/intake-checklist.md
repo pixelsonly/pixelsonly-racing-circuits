@@ -130,6 +130,10 @@ SVGO is configured to preserve comments. **Do not put `--` inside the comment**
       site renders it with `<Content />`, so a blockquote would surface as a
       pull-quote on the published page. Match the comment convention already used
       by the "Expand with…" note at the bottom of each existing `<slug>.md`.
+- [ ] **No em-dashes** (`—`) in editorial copy: the narrative `.md` body and the prose
+      fields (`subtitle`, `editorial.tagline`, corner `description`/`story`/`landmark`/
+      `coaching`). Use a colon, comma, parentheses, or a new sentence instead. Exempt:
+      HTML/YAML comments and source titles. `npm run validate` enforces this.
 - [ ] `commerce.shopify_product_url` (at launch), `commerce.card_url` (companion
       card short link).
 
@@ -140,4 +144,4 @@ SVGO is configured to preserve comments. **Do not put `--` inside the comment**
 
 ## 9. Validate
 - [ ] `npm run validate` passes (required fields, paired units, asset existence,
-      no duplicate slug, sources present).
+      no duplicate slug, sources present, no em-dashes in editorial copy).

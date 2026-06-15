@@ -30,6 +30,16 @@ Published as `@pixelsonly/pixelsonly-racing-circuits` to GitHub Packages.
   (span_km=80), authed by CAPTURES_DISPATCH_TOKEN. Fires on the track ADD only — NOT on edits to an
   existing track, NOT on release. Re-run capture.yml manually if a coordinate fix needs a fresh master.
 
+## Editorial style
+- No em-dashes in editorial content. Brand voice forbids the em-dash (`—`, U+2014). Use a
+  colon, comma, parentheses, or a new sentence instead (matching the existing track copy).
+- Scope = reader-facing prose: the narrative `<slug>.md` body, and the YAML prose fields
+  `subtitle`, `editorial.tagline`, and per-corner `description` / `story` / `landmark` / `coaching`.
+- Exempt (not editorial content): `<!-- ... -->` HTML comments and author notes in the `.md`,
+  YAML `#` comments, source `title`/`url` fields, and corner `name`/`number` labels.
+- `npm run validate` enforces this (the em-dash integrity check) — a stray em-dash fails CI.
+  Out of scope by design: en-dashes and hyphens are allowed (e.g. range labels like `Turns 3-5`).
+
 ## Conventions
 - Public-PR model: nothing reaches main without passing validate.
 - Do not touch the stylization / satellite.webp return path — intentionally manual.

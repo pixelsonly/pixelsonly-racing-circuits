@@ -59,7 +59,7 @@ layouts:
     number: "2"
     name: The Fountain
     description: >-
-      The roundabout corner curling around the landmark Long Beach dolphin fountain that Turn 1 feeds into — the opening of the signature fountain complex, threaded between flowerbeds and concrete walls.
+      The roundabout corner curling around the landmark Long Beach dolphin fountain that Turn 1 feeds into: the opening of the signature fountain complex, threaded between flowerbeds and concrete walls.
     direction: right
     position: { x: 0.237, y: 0.804 }
     sources:
@@ -101,7 +101,7 @@ layouts:
     number: "5"
     name: Turn 5
     description: >-
-      A corner where the circuit begins to widen noticeably, with a multi-tiered curb drivers strike to pick up speed onto the following chute — one of two curb-strike spots on the lap.
+      A corner where the circuit begins to widen noticeably, with a multi-tiered curb drivers strike to pick up speed onto the following chute: one of two curb-strike spots on the lap.
     direction: right
     position: { x: 0.064, y: 0.615 }
     sources:
@@ -188,7 +188,7 @@ layouts:
     description: >-
       The slow right-hand hairpin and final corner of the lap, taken in first gear at around 30 mph; cutting close to the inside wall sets up the launch back onto Shoreline Drive toward the start/finish line.
     story: |
-      The hairpin is Long Beach's defining corner — arguably one of the most
+      The hairpin is Long Beach's defining corner: arguably one of the most
       famous corners on any IndyCar track. A tight, first-gear right-hander, it
       has featured in every iteration of the circuit since 1975, and the slow-
       motion image of the field threading it onto Shoreline Drive is the picture
@@ -207,7 +207,7 @@ layouts:
 
 editorial:
   tagline: >-
-    The crown jewel of American street racing — a 1.968-mile waterfront sprint through downtown Long Beach, down Shoreline Drive and around the dolphin fountain to the famous first-gear hairpin.
+    The crown jewel of American street racing: a 1.968-mile waterfront sprint through downtown Long Beach, down Shoreline Drive and around the dolphin fountain to the famous first-gear hairpin.
   narrative_md: long-beach.md
   available_in:
   - iRacing
