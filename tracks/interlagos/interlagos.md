@@ -5,8 +5,8 @@
      `interlagos.yaml`; add sources here too if this file introduces facts the
      record does not already cite. -->
 
-The Autódromo José Carlos Pace — universally known as Interlagos, after the São
-Paulo district between two reservoirs where it was built — opened in 1940 and has
+The Autódromo José Carlos Pace, universally known as Interlagos, after the São
+Paulo district between two reservoirs where it was built, opened in 1940 and has
 hosted the Brazilian Grand Prix almost every year since 1973. Originally named for
 that "between the lakes" setting, the circuit was renamed in 1985 for José Carlos
 Pace, the Brazilian who won his home Grand Prix here in 1975 and died in a plane
@@ -29,8 +29,8 @@ launches the cars down the Reta Oposta back straight.
 
 From Curva do Sol the lap plunges through the Descida do Lago (Turns 4–5) toward
 the lake, sweeps the downhill Ferradura horseshoe (Turns 6–7), and threads the
-slow, twisting infield — Laranjinha, Pinheirinho, the Bico de Pato "duck's bill"
-(Turn 10) and Mergulho — down to Junção (Turn 12). That left-hander at the lowest
+slow, twisting infield (Laranjinha, Pinheirinho, the Bico de Pato "duck's bill"
+(Turn 10) and Mergulho) down to Junção (Turn 12). That left-hander at the lowest
 point of the circuit is the most critical corner on the lap: its exit begins the
 long, full-throttle uphill climb past the grandstands all the way back to the
 line. It was at Junção in 2008 that Lewis Hamilton passed Timo Glock on the final

@@ -10,7 +10,7 @@ The Circuit de la Sarthe first hosted the 24 Hours of Le Mans on 26–27 May
 Sarthe department of western France. A century of modifications later, the
 full Circuit des 24 Heures du Mans measures 13.626 km (8.467 mi) over thirty-
 eight turns, clockwise, still stitched together from purpose-built racetrack
-and closed-off public road — the Mulsanne Straight is the everyday D338. It is
+and closed-off public road. The Mulsanne Straight is the everyday D338. It is
 one of the longest and fastest circuits in world motorsport, and the bulk of a
 lap is spent flat in top gear.
 
@@ -18,7 +18,7 @@ lap is spent flat in top gear.
 
 The circuit's signature is its longest feature: the roughly 6 km Mulsanne
 Straight, known in French as the Ligne Droite des Hunaudières. Until 1990 cars
-ran it unbroken — a WM P88-Peugeot was timed at 407 km/h here in 1988 — before two
+ran it unbroken (a WM P88-Peugeot was timed at 407 km/h here in 1988) before two
 chicanes were installed to cap top speed and satisfy an FIA limit on straight
 length. It remains where the race is won or lost on raw velocity and nerve,
 braking from over 320 km/h into the right-hand Mulsanne Corner at its end.

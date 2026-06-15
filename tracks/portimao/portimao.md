@@ -9,8 +9,8 @@ The Autódromo Internacional do Algarve opened in 2008 in the hills above
 Portimão on Portugal's southern coast, designed by architect Ricardo Pina. The
 Grand Prix circuit runs clockwise over 2.891 mi (4.653 km) and fifteen turns,
 with around 79 ft (24 m) between its lowest and highest points. That constant
-rise and fall — blind crests, steep climbs and sudden drops packed into a short
-lap — earned it the nickname the "rollercoaster," and made it one of the most
+rise and fall (blind crests, steep climbs and sudden drops packed into a short
+lap) earned it the nickname the "rollercoaster," and made it one of the most
 distinctive modern circuits when it stepped up to host the Formula 1 Portuguese
 Grand Prix in 2020 and 2021.
 
@@ -27,9 +27,9 @@ race lap record here in 2020 at 1:18.750.
 
 Because most of the corners are unnamed and simply numbered, Portimão is learned
 through its elevation rather than its landmarks. Turn 4 is a fast left over a
-blind uphill crest that can unsettle the car; the Turn 10–11 double-right climbs
+blind uphill crest that can unsettle the car; the Turn 10-11 double-right climbs
 roughly 12 m into a blind entry at the circuit's high point, then drops some
-16 m down the other side — the steepest descent on the lap. The closing sequence
+16 m down the other side, the steepest descent on the lap. The closing sequence
 works downhill and back up before the fast, undulating final right of Turn 15
 releases the cars onto the long straight to begin the plunge again.
 

@@ -86,7 +86,7 @@ layouts:
       The Esses are what Watkins Glen is best known for: a fast, uphill,
       right-left-right flick where this middle left crests blind over the brow of
       the climb. Taken near flat-out, it rewards commitment and a car that stays
-      settled as the camber rolls underneath it — the corner that defines a quick
+      settled as the camber rolls underneath it: the corner that defines a quick
       lap at the Glen.
     direction: left
     position: { x: 0.230, y: 0.416 }
@@ -115,7 +115,7 @@ layouts:
     number: "5"
     name: Outer Loop
     description: >-
-      A long, banked right-hand sweeper at the far end of the back straight — the steepest-banked corner on the circuit, known to NASCAR as the Carousel — taken with a late, fall-away apex that launches the lap downhill into the Boot. The 1992 Inner Loop chicane breaks the back straight just before it.
+      A long, banked right-hand sweeper at the far end of the back straight (the steepest-banked corner on the circuit, known to NASCAR as the Carousel) taken with a late, fall-away apex that launches the lap downhill into the Boot. The 1992 Inner Loop chicane breaks the back straight just before it.
     direction: right
     position: { x: 0.868, y: 0.381 }
     sources:
@@ -129,7 +129,7 @@ layouts:
     number: "6"
     name: The Chute
     description: >-
-      A downhill left at the foot of the Chute, dropping off the Outer Loop into the wooded Boot — the slowest section of the circuit.
+      A downhill left at the foot of the Chute, dropping off the Outer Loop into the wooded Boot: the slowest section of the circuit.
     direction: left
     position: { x: 0.725, y: 0.551 }
     sources:
@@ -213,7 +213,7 @@ layouts:
 
 editorial:
   tagline: >-
-    Watkins Glen's endurance "Boot" — a 3.45-mile plunge through the fast, blind Esses, the banked Outer Loop, and the wooded four-turn Boot extension that hosts IMSA's 6 Hours of the Glen.
+    Watkins Glen's endurance "Boot": a 3.45-mile plunge through the fast, blind Esses, the banked Outer Loop, and the wooded four-turn Boot extension that hosts IMSA's 6 Hours of the Glen.
   narrative_md: the-glen.md
   available_in:
   - iRacing

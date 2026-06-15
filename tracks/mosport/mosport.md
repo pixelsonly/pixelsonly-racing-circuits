@@ -7,8 +7,8 @@
 
 Canadian Tire Motorsport Park opened in 1961 on rolling farmland near
 Bowmanville, Ontario, about 75 km east of Toronto. Designed by Alan Bunting
-for the British Empire Motor Club, it was built as "Mosport" — a contraction
-of "Motor Sport" — and was known as Mosport Park, then Mosport International
+for the British Empire Motor Club, it was built as "Mosport", a contraction
+of "Motor Sport", and was known as Mosport Park, then Mosport International
 Raceway, before a 2012 sponsorship deal brought the current name. The slug
 `mosport` keeps the historic identity. The Grand Prix course measures
 2.459 mi (3.957 km) over ten turns, runs clockwise, and rises and falls
@@ -19,9 +19,9 @@ road circuits in North America.
 
 The circuit's signature feature is Moss Corner at Turns 5a/5b, named for
 Stirling Moss. Visiting the unfinished site in 1960, Moss suggested replacing
-the planned single-radius hairpin with a two-part combination — a
+the planned single-radius hairpin with a two-part combination, a
 longer-radius right blending into a tight 90-degree right onto the back
-straight — arguing it would be a greater test of skill and a better show. The
+straight, arguing it would be a greater test of skill and a better show. The
 complex still demands a setup compromise between high-speed stability and
 low-speed grip.
 
@@ -30,8 +30,8 @@ low-speed grip.
 The lap opens with the daunting fast right of Turn 1, flowing through the
 sweeping Clayton (Turn 2) and Quebec (Turn 3) corners before a gentle left
 sets up Moss Corner. Moss launches the cars onto the three-quarter-mile Mario
-Andretti Straightaway — a back straight carrying several subtle bends and
-elevation changes — which ends in the quick right-left of the Esses (Turns
+Andretti Straightaway, a back straight carrying several subtle bends and
+elevation changes, which ends in the quick right-left of the Esses (Turns
 8–9). White's Corner, a 90-degree right at Turn 10, completes the lap and
 releases the cars back onto the start/finish straight. Mosport hosted the
 Canadian Grand Prix through the 1960s and 1970s, with Mario Andretti setting

@@ -71,7 +71,7 @@ layouts:
     name: Rodríguez International Horseshoe
     signature: true
     description: >-
-      The infield's defining corner — a long 180-degree right-hand hairpin, reprofiled in the 1985 infield revisions and one of the clearest passing opportunities on the road course.
+      The infield's defining corner: a long 180-degree right-hand hairpin, reprofiled in the 1985 infield revisions and one of the clearest passing opportunities on the road course.
     story: |
       Known for decades simply as the International Horseshoe, the hairpin now
       also carries the name of Mexican sports-car great Pedro Rodríguez, a
@@ -128,7 +128,7 @@ layouts:
     number: "7"
     name: Turn 7
     description: >-
-      The first stretch of 31-degree superspeedway banking — the NASCAR oval's Turn 1 — a flat-out banked left-hand sweep.
+      The first stretch of 31-degree superspeedway banking, the NASCAR oval's Turn 1: a flat-out banked left-hand sweep.
     direction: left
     position: { x: 0.922, y: 0.543 }
     sources:
@@ -157,10 +157,10 @@ layouts:
     name: Le Mans Chicane
     signature: true
     description: >-
-      The entry of the backstretch chicane — a hard braking zone reached at near-maximum speed, flicking left-right off the straight; known for decades as the Bus Stop.
+      The entry of the backstretch chicane: a hard braking zone reached at near-maximum speed, flicking left-right off the straight; known for decades as the Bus Stop.
     story: |
-      Added to tame backstretch speeds and reworked repeatedly — widened in
-      2003, its third leg removed in 2010 — the Bus Stop was renamed the
+      Added to tame backstretch speeds and reworked repeatedly (widened in
+      2003, its third leg removed in 2010), the Bus Stop was renamed the
       Le Mans Chicane in January 2022 in a reciprocal gesture with Circuit de
       la Sarthe, whose first chicane on the Mulsanne Straight became the
       Daytona Chicane.
@@ -245,7 +245,7 @@ layouts:
 
 editorial:
   tagline: >-
-    The World Center of Racing — a 3.56-mile road course that threads a tight infield through Daytona's 31-degree superspeedway banking, home of the Rolex 24, America's round-the-clock endurance classic.
+    The World Center of Racing: a 3.56-mile road course that threads a tight infield through Daytona's 31-degree superspeedway banking, home of the Rolex 24, America's round-the-clock endurance classic.
   narrative_md: daytona.md
   available_in:
   - iRacing

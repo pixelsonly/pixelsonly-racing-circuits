@@ -18,6 +18,9 @@
  *        assets.satellite.derivative (if set), editorial.narrative_md (if set).
  *   8. Referenced .svg assets parse as well-formed XML and look like <svg>.
  *   9. Source citations present (record-level enforced by schema; warns on draft-only).
+ *  10. Editorial style: no em-dashes (U+2014) in reader-facing prose. Brand voice
+ *      forbids them (see AGENTS.md "Editorial style"). Inspects the prose fields and
+ *      the narrative .md body only; HTML/YAML comments and source titles are exempt.
  *
  * Dependencies: ajv, ajv-formats, yaml. (see package.json)
  */
@@ -38,6 +41,7 @@ const errors = [];
 const warnings = [];
 const err = (slug, msg) => errors.push(`  [${slug}] ${msg}`);
 const warn = (slug, msg) => warnings.push(`  [${slug}] ${msg}`);
+const EM_DASH = "—"; // U+2014, banned in editorial copy (see checkNoEmDash + AGENTS.md)
 
 // --- Load schema + compile validator -------------------------------------
 const schema = JSON.parse(readFileSync(schemaPath, "utf8"));
@@ -172,6 +176,46 @@ for (const folder of trackFolders) {
   }
   if (record.status === "canonical" && (!Array.isArray(record.sources) || record.sources.length < 2)) {
     err(folder, `status "canonical" requires >=2 record-level sources.`);
+  }
+
+  // 10 editorial style: no em-dashes in reader-facing prose
+  checkNoEmDash(folder, folderPath, record);
+}
+
+// Brand voice forbids the em-dash in editorial copy. We inspect only reader-facing
+// prose — the YAML prose fields and the narrative .md body (with HTML comments
+// stripped) — so author notes, YAML `#` comments, and source titles stay exempt.
+// en-dashes and hyphens are allowed (e.g. range labels like "Turns 3-5").
+function checkNoEmDash(slug, folderPath, record) {
+  const advise = "use a colon, comma, parentheses, or a new sentence";
+  const flag = (label, val) => {
+    if (typeof val === "string" && val.includes(EM_DASH)) {
+      const snippet = val.trim().replace(/\s+/g, " ").slice(0, 80);
+      err(slug, `em-dash (${EM_DASH}) in editorial copy at ${label} — ${advise}: "${snippet}"`);
+    }
+  };
+
+  flag("subtitle", record.subtitle);
+  flag("editorial.tagline", record.editorial?.tagline);
+  for (const layout of Array.isArray(record.layouts) ? record.layouts : []) {
+    for (const c of Array.isArray(layout?.corners) ? layout.corners : []) {
+      for (const field of ["description", "story", "landmark", "coaching"]) {
+        flag(`layout "${layout?.id}" corner "${c?.id}".${field}`, c?.[field]);
+      }
+    }
+  }
+
+  // Narrative markdown body. Blank out HTML comments first (author notes are exempt)
+  // while preserving newlines so reported line numbers stay accurate.
+  const nar = record.editorial?.narrative_md;
+  if (nar) {
+    const p = join(folderPath, nar);
+    if (existsSync(p)) {
+      const body = readFileSync(p, "utf8").replace(/<!--[\s\S]*?-->/g, (m) => m.replace(/[^\n]/g, " "));
+      body.split("\n").forEach((line, i) => {
+        if (line.includes(EM_DASH)) err(slug, `em-dash (${EM_DASH}) in editorial copy at ${nar}:${i + 1} — ${advise}.`);
+      });
+    }
   }
 }
 
