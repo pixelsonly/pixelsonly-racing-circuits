@@ -64,8 +64,8 @@ layouts:
     number: "3"
     name: Turn 3
     description: >-
-      A quick left that opens the fast Turn 3–4–5 sequence; carrying speed through here sets up the run across the complex.
-    direction: left
+      A medium-speed right-hander that opens the fast Turn 3–4–5 sequence; carrying speed through here sets up the run across the complex.
+    direction: right
     position: { x: 0.555, y: 0.835 }
     sources:
     - title: Laguna Seca Track Guide — DIY Sim Studio
@@ -97,8 +97,8 @@ layouts:
     number: "6"
     name: Turn 6
     description: >-
-      The circuit's most technical corner: a blind right-hander over a crest that then dips, compressing the car as it reaches the apex.
-    direction: right
+      The circuit's most technical corner: a blind left-hander over a crest that then dips, compressing the car as it reaches the apex.
+    direction: left
     position: { x: 0.725, y: 0.097 }
     sources:
     - title: Laguna Seca Track Guide — DIY Sim Studio
