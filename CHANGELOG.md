@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.2](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.21.1...pixelsonly-racing-circuits-v1.21.2) (2026-06-17)
+
+
+### Data corrections & fixes
+
+* correct Laguna Seca Turn 3 and Turn 6 handedness (transposed) ([#86](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/86)) ([eb597a9](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/eb597a9b9a6c1ac0c14666c4fe2e6f6262a9c95a))
+
 ## [1.21.1](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.21.0...pixelsonly-racing-circuits-v1.21.1) (2026-06-15)
 
 
