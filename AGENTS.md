@@ -7,6 +7,10 @@ Published as `@pixelsonly/pixelsonly-racing-circuits` to GitHub Packages.
 - `npm run validate` — schema + integrity checks. Required gate; runs in CI (validate.yml) on PRs
   touching tracks/, schema/, scripts/, or package.json. Run it before opening a PR.
 - `npm run build` — derives build/circuits.json from per-track YAML (runs in prepack + publish).
+- `npm run audit:handedness` — cross-checks each corner's `direction` against the map.svg
+  centerline geometry and NOMINATES likely-wrong corners (needs `npm run build` first). It only
+  flags candidates — always confirm a HIGH flag against a written source before editing data;
+  it over-flags on tight clusters / compound-corner tracks (see the WEAK CALIBRATION note).
 - Track data: tracks/<slug>/<slug>.yaml — the filename must match the folder name.
 
 ## Release model (do not bypass)
