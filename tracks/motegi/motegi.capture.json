@@ -1,0 +1,29 @@
+{
+  "slug": "motegi",
+  "layout": "road-course",
+  "center": {
+    "lat": 36.531963,
+    "lon": 140.231596
+  },
+  "center_source": "osm",
+  "svg_diameter_km": 1.358,
+  "margin_fraction": 0.18,
+  "web": {
+    "span_km": 1.847,
+    "size": 2500
+  },
+  "master": {
+    "span_km": 4.074,
+    "size": 6000
+  },
+  "osm": {
+    "accepted": true,
+    "windowDiameterKm": 1.895,
+    "windowPoints": 754
+  },
+  "derived_from": {
+    "length_km": 4.801,
+    "map_svg": "map.svg"
+  },
+  "tool": "derive-capture-frame.mjs"
+}

@@ -23,6 +23,7 @@ this table automatically.
 
 | Track / map | Source | License | Notes |
 |---|---|---|---|
+| `motegi/map.svg` | [Twin_Ring_Motegi_map-2.svg](https://commons.wikimedia.org/wiki/File:Twin_Ring_Motegi_map-2.svg) | CC BY-SA 3.0 | Artist: Ronny Astrada (Indonesia). Source committed (SVGO-optimized) as `motegi/map-source.svg`. Fetched 2026-06-21 from Wikimedia Commons. |
 | `portimao/map.svg` | [Autódromo_do_Algarve_F1_Sectors.svg](https://commons.wikimedia.org/wiki/File:Aut%C3%B3dromo_do_Algarve_F1_Sectors.svg) | CC BY-SA 4.0 | Artist: GabrielStella. Source committed (SVGO-optimized) as `portimao/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `interlagos/map.svg` | [Autódromo_José_Carlos_Pace_(AKA_Interlagos)_track_map.svg](https://commons.wikimedia.org/wiki/File:Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_(AKA_Interlagos)_track_map.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `interlagos/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
 | `fuji/map.svg` | [Fuji.svg](https://commons.wikimedia.org/wiki/File:Fuji.svg) | CC BY-SA 3.0 | Artist: Will Pittenger. Source committed (SVGO-optimized) as `fuji/map-source.svg`. Fetched 2026-06-12 from Wikimedia Commons. |
@@ -79,3 +80,4 @@ flag you add:
 | `fuji/flag.svg` | [Flag of Japan.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg) | Public domain | Artist: Various. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
 | `interlagos/flag.svg` | [Flag of Brazil.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Brazil.svg) | Public domain | Artist: Raimundo Teixeira Mendes. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
 | `portimao/flag.svg` | [Flag of Portugal (official).svg](https://commons.wikimedia.org/wiki/File:Flag_of_Portugal_(official).svg) | Public domain | Artist: Original: Columbano Bordalo Pinheiro Vector: Vítor Luís Rodrigues, António Martins-Tuválkin. Fetched 2026-06-12 from Wikimedia Commons via Wikidata P41. |
+| `motegi/flag.svg` | [Flag of Japan.svg](https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg) | Public domain | Artist: Various. Fetched 2026-06-21 from Wikimedia Commons via Wikidata P41. |

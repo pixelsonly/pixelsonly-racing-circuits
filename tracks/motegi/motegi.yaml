@@ -1,0 +1,309 @@
+# Circuit Record — validates against ../../schema/circuit.schema.json
+# Authoring notes for contributors:
+#   - Every fact should be traceable to an entry in `sources` (or a corner/lap_records
+#     `sources` block). Use YAML comments to flag anything still needing a second source.
+#   - Persist BOTH metric and imperial. The display unit per surface is a styling choice.
+#   - `slug` must match this folder's name and never changes once published.
+
+slug: motegi
+name: Mobility Resort Motegi
+display_name: Motegi
+subtitle: Mobility Resort Motegi
+country_code: JP
+country_name: Japan
+locality: Motegi, Tochigi Prefecture, Japan
+latitude: 36.53333 # circuit center (36°32′0″N) — geohack via Wikipedia
+longitude: 140.22833 # 140°13′42″E (EAST — positive)
+year_opened: 1997
+owner: Honda Motor Co., Ltd. # operated by its subsidiary Honda Mobilityland; renamed Twin Ring Motegi to Mobility Resort Motegi on 1 March 2022
+
+primary_layout: road-course
+
+layouts:
+- id: road-course
+  name: Road Course
+  current: true
+  years: 1997-present # the ~4.8 km Grand Prix road course; the venue's separate oval Super Speedway is a distinct configuration not recorded here
+  direction: clockwise
+  turns: 14
+  length_km: 4.801 # Wikipedia + official site ("4.8 km"); RacingCircuits.info gives the minority figure 4.796 km / 2.980 mi
+  length_mi: 2.983
+  elevation_change_m: 30.4 # official course guide figure (an "exceptionally flat" circuit by Japanese standards)
+  elevation_change_ft: 100
+  map_svg: map.svg
+  corners:
+  # Motegi is a "stop-and-go" road course: short straights into heavy braking zones and several
+  # near-hairpin corners, with a fast 130R sweep and an S-Curve section the exception. The road
+  # course runs CLOCKWISE (opposite the oval). The official course guide gives 14 turns = 8 right,
+  # 6 left; the per-corner handedness below sums to exactly 8R/6L, matching that count.
+  # Named corners follow MotoGP / Super Formula terminology: 130R (T6), S-Curves (T7-8), V-Corner
+  # (T9), Hairpin (T10), 90-degree corner (T11), Victory Corner (T14). Handedness was cross-checked
+  # against two independent statements where possible; positions are the source map's numbered turn
+  # markers (map-source.svg) transformed into the map.svg viewBox via the affine that produced
+  # map.svg (scripts/derive-corner-positions.mjs). Every direction was re-checked against the
+  # map.svg geometry and GEOMETRY WINS.
+  - id: turn-1
+    number: "1"
+    name: Turn 1
+    description: >-
+      A wide, fast right-hander at the end of the start/finish straight, reached under heavy braking; the first half of the quick opening right-hand sequence.
+    direction: right
+    position: { x: 0.082, y: 0.319 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+  - id: turn-2
+    number: "2"
+    name: Turn 2
+    description: >-
+      The wide, fast continuation of the opening right-hand sequence, carrying speed toward the first tight braking zone.
+    direction: right
+    position: { x: 0.408, y: 0.574 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+  - id: turn-3
+    number: "3"
+    name: Turn 3
+    description: >-
+      A tight left-hander taken after a downshift, tightening into the slow section that follows.
+    direction: left
+    position: { x: 0.432, y: 0.529 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+  - id: turn-4
+    number: "4"
+    name: Turn 4
+    description: >-
+      A second left-hander where the throttle goes down early for the run along the following straight.
+    direction: left
+    position: { x: 0.178, y: 0.228 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+  - id: turn-5
+    number: "5"
+    name: Turn 5
+    description: >-
+      A right-hander at the end of the straight reached under one of the heaviest braking zones on the lap; a key overtaking point.
+    direction: right
+    position: { x: 0.306, y: 0.145 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+  - id: r130
+    number: "6"
+    name: 130R
+    description: >-
+      A fast, open right-hand sweep named for its radius, taken in a high gear at over 180 km/h; one of the few flowing corners on an otherwise stop-and-go layout.
+    direction: right
+    position: { x: 0.399, y: 0.169 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+    - title: Twin Ring Motegi — Motorsport Guides
+      url: https://motorsportguides.com/twin-ring-motegi/
+      accessed: 2026-06-21
+  - id: s-curves-entry
+    number: "7"
+    name: S-Curves
+    description: >-
+      The first half of the S-Curve esses, a quick left-hander taken around third gear that flows into the right-hand exit.
+    direction: left
+    position: { x: 0.54, y: 0.332 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+  - id: s-curves-exit
+    number: "8"
+    name: S-Curves
+    description: >-
+      The right-hand exit of the S-Curve section, releasing the cars toward the slow V-Corner complex.
+    direction: right
+    position: { x: 0.618, y: 0.365 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+  - id: v-corner
+    number: "9"
+    name: V-Corner
+    description: >-
+      A very slow, tight first-gear left-hander, one of the slowest points on the circuit and an overtaking opportunity; overlooked by the V-Corner grandstand.
+    direction: left
+    position: { x: 0.707, y: 0.521 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+    - title: Twin Ring Motegi — Motorsport Guides
+      url: https://motorsportguides.com/twin-ring-motegi/
+      accessed: 2026-06-21
+  - id: hairpin
+    number: "10"
+    name: Hairpin
+    signature: true
+    description: >-
+      A tight, slow right-hand hairpin taken in first gear, its exit feeding the section that passes through the tunnel under the oval's back straight and onto the long back straightaway.
+    story: |
+      The Hairpin captures Motegi's stop-and-go character: a near-standstill,
+      first-gear right-hander whose exit decides the long run down the back
+      straight and the heavy braking that follows. A mistake here gives a rival
+      the whole straight to attack into the next braking zone, so the corner is a
+      recurring decider in MotoGP and Super Formula racing. It also marks the
+      circuit's signature stretch, where the road course dips through a tunnel
+      beneath the oval Super Speedway before opening back out into the countryside.
+    direction: right
+    position: { x: 0.94, y: 0.303 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+    - title: Seven of Motegi's 13 Corners Are Taken In First Or Second Gear — Roadracing World
+      url: https://www.roadracingworld.com/news/seven-of-motegis-13-corners-are-taken-in-first-or-second-gear/
+      accessed: 2026-06-21
+  - id: ninety-degree-corner
+    number: "11"
+    name: 90-degree corner
+    description: >-
+      A hard-braking, roughly 90-degree right-hander reached at the end of the back straight; a second-gear corner and a prime late-braking passing spot.
+    direction: right
+    position: { x: 0.558, y: 0.799 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+    - title: Twin Ring Motegi — Motorsport Guides
+      url: https://motorsportguides.com/twin-ring-motegi/
+      accessed: 2026-06-21
+  - id: turn-12
+    number: "12"
+    name: Turn 12
+    description: >-
+      The first of two left-handers that lead the cars toward the final corner.
+    direction: left
+    position: { x: 0.437, y: 0.731 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+  - id: turn-13
+    number: "13"
+    name: Turn 13
+    description: >-
+      The second of the two left-handers, setting up the entry into Victory Corner.
+    direction: left
+    position: { x: 0.384, y: 0.721 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+  - id: victory-corner
+    number: "14"
+    name: Victory Corner
+    signature: true
+    description: >-
+      The final corner before the start/finish line, a second-gear right-hander and the last real chance to make a pass before the line.
+    story: |
+      Victory Corner earns its name as the last braking zone of the lap, the
+      final opportunity to force a move before the start/finish line. A
+      second-gear right-hander onto the main straight, it has settled countless
+      Super Formula, Super GT and MotoGP finishes: get a run out of it and the
+      sprint to the line is on, miss the exit and the door stays shut.
+    direction: right
+    position: { x: 0.334, y: 0.691 }
+    sources:
+    - title: Curvas del Twin Ring Motegi — Motociclismo
+      url: https://www.motociclismo.es/comunidad/circuitos/curvas-twin-ring-motegi-nzm_259656_102.html
+      accessed: 2026-06-21
+    - title: Twin Ring Motegi — Motorsport Guides
+      url: https://motorsportguides.com/twin-ring-motegi/
+      accessed: 2026-06-21
+  lap_records:
+  - class: Super Formula
+    time: "1:31.379"
+    driver: Sena Sakaguchi
+    car: Dallara SF23
+    year: 2026
+    record_type: race
+    sources:
+    - title: Mobility Resort Motegi — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Mobility_Resort_Motegi
+      accessed: 2026-06-21
+  - class: Super Formula # unofficial all-time lap record, set in qualifying
+    time: "1:29.757"
+    driver: Tomoki Nojiri
+    car: Dallara SF19
+    year: 2021
+    record_type: outright
+    sources:
+    - title: Mobility Resort Motegi — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Mobility_Resort_Motegi
+      accessed: 2026-06-21
+  - class: Super GT (GT500)
+    time: "1:38.350"
+    driver: Tadasuke Makino
+    car: Honda NSX-GT
+    year: 2022
+    record_type: race
+    sources:
+    - title: Mobility Resort Motegi — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Mobility_Resort_Motegi
+      accessed: 2026-06-21
+  - class: MotoGP
+    time: "1:44.412"
+    driver: Francesco Bagnaia
+    car: Ducati Desmosedici GP25
+    year: 2025
+    record_type: race
+    sources:
+    - title: Mobility Resort Motegi — Wikipedia (lap records)
+      url: https://en.wikipedia.org/wiki/Mobility_Resort_Motegi
+      accessed: 2026-06-21
+
+editorial:
+  tagline: >-
+    Honda's stop-and-go test in the Tochigi hills: 4.8 km of heavy braking zones, tight hairpins and a tunnel under the oval, where Victory Corner has the last word in MotoGP, Super GT and Super Formula.
+  narrative_md: motegi.md
+  available_in:
+  - iRacing
+  - MotoGP 24
+
+commerce:
+  card_url: https://pixelsonly.racing/circuits/motegi # update to the short/trackable URL when the redirect is live
+
+assets:
+  flag_svg: flag.svg
+  satellite:
+    source_key: tracks/motegi/motegi.tiff # private R2 master — informational only, never published
+    attribution: Contains modified Copernicus Sentinel data 2026
+  map_source: map-source.svg
+  map_attribution:
+    source_title: Twin_Ring_Motegi_map-2.svg
+    source_url: https://commons.wikimedia.org/wiki/File:Twin_Ring_Motegi_map-2.svg
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    artist: Ronny Astrada (Indonesia)
+    attribution_text: Track map derived from "Twin_Ring_Motegi_map-2.svg" by Ronny Astrada (Indonesia), CC BY-SA 3.0, via Wikimedia Commons.
+    accessed: 2026-06-21
+
+sources:
+- title: Mobility Resort Motegi — Wikipedia
+  url: https://en.wikipedia.org/wiki/Mobility_Resort_Motegi
+  accessed: 2026-06-21
+- title: Course Guide — Mobility Resort Motegi (official site)
+  url: https://www.mr-motegi.jp/eng/course_m/
+  accessed: 2026-06-21
+- title: Motegi — RacingCircuits.info
+  url: https://www.racingcircuits.info/asia/japan/motegi.html
+  accessed: 2026-06-21
+
+status: verified
