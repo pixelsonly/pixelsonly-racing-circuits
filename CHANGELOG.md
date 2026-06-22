@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.21.2...pixelsonly-racing-circuits-v1.22.0) (2026-06-22)
+
+
+### New tracks & additive changes
+
+* add Motegi (Road Course) ([#90](https://github.com/pixelsonly/pixelsonly-racing-circuits/issues/90)) ([5e651e1](https://github.com/pixelsonly/pixelsonly-racing-circuits/commit/5e651e1f974b88411e769ad9ceff2885d2670faf))
+
 ## [1.21.2](https://github.com/pixelsonly/pixelsonly-racing-circuits/compare/pixelsonly-racing-circuits-v1.21.1...pixelsonly-racing-circuits-v1.21.2) (2026-06-17)
 
 
